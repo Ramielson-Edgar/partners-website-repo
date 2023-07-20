@@ -1,0 +1,4467 @@
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"),
+    url("../fonts/montserrat-latin-700-normal.woff") format("woff"),
+    url("../fonts/montserrat-latin-700-normal.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat-regular";
+  src: local("Montserrat"),
+    url("../fonts/montserrat-latin-400-normal.woff") format("woff"),
+    url("../fonts/montserrat-latin-400-normal.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto-normal";
+  src: local("Roboto-normal"),
+    url("../fonts/roboto-latin-400-normal.woff") format("woff"),
+    url("../fonts/roboto-latin-400-normal.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto-bold";
+  src: local("Roboto-bold"),
+    url("../fonts/roboto-latin-700-normal.woff") format("woff"),
+    url("../fonts/roboto-latin-700-normal.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto-black";
+  src: local("Roboto-bold"),
+    url("../fonts/roboto-latin-900-normal.woff") format("woff"),
+    url("../fonts/roboto-latin-900-normal.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto-medium";
+  src: local("Roboto-bold"),
+    url("../fonts/roboto-latin-500-normal.woff") format("woff"),
+    url("../fonts/roboto-latin-500-normal.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  position: relative;
+  font-family: "Roboto-normal", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 30px;
+  color: var(--dark-500);
+  background-color: var(--light);
+}
+
+:root {
+  --light: #fff;
+  --blue-100: #f9faff;
+  --blue-150: #dcefff;
+  --blue-500: #42a5f5;
+  --blue-700: #008af9;
+  --blue-800: #4a89f2;
+  --blue-900: #05529e;
+
+  --red-100: #ffdddc;
+  --red-300: #ec5350;
+  --red-500: #e53935;
+
+  --green-100: #c8f3e5;
+  --green-500: #4cd7ab;
+  --green-700: #1effb8;
+
+  --dark-300: #939393;
+  --dark-400: #4b4b4b;
+  --dark-500: #232323;
+
+
+  --font-size-50: clamp(1.13rem, calc(-0.6rem + 4.81vw), 3.13rem);
+  --font-size-30: clamp(1rem, calc(0.24rem + 2.11vw), 1.88rem);
+  --font-size-24: clamp(0.88rem, calc(0.33rem + 1.5vw), 1.5rem);
+  --font-size-18: clamp(0.81rem, calc(0.54rem + 0.75vw), 1.13rem);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  text-transform: capitalize;
+}
+
+h1,
+h2,
+h3,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+
+h1 {
+  font-size: var(--font-size-50);
+}
+
+h2 {
+  font-size: var(--font-size-30);
+}
+
+h3 {
+  font-size: var(--font-size-24);
+}
+
+h4 {
+  font-size: var(--font-size-18);
+}
+
+.light-title {
+  font-size: clamp(3.13rem, calc(-2.01rem + 14.29vw), 9.06rem);
+  color: #fbfbfb;
+}
+
+a {
+  display: block;
+  transition: all 0.3s ease-in;
+}
+
+p {
+  color: var(--dark-400);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+.section-padding {
+  padding: 70px 0;
+}
+
+.section-header {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+
+.section-header__text,
+.section-header__title {
+  margin-bottom: 17px;
+}
+
+
+.text-gradient {
+  color: var(--blue-500);
+}
+
+.text-bold {
+  font-family: "Roboto-bold";
+}
+
+ 
+.btn-base {
+  display: inline-block;
+  border-radius: 5px;
+  color: var(--light);
+  border: 1px solid transparent;
+  text-transform: capitalize;
+
+  outline: none;
+  box-shadow: none;
+}
+
+.btn-button {
+  display: inline-block;
+  border-radius: 5px;
+  color: var(--light);
+  border: 1px solid transparent;
+  text-transform: capitalize;
+  background: transparent;
+  outline: none;
+  box-shadow: none;
+}
+
+.btn-base:hover {
+  transform: translateY(-8px);
+  box-shadow: none;
+  outline: none;
+}
+
+.btn-blue-white {
+  background-color: var(--blue-500);
+}
+
+.btn-blue-white:hover,
+.btn-blue-white:focus {
+  color: var(--blue-500);
+  background-color: transparent;
+  border: 1px solid var(--blue-500);
+}
+
+.btn-green-red {
+  background-color: var(--green-500);
+}
+
+.btn-green-red:hover,
+.btn-green-red:focus {
+  color: var(--light);
+  background-color: var(--red-300);
+  border: 1px solid var(--red-300);
+}
+
+.btn-blue-green {
+  background-color: transparent;
+  color: var(--blue-500);
+  border: 1px solid var(--blue-500);
+}
+
+.btn-blue-green:hover,
+.btn-blue-green:focus {
+  color: var(--light);
+  background-color: var(--green-500);
+  border: 1px solid var(--green-500);
+}
+
+.btn-light-blue {
+  color: var(--blue-500);
+  border: 1px solid var(--blue-500);
+}
+
+.btn-light-blue:hover,
+.btn-light-blue:focus {
+  color: var(--light);
+  background-color: var(--blue-500);
+  border: 1px solid var(--blue-500);
+}
+
+.btn-red-green {
+  color: var(--light);
+  background-color: var(--red-500);
+}
+
+.btn-red-green:hover,
+.btn-red-green:focus {
+  color: var(--light);
+  background-color: var(--green-500);
+}
+
+.btn-white-red {
+  color: #003763;
+  background-color: var(--light);
+}
+
+.btn-white-red:hover,
+.btn-white-red:focus {
+  color: var(--light);
+  background-color: var(--red-500);
+}
+
+.btn-white-green {
+  color: var(--blue-500);
+  background-color: var(--light);
+}
+
+.btn-white-green:hover {
+  color: var(--light);
+  background-color: var(--green-500);
+}
+
+.btn-white-blue {
+  color: var(--blue-500);
+  background-color: var(--light);
+  border: 1px solid var(--blue-500);
+}
+
+.btn-white-blue:hover {
+  color: var(--light);
+  background-color: var(--blue-500);
+}
+
+
+
+.btn-button.active {
+  color: var(--light);
+  background-color: var(--blue-500);
+}
+
+.btn-base-small {
+  padding: 8px 20px;
+}
+
+.btn-base-lg {
+  padding: 8px 45px;
+}
+
+.btn-base-big {
+  padding: 8px 50px;
+}
+
+.btn-base-xl {
+  padding: 8px 60px;
+}
+
+.bg-blue {
+  background-color: #fdfdff;
+}
+
+.text-bold {
+  font-family: "Montserrat", sans-serif;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.close {
+  position: absolute;
+  top: 120px;
+  right: 100px;
+  z-index: 10;
+}
+
+
+#block-adrofx-theme-local-tasks ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  max-width: 500px;
+
+}
+
+.close::before {
+  display: inline-block;
+  content: "";
+  width: 30px;
+  height: 30px;
+
+  background-image: url('../home/icons/close.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.messages.success {
+  color: var(--light);
+  padding: 30px;
+  background-color: var(--green-500);
+}
+
+.messages.error {
+  color: var(--light);
+  padding: 30px;
+  background-color: var(--red-300);
+}
+
+.copyright {
+  text-align: center;
+}
+
+.partnership-programs-step__list,
+.partner-program-step__list,
+.partnership-programs__nav-list,
+.footer-contacts,
+.social-media,
+.footer-links,
+.footer-list,
+.footer-terms,
+.footer-company,
+.footer-contacts__item,
+.partner-program-benefits__list,
+.partner-program-calculator__list,
+.partnership-programs-privilege__body-text,
+.partnership-programs-privilege__list,
+.partnership-programs-benefits__body-list,
+.partnership-programs-benefits__list,
+.partnership-programs-features__item-list,
+.partnership-programs-features__list,
+.partnership-programs-plans__list,
+.partnership-programs-award__list,
+.partner-program-ib-benefits__list,
+.partnership-programs-advantages__list,
+.partner-program-advantages__list,
+.cpa-program-benefits__list,
+.cpa-program-why__list,
+.cpa-program-platforms__list,
+.cpa-program-plan__list,
+.cpa-program-advantages__list,
+.partnership-programs__nav-list,
+.grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.partnership-programs__nav-link,
+.btn-base {
+  text-decoration: none;
+}
+
+.partnership-programs__nav-link:hover,
+.btn-base:hover,
+.partnership-programs__nav-link:focus,
+.btn-base:focus {
+  text-decoration: none;
+}
+
+
+.grid.step .grid__item,
+.partner-program-step__list-item,
+.partnership-programs-features__item,
+.partnership-programs-plans__item,
+.partner-program-ib-benefits__list-item,
+.partner-program-advantages__list-item,
+.partnership-programs__nav-link::after,
+.btn-base {
+  transition: 0.3s ease-in;
+}
+
+
+.partnership-programs-step__title,
+.partnership-programs-benefits__header,
+.partnership-programs-features__title,
+.partnership-programs-plans__header {
+  margin-bottom: 50px;
+}
+
+.partnership-programs-header {
+  overflow: hidden;
+  background-color: var(--light);
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+.partnership-programs-header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+
+.partnership-programs__nav-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.partnership-programs__nav-link {
+  display: inline-block;
+  color: var(--dark-400);
+}
+
+.partnership-programs__nav-link {
+  margin: 0 16px;
+  font-size: 0.813rem;
+  position: relative;
+}
+
+.partnership-programs__nav-link:focus,
+.partnership-programs__nav-link:hover {
+  color: var(--dark-500);
+}
+
+.partnership-programs__nav-link::after {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  width: 0%;
+  height: 5px;
+  background-color: var(--blue-500);
+  transform: translateY(41px);
+}
+
+.partnership-programs__nav-link:focus::after,
+.partnership-programs__nav-link:hover::after {
+  width: 100%;
+  outline: none;
+}
+
+.partnership-programs-hero {
+  position: relative;
+  overflow: hidden;
+  background: url("../img/hand-vertical.png"), url("../img/hand-2.png") var(--blue-100);
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom center, top right -350px;
+  margin: 0 10px;
+  border-radius: 0 0 30px 30px;
+  z-index: 1;
+}
+
+.circles::before,
+.circles::after {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  border: 20px solid var(--light);
+  z-index: -1;
+}
+
+
+
+.partnership-programs-hero.circles::before {
+  bottom: -100px;
+  left: -100px;
+}
+
+.partnership-programs-hero.circles::after {
+  bottom: unset;
+  left: unset;
+  top: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  z-index: -1;
+}
+
+
+.partnership-programs-advantages {
+  padding: 40px 30px;
+  border: 1px solid #E3EFFD;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 31px 47px 100px -10px rgba(0, 0, 0, 0.04);
+  margin-top: 50px;
+  border-radius: 12px;
+}
+
+.partnership-programs-advantages__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.partnership-programs-advantages__body-text {
+  font-size: 0.875rem;
+}
+
+.partnership-programs-advantages__item {
+  display: flex;
+}
+
+.partnership-programs-advantages__img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 68px;
+  height: 68px;
+  border-radius: 100%;
+  margin-right: 20px;
+  background-color: #EEF3FE;
+}
+
+.partnership-programs-award__list.owl-carousel-awards {
+  display: none;
+}
+
+.partnership-programs-award__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.partnership-programs-award__item {
+  display: flex;
+}
+
+.partnership-programs-award__title {
+  margin-bottom: 50px;
+}
+
+.partnership-programs-award__body-title {
+  font-size: 0.875rem;
+}
+
+.partnership-programs-award__body-name {
+  flex-grow: 1;
+  font-size: 0.813rem;
+}
+
+.partnership-programs-award__body-text {
+  font-size: 10px;
+  font-weight: 300;
+  line-height: 1.1;
+}
+
+.partnership-programs-award__img-container {
+  margin-right: 10px;
+}
+
+.partnership-programs-award__body {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 270px;
+  border-left: 2px solid var(--blue-500);
+  padding-left: 10px;
+  height: 80px;
+}
+
+.partnership-programs-award__body-title {
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+
+.section-header.plan {
+  margin-bottom: 130px;
+}
+
+.partnership-programs-plans {
+  overflow: hidden;
+  position: relative;
+  border-radius: 30px;
+  z-index: 1;
+}
+
+.partnership-programs-plans__title {
+  margin-bottom: 30px;
+}
+
+.partnership-programs-plans.circles::after {
+  top: -100px;
+  left: 100px;
+  width: 200px;
+  height: 200px;
+  border: 39px solid var(--light);
+}
+
+.partnership-programs-plans.circles::before {
+  bottom: -100px;
+  right: -100px;
+  top: unset;
+  left: unset;
+  width: 300px;
+  height: 300px;
+  border: 10px solid var(--light);
+}
+
+.partnership-programs-plans__link {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  text-transform: capitalize;
+  max-width: 300px;
+  margin-left: auto;
+}
+
+.partnership-programs-plans__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.partnership-programs-plans__item {
+  position: relative;
+  overflow: hidden;
+
+  display: inherit;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+
+  background-color: var(--light);
+  border-radius: 20px;
+  border: 1px solid #E8ECFF;
+  z-index: 1;
+}
+
+.owl-carousel-plans .owl-item.active,
+.partnership-programs-step__item:hover,
+.partnership-programs-plans__item:hover {
+  transform: translateY(-10px);
+  z-index: 2;
+  box-shadow: 37px 40px 70px -10px rgba(9, 19, 69, 0.1);
+}
+
+.partnership-programs-plans__item:not(:last-child) {
+  margin-right: 15px;
+}
+
+.partnership-programs-plans__item-header {
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  background-color: #F8FAFF;
+  padding: 35px;
+}
+
+.partnership-programs-plans__body {
+  padding: 30px 30px 0 30px;
+}
+
+.partnership-programs-plans__item-header svg {
+  margin-right: 40px;
+}
+
+.partnership-programs-plans__body-title {
+  margin-bottom: 8px;
+}
+
+.partnership-programs-plans__body-text {
+  font-size: 0.875rem;
+  color: var(--dark-400);
+  min-height: 150px;
+}
+
+.partnership-programs-plans__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  padding: 0 30px;
+  margin-bottom: 20px;
+}
+
+.partnership-programs-plans__item:last-child .partnership-programs-plans__price {
+  align-items: center;
+}
+
+.partnership-programs-plans__price-per-lot {
+  font-size: 1rem;
+}
+
+.partnership-programs-plans-price-amount-wrapper>.partnership-programs-plans__price-amount {
+  font-size: clamp(1rem, 0.62rem + 1.62vw, 1.88rem);
+}
+
+.partnership-programs-plans__price-cpa,
+.partnership-programs-plans__price-up {
+  text-transform: uppercase;
+}
+
+.partnership-programs-plans__price-cpa,
+.partnership-programs-plans__price-up,
+.partnership-programs-plans__price-amount {
+  color: var(--blue-500);
+}
+
+.partnership-programs-plans__price-amount {
+  font-size: 3.5rem;
+}
+
+.partnership-programs-plans__btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 30px 30px;
+}
+
+.btn-base.plans:focus,
+.btn-base.plans:hover {
+  transform: unset;
+}
+
+.partnership-programs-plans__btn-container .btn-blue-green {
+  margin-right: 10px;
+}
+
+.partnership-programs-benefits__body-img-container svg,
+.partnership-programs-plans__btn-container .btn-blue-green svg {
+  fill: none;
+  stroke: var(--blue-500);
+}
+
+.partnership-programs-plans__btn-container .btn-blue-green.is-active .btn-text {
+  display: inline-block;
+}
+
+.partnership-programs-plans__btn-container .btn-blue-green.is-active svg {
+  display: none;
+}
+
+.partnership-programs-plans__btn-container .btn-blue-green:not(.is-active) .btn-text {
+  display: none;
+}
+
+.partnership-programs-plans__btn-container .btn-blue-green:active,
+.partnership-programs-plans__btn-container .btn-blue-green:focus {
+  background-color: var(--green-500);
+  color: var(--light);
+}
+
+.partnership-programs-plans__btn-container .btn-blue-green:focus svg,
+.partnership-programs-plans__btn-container .btn-blue-green:hover svg {
+  stroke: var(--light);
+}
+
+.card {
+  border-radius: 20px;
+  border: 1px solid #E8ECFF;
+}
+
+.btn-link .card__img-container svg {
+  fill: var(--blue-500);
+}
+
+.btn-link:not(.collapsed) .card__img-container svg {
+  transform: rotate(180deg);
+}
+
+.card-header,
+.card-body {
+  padding: 30px 44px;
+}
+
+.card__img-container {
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--blue-500);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 50%;
+}
+
+.btn-link.collapsed .card__img-container svg {
+  fill: var(--blue-500);
+}
+
+.card-header {
+  background-color: var(--light);
+  border-bottom: 1px solid #E8ECFF;
+}
+
+.btn-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-link,
+.btn-link:hover {
+  color: var(--dark-500);
+  text-decoration: unset;
+}
+
+.btn-link:focus {
+  outline: none;
+  text-decoration: unset;
+  box-shadow: none;
+}
+
+.card-body-title {
+  font-size: clamp(0.88rem, 0.71rem + 0.69vw, 1.25rem);
+  margin-bottom: 1em;
+}
+
+
+
+.partnership-programs-features__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.partnership-programs-features__item-list-item {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  align-items: center;
+  gap: 10px;
+}
+
+.partnership-programs-features__item {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 363px;
+  border: 2px solid #E8ECFF;
+  background-color: var(--light);
+  border-radius: 20px;
+  z-index: 1;
+}
+
+.partnership-programs-features__item:hover {
+  transform: translateY(-8px);
+  box-shadow: -27px 24px 50px -10px rgba(9, 19, 69, 0.150);
+  z-index: 2;
+}
+
+.partnership-programs-features__item-body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 160px;
+  background-color: var(--blue-100);
+  z-index: 1;
+}
+
+.partnership-programs-features__item-body img {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+}
+
+.partnership-programs-features__item-header {
+  padding: 20px 20px 50px;
+  flex-grow: 1;
+}
+
+.partnership-programs-features__item:nth-child(4):hover,
+.partnership-programs-features__item:first-child:hover {
+  box-shadow: 27px 24px 50px -10px rgba(9, 19, 69, 0.150);
+}
+
+.partnership-programs-features__item-list-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.partnership-programs-features__item-title {
+  font-size: clamp(0.88rem, 0.71rem + 0.69vw, 1.25rem);
+  margin-bottom: 20px;
+}
+
+.partnership-programs-benefits__body-img-container,
+.partnership-programs-features__item-img-container {
+  width: 26px;
+  height: 26px;
+  border: 1px solid var(--blue-500);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 10px;
+  transform: rotate(270deg);
+}
+
+.partnership-programs-features__item-img-container svg {
+  stroke: var(--blue-500);
+  fill: none;
+}
+
+.partnership-programs-features__item-list-text {
+  font-size: 0.813rem;
+  line-height: 20px;
+}
+
+.partnership-programs-features__item-body::before,
+.partnership-programs-features__item-body::after {
+  position: absolute;
+  bottom: -50px;
+  right: -20px;
+  display: inline-block;
+  content: "";
+  width: 172px;
+  height: 172px;
+  border-radius: 50%;
+  border: 30px solid rgb(255, 255, 255);
+  z-index: -1;
+}
+
+.partnership-programs-features__item-body::before {
+  top: -30px;
+  left: -30px;
+  border: 10px solid rgb(255, 255, 255);
+}
+
+.partnership-programs-performance {
+  position: relative;
+  overflow: hidden;
+  background: url("../img/performance-bg.png"), var(--blue-100);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 1883px;
+  border-radius: 30px;
+  margin: 10px 10px 0 10px;
+  z-index: 1;
+}
+
+.partnership-programs-performance.circles::after {
+  bottom: -20px;
+  left: -20px;
+  width: 172px;
+  height: 172px;
+  border: 30px solid var(--light);
+}
+
+.partnership-programs-performance.circles::before {
+  top: -20px;
+  right: -20px;
+  left: unset;
+  width: 100px;
+  height: 100px;
+  border: 10px solid var(--light);
+}
+
+
+.partnership-programs-benefits {
+  position: relative;
+  background: var(--light);
+}
+
+.partnership-programs-benefits__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.partnership-programs-benefits__item {
+  position: relative;
+  overflow: hidden;
+  flex: 1;
+  border-radius: 20px;
+  box-shadow: 37px 40px 70px -10px rgba(9, 19, 69, 0.1);
+}
+
+.partnership-programs-benefits__item:not(:last-child) {
+  margin-right: 14px;
+}
+
+
+.partnership-programs-benefits__body-item {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  gap: 10px;
+}
+
+.partnership-programs-benefits__body-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.partnership-programs-benefits__body-text {
+  font-size: 0.875rem;
+}
+
+.partnership-programs-benefits__body {
+  background-color: var(--light);
+  padding: 20px;
+}
+
+.partnership-programs-benefits__item {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 392px auto;
+}
+
+.partnership-programs-benefits__item-header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--blue-800);
+}
+
+.partnership-programs-benefits__item-title {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  color: var(--light);
+}
+
+
+
+.partnership-programs-privilege__item {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  align-items: center;
+  gap: 20px;
+}
+
+.partnership-programs-privilege__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+}
+
+.partnership-programs-privilege__img-container {
+  flex: 1;
+  width: 84px;
+  height: 84px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #EEF3FE;
+}
+
+.partnership-programs-banner {
+  position: relative;
+  background-color: var(--light);
+}
+
+
+.partnership-programs-banner__header-text,
+.partnership-programs-banner__header-title {
+  margin-bottom: 20px;
+}
+
+.partnership-programs-banner__header-text {
+  color: var(--light);
+}
+
+.partnership-programs-banner__header-title {
+  font-size: clamp(1rem, 0.62rem + 1.62vw, 1.88rem);
+}
+
+.partnership-programs-banner__wrapper {
+  background: url("../img/partner-banner.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 10px;
+  padding: 150px 50px 50px;
+  color: var(--light);
+  box-shadow: 22px 36px 100px -30px rgba(9, 19, 69, 0.2);
+}
+
+.partnership-programs-step {
+  position: relative;
+  overflow: hidden;
+  margin: 0 10px 10px 10px;
+  border-radius: 30px;
+  background-color: var(--blue-100);
+  z-index: 1;
+}
+
+.partnership-programs-step.circles::after {
+  top: -100px;
+  left: -100px;
+  width: 329px;
+  height: 329px;
+}
+
+.partnership-programs-step.circles::before {
+  bottom: -150px;
+  right: -150px;
+  top: unset;
+  left: unset;
+  border: 10px solid var(--light);
+}
+
+.partnership-programs-step__list {
+  display: flex;
+}
+
+.partnership-programs-step__item {
+  position: relative;
+  text-align: center;
+  background-color: var(--light);
+  border-radius: 10px;
+  padding: 30px;
+  z-index: 1;
+  flex: 1;
+}
+
+.partnership-programs-step__item:not(:last-child) {
+  margin-right: 17px;
+}
+
+.partnership-programs-step__img-container {
+  position: relative;
+}
+
+.partnership-programs-step__img-container-title {
+  position: absolute;
+  top: 50px;
+  left: 0;
+}
+
+.partnership-programs-step__img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.partnership-programs-step__progress {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 138px;
+  height: 138px;
+  margin-bottom: 30px;
+}
+
+.partnership-programs-step__progress svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  width: 100%;
+  height: 100%;
+}
+
+.partnership-programs-step__progress svg {
+  fill: transparent;
+  stroke-width: 5px;
+  stroke: var(--green-500);
+  stroke-dasharray: 428;
+  stroke-dashoffset: 428;
+  stroke-linecap: round;
+}
+
+@-webkit-keyframes progress {
+  to {
+    stroke-dashoffset: var(--target);
+  }
+}
+
+@keyframes progress {
+  to {
+    stroke-dashoffset: var(--target);
+  }
+}
+
+.owl-carousel-plans .owl-item.active {
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.owl-carousel-plans.owl-carousel .owl-stage-outer {
+  overflow: unset;
+}
+
+.owl-carousel-features .owl-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.owl-dots .owl-dot span {
+  display: block;
+  width: 10px;
+  height: 10px;
+
+  background: #869791;
+  border-radius: 20px;
+  margin: 5px 7px;
+  opacity: 1;
+}
+
+
+.owl-dots .owl-dot:focus,
+.owl-theme .owl-dots .owl-dot:focus {
+  outline: 2px solid var(--blue-500);
+  border-radius: 100px;
+}
+
+
+.owl-dots .owl-dot.active span,
+.owl-dots .owl-dot:hover span,
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  background: var(--blue-800);
+}
+
+.partnership-programs-footer {
+  color: var(--light);
+  background-color: var(--dark-500);
+}
+
+.footer-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+
+.footer-title {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+
+.footer-links__link {
+  display: block;
+  font-size: 0.813rem;
+  color: hsla(0deg, 0%, 100%, 0.5);
+  transition: all 0.3s ease-in;
+}
+
+.footer-links__link:hover,
+.footer-links__link:focus {
+  color: var(--blue-700);
+}
+
+.social-media {
+  display: flex;
+  justify-content: space-between;
+  max-width: 240px;
+  margin-top: 20px;
+}
+
+.social-media__link svg {
+  fill: #6b6b6b;
+}
+
+.social-media__link svg,
+.footer-contacts__link svg {
+  transition: fill 0.3s ease-in;
+}
+
+.social-media__link:hover svg {
+  fill: var(--light);
+}
+
+.footer-contacts__link {
+  fill: var(--light);
+  color: var(--light);
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-contacts__link:hover {
+  color: var(--blue-700);
+  transition: all 0.3s ease-in;
+}
+
+.footer-contacts__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.footer-text {
+  font-size: 0.813rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-contacts__link:hover svg {
+  fill: var(--blue-700);
+}
+
+.footer-company__item {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.footer-separator {
+  background-color: #939393;
+}
+
+.footer-terms {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-terms__link {
+  color: var(--light);
+}
+
+.footer-hr {
+  border-top: 1px solid rgba(147, 147, 147, 0.253);
+  padding: 40px 0;
+}
+
+.footer-terms.footer-hr {
+  border-bottom: 1px solid rgba(147, 147, 147, 0.253);
+  border-top: unset;
+}
+
+.footer-terms__link:hover {
+  color: var(--blue-700);
+}
+
+.menu {
+  display: none;
+  position: fixed;
+  background: rgba(35, 35, 35, 0.8431372549);
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  transition: all 0.3s ease-in;
+}
+
+.mobile-menu {
+  padding: 30px;
+  position: absolute;
+  background: var(--light);
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+}
+
+.menu.is-active {
+  display: block;
+}
+
+@-webkit-keyframes slideLeft {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.menu.is-active .mobile-menu {
+  -webkit-animation-name: slideLeft;
+  animation-name: slideLeft;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+}
+
+.mobile-menu__buttons {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.mobil-menu__options {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.btn-blue-red {
+  background-color: var(--blue-500);
+}
+
+.btn-blue-red:hover,
+.btn-blue-red:focus {
+  color: var(--light);
+  background-color: var(--red-300);
+  border: 1px solid var(--red-300);
+}
+
+.btn-base-small {
+  padding: 10px 20px;
+}
+
+.btn-base-lg {
+  padding: 10px 40px;
+}
+
+.light-blue {
+  background-color: #F9FAFF;
+}
+
+
+
+.btn-base {
+  text-decoration: none;
+}
+
+.btn-base:hover,
+.btn-base:focus {
+  text-decoration: none;
+}
+
+.owl-carousel-price.owl-theme .owl-dots .owl-dot span,
+.cpa-program-benefits__item,
+.cpa-program-plan__item,
+.btn-base {
+  transition: 0.3s ease-in;
+}
+
+.cpa-program-benefits__body-text,
+.cpa-program-why__section-text,
+.cpa-program-plan__item-text,
+.cpa-program-header__description {
+  color: var(--dark-400);
+}
+
+.cpa-program-hero {
+  position: relative;
+  z-index: 1;
+}
+
+.circles::after,
+.circles::before {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  top: -100px;
+  right: -100px;
+  width: 288px;
+  height: 288px;
+  border-radius: 50%;
+  border: 13px solid #FFFFFF;
+  z-index: -1;
+}
+
+.circles::after {
+  top: unset;
+  right: unset;
+  left: -30px;
+  bottom: -10px;
+  width: 150px;
+  height: 150px;
+  border: 30px solid #FFFFFF;
+}
+
+
+.section-header.hero-revenue .section-header-sub,
+.partnership-programs-hero__header-subscription,
+.cpa-program-hero-sub {
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  font-weight: 700;
+  color: var(--red-500);
+  background-color: #F8F1F5;
+  border-radius: 10px;
+  margin-bottom: 17px;
+}
+
+
+.cpa-program-header.hero .cpa-program-header__description {
+  max-width: 450px;
+}
+
+.cpa-program-hero__img-container {
+  position: relative;
+}
+
+.cpa-program-feedback,
+.cpa-program-icons {
+  position: absolute;
+  z-index: 2;
+}
+
+.cpa-program-feedback {
+  bottom: -50px;
+  right: -10px;
+  z-index: 1;
+}
+
+.cpa-program-icons {
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.cpa-program-advantages__list-container {
+  position: relative;
+  top: -50px;
+  border-radius: 8px;
+  padding: 40px 0;
+  background-color: var(--light);
+  box-shadow: 9px 30px 50px -10px rgba(9, 19, 69, 0.04);
+  z-index: 2;
+}
+
+.cpa-program-advantages__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-between;
+  justify-items: center;
+  gap: 10px;
+}
+
+.cpa-program-advantages__item {
+  display: flex;
+  align-items: center;
+}
+
+.cpa-program-advantages__img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background-color: #EEF3FE;
+  margin-right: 10px;
+}
+
+.cpa-program-advantages__body-text {
+  font-size: 0.875rem;
+}
+
+.section-header.profit {
+  margin-bottom: 0;
+}
+
+.mb-130 {
+  margin-bottom: 130px;
+}
+
+.profit-icons {
+  position: absolute;
+  top: 30px;
+  left: 38px;
+}
+
+.cpa-program-profit__title {
+  font-size: clamp(1rem, 0.89rem + 0.46vw, 1.25rem);
+}
+
+.cpa-program-profit__img-container,
+.cpa-program-profit__text,
+.cpa-program-profit__title {
+  margin-bottom: 13px;
+}
+
+.cpa-program-profit__img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.cpa-program-profit__img-container.blue {
+  background-color: #D4ECFF;
+}
+
+.cpa-program-profit__img-container.green {
+  background-color: #DAFEF3;
+}
+
+.cpa-program-plan.circles::after {
+  bottom: unset;
+  top: 430px;
+  left: -40px;
+  z-index: -1;
+}
+
+.cpa-program-plan.circles::before {
+  bottom: -14px;
+  top: unset;
+  right: -110px;
+  z-index: 1;
+}
+
+.cpa-program-plan {
+  position: relative;
+  z-index: 3;
+}
+
+.cpa-program-plan__list {
+  display: flex;
+}
+
+.cpa-program-plan__list .owl-stage-outer .owl-dots button:focus {
+  outline: var(--blue-500);
+}
+
+.cpa-program-plan__item {
+  overflow: hidden;
+  position: relative;
+  flex: 1;
+  background-color: var(--light);
+  box-shadow: 50px 54px 50px -10px rgba(9, 19, 69, 0.06);
+  border-radius: 17px;
+}
+
+.cpa-program-plan__item:hover {
+  transform: translateY(-8px);
+}
+
+.cpa-program-plan__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.cpa-program-plan__item.premium::before,
+.cpa-program-plan__item.standard::before {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 8px;
+  background-color: var(--blue-500);
+}
+
+.cpa-program-plan__item.premium::before {
+  background-color: #6F13FB;
+}
+
+.cpa-program-plan__item-header {
+  background-color: #FDFDFD;
+  padding: 26px 40px;
+  height: 180px;
+}
+
+.cpa-program-plan-item-body-note {
+  display: flex;
+  justify-content: center;
+  color: var(--blue-500);
+}
+
+.cpa-program-plan__item-title {
+  font-size: 24px;
+  margin-bottom: 17px;
+  max-width: 320px;
+}
+
+.cpa-program-plan__item-text {
+  max-width: 360px;
+  font-size: 0.875rem;
+}
+
+.cpa-program-plan-item-body-wrapper:first-child {
+  margin-bottom: 50px;
+}
+
+.cpa-program-plan__item-body-text::before {
+  display: inline-block;
+  vertical-align: middle;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 10px;
+}
+
+.cpa-program-plan__item-body-text.deposit::before {
+  background-image: url("../icons/icon-deposit.svg");
+}
+
+.cpa-program-plan__item-body-text.shield::before {
+  background-image: url("../icons/icon-shield.svg");
+}
+
+.cpa-program-plan__item-body-text.payment::before {
+  background-image: url("../icons/icon-payment.svg");
+}
+
+.cpa-program-plan__item-body-text {
+  font-family: "Montserrat-regular";
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.cpa-program-plan__item-body-title,
+.cpa-program-plan__item-body-price {
+  font-size: 1.5rem;
+}
+
+.cpa-program-plan__item-body {
+  padding: 40px;
+}
+
+.cpa-program-plan__item-body-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 46px 0;
+  border-bottom: 1px solid #D9D9D9;
+}
+
+.cpa-program-plan__item-body-row:nth-child(3) {
+  border-bottom: unset;
+}
+
+.cpa-program-plan__item-body.premium .cpa-program-plan__item-body-row {
+  padding: 20px 0;
+}
+
+.cpa-program-plan-bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 65%;
+  width: 100%;
+  background-color: #F9FAFF;
+  z-index: -1;
+}
+
+.cpa-program-header.plan {
+  margin-bottom: 130px;
+}
+
+.cpa-program-plan-title {
+  position: absolute;
+  bottom: -300px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  color: rgba(248, 248, 248, 0.36);
+  font-size: clamp(3.13rem, -2.32rem + 23.24vw, 15.69rem);
+}
+
+.cpa-program-plan-text {
+  position: relative;
+  z-index: 2;
+}
+
+.cpa-program-platforms__wrapper {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  padding: 50px 30px;
+  border: 1px solid #B5B5B5;
+  border-radius: 17px;
+}
+
+.cpa-program-platforms__title {
+  font-size: clamp(1rem, 0.62rem + 1.62vw, 1.88rem);
+}
+
+.cpa-program-platforms__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+.cpa-program-why__list {
+  position: relative;
+}
+
+.cpa-program-why__section {
+  height: 80vh;
+  margin-top: 100px;
+}
+
+.cpa-program-why__item:last-child .cpa-program-why__section {
+  height: 60vh;
+}
+
+.section-header.why .section-header__title {
+  font-size: var(--font-size-50);
+}
+
+.cpa-program-why__section-sub {
+  text-transform: capitalize;
+  color: var(--blue-500);
+}
+
+
+.cpa-program-why__img-container {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 150px;
+  height: 60vh;
+}
+
+.cpa-program-why__img-container img {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: 0;
+  bottom: 0;
+  z-index: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cpa-program-material {
+  position: relative;
+}
+
+.cpa-program-material.circles::after {
+  top: 0;
+  left: -50px;
+}
+
+.cpa-program-material.circles::before {
+  bottom: -20px;
+  right: -40px;
+  top: unset;
+  width: 192px;
+  height: 192px;
+  z-index: 1;
+}
+
+.section-header.material {
+  position: relative;
+  z-index: 2;
+}
+
+.cpa-program-material-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  z-index: -1;
+}
+
+.cpa-program-benefits {
+  position: relative;
+  background-color: var(--light);
+}
+
+.cpa-program-benefits__list {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  z-index: 2;
+}
+
+.cpa-program-benefits__item {
+  position: relative;
+  overflow: hidden;
+  padding: 37px 25px;
+  background-color: var(--light);
+  box-shadow: 30px 28px 50px -10px rgba(9, 19, 69, 0.05);
+  border-radius: 17px;
+  z-index: 1;
+}
+
+.cpa-program-benefits__item:hover {
+  transform: translateY(-8px);
+  z-index: 2;
+}
+
+.cpa-program-benefits__item::before {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  height: 100%;
+  width: 8px;
+  background-color: var(--blue-500);
+}
+
+.cpa-program-benefits__body-title {
+  font-size: 1.13rem;
+}
+
+.cpa-program-benefits__body-text {
+  font-size: 0.875rem;
+}
+
+.cpa-program-benefits__img-container {
+  margin-bottom: 50px;
+}
+
+.cpa-program-benefits {
+  position: relative;
+  z-index: 1;
+}
+
+.cpa-program-benefits-bg {
+  position: absolute;
+  bottom: -250px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 50%;
+  border-radius: 13px;
+  z-index: -1;
+}
+
+.owl-carousel-benefits .owl-stage-outer,
+.owl-carousel-price .owl-stage-outer {
+  overflow: unset;
+}
+
+.owl-carousel-benefits.owl-theme .owl-nav.disabled+.owl-dot .owl-carousel-price.owl-theme .owl-nav.disabled+.owl-dots {
+  margin-top: 50px;
+}
+
+.owl-carousel-price.owl-theme .owl-dots .owl-dot.active span {
+  width: 169px;
+  height: 4px;
+  border-radius: 5px;
+  background-color: var(--blue-500);
+}
+
+.owl-carousel-why.owl-theme .owl-dots .owl-dot.active span,
+.owl-carousel-why.owl-theme .owl-dots .owl-dot:hover span,
+.owl-carousel-benefits.owl-theme .owl-dots .owl-dot.active span,
+.owl-carousel-benefits.owl-theme .owl-dots .owl-dot:hover span {
+  background-color: var(--blue-500);
+}
+
+.owl-carousel-price.owl-theme .owl-dots {
+  text-align: left;
+  margin-left: 50px;
+}
+
+.owl-carousel-price.owl-theme .owl-dots .owl-dot span {
+  width: 22px;
+  height: 4px;
+}
+
+.splide__pagination--ttb {
+  right: 0;
+  top: -50%;
+}
+
+.splide__pagination__page.is-active {
+  background-color: var(--blue-500);
+}
+
+
+
+
+
+.partner-program-step__header-sub,
+.section-header__sub {
+  display: inline-block;
+  text-transform: capitalize;
+  color: var(--blue-700);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.gr-circles {
+  position: absolute;
+  top: -450px;
+  left: -490px;
+  width: 1047px;
+  height: 1047px;
+  background: url("../img/circles.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: -1;
+}
+
+.gr-circles-icons::after,
+.gr-circles-icons::before {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  width: 32px;
+  height: 32px;
+  border: 1px solid #1b8cff;
+  border-radius: 50%;
+  box-shadow: 7px 12px 30px -10px rgba(65, 65, 65, 0.4);
+}
+
+.gr-circles-icons.top::before {
+  top: 490px;
+  right: 180px;
+  background: url("../icons/search.svg") var(--light);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.gr-circles-icons.bottom::after {
+  bottom: 0;
+  right: 450px;
+  background: url("../icons/cloud.svg") var(--light);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+.gr-circles.hero-revenue {
+  top: -1010px;
+}
+
+.partner-program-hero {
+  position: relative;
+  z-index: 2;
+}
+
+.section-header__title.hero-revenue {
+  font-size: clamp(1.25rem, 0.44rem + 3.47vw, 3.13rem);
+  line-height: 1.1;
+}
+
+.section-header__desc.hero-revenue {
+  font-size: clamp(0.88rem, 0.71rem + 0.69vw, 1.25rem);
+  margin-bottom: 38px;
+}
+
+.section-header__sub.hero-revenue {
+  color: var(--green-500);
+  text-transform: capitalize;
+  padding: 8px 30px;
+  background: #d8f6ed;
+  border-radius: 7px;
+}
+
+.partner-program-hero__img-container .revenue-icons {
+  position: absolute;
+  bottom: 80px;
+  left: 0;
+}
+
+.gr-circles.benefits {
+  top: -450px;
+  left: unset;
+  right: -200px;
+  width: 720px;
+  height: 720px;
+}
+
+.gr-circles.benefits .gr-circles-icons.top::before {
+  top: 100px;
+  right: 80px;
+  background: url("../icons/headphone.svg") var(--light);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.gr-circles.benefits .gr-circles-icons.bottom::after {
+  bottom: 150px;
+  top: unset;
+  background: url("../icons/settings.svg") var(--light);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.partner-program-benefits {
+  padding-top: 70px;
+}
+
+.partner-program-benefits-wrapper {
+  background-color: #f9faff;
+}
+
+.partner-program-benefits-wrapper,
+.partner-program-benefits__list-item {
+  border-radius: 20px;
+}
+
+.partner-program-benefits__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 7px;
+  padding: 10px;
+}
+
+.partner-program-benefits__list-item {
+  padding: 30px 20px;
+  background-color: var(--light);
+}
+
+.partner-program-benefits__list-item-header {
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: var(--blue-500);
+}
+
+.partner-program-benefits__list-item-header-value {
+  font-size: clamp(3.13rem, 2.58rem + 2.31vw, 4.38rem);
+}
+
+.partner-program-benefits__list-item-header-up {
+  font-size: 18px;
+}
+
+.partner-program-benefits__list-item-body-title {
+  margin-bottom: 7px;
+}
+
+.partner-program-benefits__list-item-body-title,
+.partner-program-benefits__list-item-body-text {
+  font-size: 0.875rem;
+  line-height: 24px;
+}
+
+.partner-program-ib {
+  padding-top: 150px;
+  padding-bottom: 70px;
+}
+
+.ib-icons {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.section-header__title.ib {
+  max-width: 350px;
+}
+
+.partner-program-ib {
+  position: relative;
+}
+
+.gr-circles.ib {
+  top: unset;
+  left: -170px;
+  bottom: 0;
+  width: 729px;
+  height: 729px;
+}
+
+.gr-circles.ib .gr-circles-icons.top::before {
+  left: 130px;
+  right: unset;
+  top: 300px;
+  background: url("../icons/commissions.svg") var(--light);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.gr-circles.ib .gr-circles-icons.bottom::after {
+  background: url("../icons/discount.svg") var(--light);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.partner-program-calculator {
+  overflow: hidden;
+}
+
+.partner-program-calculator__list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: center;
+  border: 1px solid #dbdbdb;
+}
+
+.partner-program-calculator__list-item-checkbox {
+  opacity: 0;
+}
+
+.partner-program-calculator__list-item-label {
+  display: flex;
+  align-items: center;
+  margin-bottom: unset;
+  cursor: pointer;
+  padding: 25px;
+  height: 100%;
+}
+
+.partner-program-calculator__list-item-label.checked {
+  background-color: var(--blue-700);
+  color: var(--light);
+}
+
+.partner-program-calculator__list-item-title {
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+.partner-program-calculator__list-item {
+  height: 100%;
+  width: 100%;
+}
+
+.partner-program-calculator__list-item:hover {
+  background-color: #ebebeb;
+}
+
+.partner-program-calculator__list-item:not(:nth-child(3n)) {
+  border-right: 1px solid #dbdbdb;
+}
+
+.partner-program-calculator-title {
+  font-weight: 700;
+  margin-bottom: 28px;
+}
+
+.partner-program-calculator-wrapper {
+  margin-bottom: 150px;
+}
+
+.range-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+.range-field {
+  position: relative;
+}
+
+.range {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 80px;
+}
+
+.range-indicator {
+  position: absolute;
+  top: -90px;
+  left: 5%;
+  width: 116px;
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background: #010101;
+  margin-left: -40px;
+  box-shadow: 9px 13px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.1s ease-in-out;
+}
+
+.range-indicator::after {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  bottom: -10px;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 25px;
+  background: #010101;
+  transform: rotate(134deg);
+  margin-left: -8px;
+}
+
+.range-input {
+  -webkit-appearance: none;
+  width: 100%;
+  margin-top: 24px;
+  height: 5px;
+  background: transparent;
+}
+
+.track {
+  position: absolute;
+  top: 24px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #edf0ff;
+  z-index: -2;
+}
+
+.progress {
+  position: absolute;
+  top: 24px;
+  left: 0;
+  width: 5%;
+  height: 5px;
+  border-radius: unset;
+  background-color: #42a5f5;
+  z-index: -1;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  height: 5px;
+  background: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  margin-top: -15px;
+  height: 35px;
+  width: 35px;
+  border-radius: 100%;
+  background: #42a5f5;
+  border: 2px solid #ffffff;
+  box-shadow: 10px 10px 20px rgba(156, 156, 156, 0.2);
+}
+
+.range-index {
+  display: flex;
+  margin-top: 9px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.range-result {
+  display: grid;
+  grid-template-columns: auto 350px auto;
+  -moz-column-gap: 100px;
+  column-gap: 100px;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  border: 1px solid #dbdbdb;
+  padding: 18px 50px;
+  margin-bottom: 25px;
+}
+
+.range-result__desc {
+  color: #979797;
+}
+
+.range-result__text {
+  font-size: clamp(3.13rem, 2.58rem + 2.31vw, 4.38rem);
+}
+
+.range-result__number .range-result__text {
+  color: var(--green-500);
+}
+
+.range-note__text {
+  color: var(--blue-700);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.partner-program-advantages {
+  position: relative;
+  z-index: 2;
+}
+
+.gr-circles.advantages {
+  width: 700px;
+  height: 700px;
+
+  top: -860px;
+  right: -250px;
+  left: unset;
+ 
+}
+
+.gr-circles.advantages .gr-circles-icons.bottom::after,
+.gr-circles.advantages .gr-circles-icons.top::before {
+  content: unset;
+}
+
+.partner-program-advantages__header {
+  margin-bottom: 50px;
+}
+
+
+
+.section-header.calculator .section-header-sub,
+.section-header.ib-benefits .section-header-sub,
+.section-header.copy .section-header-sub,
+.section-header.ib .section-header-sub,
+.partner-program-advantages__header-sub {
+  font-weight: 700;
+  display: inline-block;
+  font-size: 0.875rem;
+  text-transform: capitalize;
+  color: var(--blue-700);
+  margin-bottom: 15px;
+}
+
+.partner-program-advantages__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 50px;
+}
+
+.partner-program-advantages__list-item {
+  overflow: hidden;
+  position: relative;
+  padding: 40px 20px;
+  background-color: var(--light);
+  box-shadow: 30px 28px 50px -20px rgba(158, 158, 158, 0.1);
+  border-radius: 10px;
+}
+
+.partner-program-advantages__list-item:hover {
+  transform: translateY(-8px);
+}
+
+.partner-program-advantages__list-item.theme::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  content: "";
+  width: 5px;
+  height: 100%;
+}
+
+.partner-program-advantages__list-item.black::before {
+  background-color: var(--dark-500);
+}
+
+.partner-program-advantages__list-item.green::before {
+  background-color: var(--green-500);
+}
+
+.partner-program-advantages__list-item.purple::before {
+  background-color: #9747ff;
+}
+
+.partner-program-advantages__list-item.cyan::before {
+  background-color: #57f4eb;
+}
+
+.partner-program-advantages__list-item.orange::before {
+  background-color: #f9a04e;
+}
+
+.partner-program-advantages__list-item.blue::before {
+  background-color: var(--blue-500);
+}
+
+.partner-program-advantages__list-item-icon,
+.partner-program-advantages__list-item-body-title {
+  margin-bottom: 16px;
+}
+
+.partner-program-advantages__list-item-body-title {
+  font-size: 1rem;
+}
+
+.partner-program-advantages__list-item-body-text {
+  font-size: 0.875rem;
+  line-height: 24px;
+}
+
+.owl-carousel-advantages .owl-stage-outer {
+  overflow: unset;
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  background: var(--blue-500);
+}
+
+.partner-program-advantages__list-item {
+  display: grid;
+  grid-template-rows: 57px 130px;
+}
+
+.copy-trade-icons {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.partner-program-ib-benefits {
+  position: relative;
+}
+
+.section-header.ib-benefits {
+  margin-bottom: 0;
+}
+
+.ib-benefits-wrapper {
+  display: grid;
+  grid-template-columns: 500px 1fr;
+  align-items: flex-end;
+  -moz-column-gap: 60px;
+  column-gap: 60px;
+  margin-bottom: 10px;
+}
+
+.partner-program-ib-benefits__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.partner-program-ib-benefits__list-item {
+  background-color: var(--light);
+  flex: 1;
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px 20px;
+  border: 1px solid #edf0ff;
+  border-radius: 10px;
+}
+
+.partner-program-ib-benefits__list-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 30px 28px 50px rgba(9, 19, 69, 0.08);
+}
+
+.partner-program-ib-benefits__list-item svg {
+  margin-bottom: 20px;
+}
+
+.partner-program-ib-benefits__list-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.partner-program-ib-benefits-list-item-text {
+  font-size: 0.875rem;
+  line-height: 21px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.partner-program-step {
+  position: relative;
+  background-color: var(--light);
+}
+
+.partner-program-step__headers {
+  margin-bottom: 50px;
+}
+
+.partner-program-step__header-title {
+  font-size: clamp(1rem, 0.62rem + 1.62vw, 1.88rem);
+}
+
+.gr-circles.step {
+  top: unset;
+  left: unset;
+  width: 500px;
+  height: 500px;
+  bottom: -120px;
+  right: -150px;
+  z-index: 1;
+}
+
+.gr-circles.step .gr-circles-icons.top::before {
+  top: 10px;
+  right: 120px;
+  background-image: url('../icons/wallet.svg');
+}
+
+.gr-circles.step .gr-circles-icons.bottom::after {
+  bottom: 80px;
+  right: 50%;
+  background-image: url('../icons/dollar.svg');
+}
+
+
+.grid.step.mobile {
+  display: none;
+}
+
+.grid.step {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.grid.step.revenue .grid__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid.step.revenue .step__body {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 165px;
+  justify-content: unset;
+  align-items: flex-start;
+}
+
+.grid.step.revenue .step__text {
+  flex-grow: 1;
+}
+
+.grid.step .grid__item {
+  overflow: hidden;
+  position: relative;
+  flex: 1;
+  padding: 24px;
+  background-color: var(--light);
+  box-shadow: 30px 28px 50px rgba(9, 19, 69, 0.05);
+  border-radius: 17px;
+}
+
+.grid.step .grid__item:hover {
+  transform: translateY(-8px);
+}
+
+.grid.step .grid__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.step__title {
+  font-size: clamp(0.88rem, 0.71rem + 0.69vw, 1.25rem);
+}
+
+.step__title,
+.step__text {
+  margin-bottom: 17px;
+}
+
+.grid.step .grid__item.theme::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  content: "";
+  width: 100%;
+  height: 5px;
+}
+
+.grid.step .grid__item.orange::before {
+  background-color: #f9a04e;
+}
+
+.grid.step .grid__item {
+  position: relative;
+}
+
+.text {
+  position: absolute;
+  bottom: 0;
+
+  font-size: var(--font-size-50);
+  text-transform: uppercase;
+  font-family: "Montserrat";
+}
+
+.text.earn {
+  right: 0;
+}
+
+
+.grid.step .grid__item.green::before {
+  background-color: var(--green-500);
+}
+
+.grid.step .grid__item.purple::before {
+  background-color: #9747ff;
+}
+
+.step__img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.step__img-container.partner {
+  display: flex;
+  flex-direction: row;
+}
+
+.step-img-container-title {
+  position: relative;
+  left: -50px;
+  font-size: 40px;
+}
+
+.step__progress {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 138px;
+  height: 138px;
+  margin-bottom: 30px;
+}
+
+.step__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  width: 100%;
+  height: 100%;
+}
+
+.step__icon {
+  fill: transparent;
+  stroke-width: 5px;
+  stroke: var(--green-500);
+  stroke-dasharray: 428;
+  stroke-dashoffset: 428;
+  stroke-linecap: round;
+}
+
+@-webkit-keyframes progress {
+  to {
+    stroke-dashoffset: var(--target);
+  }
+}
+
+@keyframes progress {
+  to {
+    stroke-dashoffset: var(--target);
+  }
+}
+
+
+
+.step-text__title {
+  font-size: 3.125rem;
+  text-transform: uppercase;
+  color: rgb(244, 244, 244);
+  text-align: center;
+}
+
+@media (min-width: 1440.98px) {
+  .partnership-programs-hero {
+    background: url("../img/had-1920.png"), url("../img/hand-2-90deg.png"), var(--blue-100);
+    background-repeat: no-repeat, no-repeat;
+    background-position: center bottom -30px, center top -50px;
+    background-size: contain, 1920px;
+  }
+}
+
+@media (max-width: 1198px) {
+  .section-header.hero .section-header__title {
+    font-size: 45px;
+  }
+
+  .section-header.hero-revenue .section-header-sub {
+    font-size: 0.688rem;
+  }
+
+  .section-header.partner-hero .section-header__title {
+    font-size: 2.7rem;
+  }
+
+  .cpa-program-advantages__img-container {
+    width: 39px;
+    height: 39px;
+  }
+
+  .cpa-program-advantages__img-container svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .cpa-program-benefits__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cpa-program-benefits-bg {
+    bottom: -300px;
+  }
+
+  .cpa-program-plan-title {
+    font-size: 180px;
+    bottom: -200px;
+  }
+
+  .cpa-program-material {
+    padding: 150px 0 0 0;
+  }
+
+  .partnership-programs-advantages__item {
+    flex-direction: column;
+  }
+
+  .partnership-programs-advantages__img-container {
+    margin-right: unset;
+    margin-bottom: 20px;
+  }
+
+  .partnership-programs-hero__header {
+    margin-top: unset;
+  }
+
+  .partnership-programs-hero {
+    background-position: right -400px bottom -50px;
+  }
+
+  .partnership-programs-plans__body-title {
+    font-size: 0.875rem;
+  }
+
+  .partnership-programs-plans__price-amount {
+    font-size: 2.5rem;
+  }
+
+  .partnership-programs-plans__item-header {
+    padding: 20px;
+  }
+
+  .partnership-programs-plans__item-header svg {
+    margin-right: 20px;
+  }
+
+  .partnership-programs-plans__body-text {
+    font-size: 0.875rem;
+  }
+
+  .partnership-programs-plans__item:not(:last-child) {
+    margin-right: 7px;
+  }
+
+  .partnership-programs-features__item-header {
+    padding: 30px;
+  }
+
+  .partnership-programs-features__item-title {
+    font-size: 1rem;
+  }
+
+  .partnership-programs-hero {
+    background: url("../img/hand-2.png"), var(--blue-100);
+    background-repeat: no-repeat, no-repeat;
+    background-position: top right -350px;
+    background-size: 80%;
+  }
+
+  .partnership-programs-performance {
+    background-size: 1628px;
+  }
+
+  .partnership-programs-hero.circles::before {
+    bottom: 20px;
+    right: 0;
+    top: unset;
+  }
+
+
+  .section-header__title.hero-revenue {
+    font-size: 40px;
+  }
+
+  .section-header__desc.hero-revenue {
+    font-size: 1rem;
+  }
+
+  .gr-circles.hero-revenue {
+    top: -930px;
+    left: -600px;
+  }
+
+  .partner-program-benefits__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gr-circles.ib {
+    left: -250px;
+  }
+
+  .gr-circles-icons.bottom::after {
+    bottom: 125px;
+    right: 350px;
+  }
+
+  .ib-icons {
+    left: -4px;
+  }
+
+  .range-result__text {
+    font-size: clamp(1.25rem, 0.44rem + 3.47vw, 3.13rem);
+  }
+
+  .range-result {
+    grid-template-columns: auto 250px auto;
+  }
+
+  .ib-benefits-wrapper {
+    grid-template-columns: 400px 1fr;
+  }
+
+  .section-header__title,
+  .partner-program-advantages__header-title,
+  .section-header.copy .section-header__title {
+    font-size: 28px;
+  }
+
+
+  .grid.step .step__text {
+    font-size: 0.875rem;
+    line-height: 21px;
+  }
+
+}
+
+@media (max-width: 991.98px) {
+  .cpa-program-material-bg {
+    bottom: 0;
+    top: unset;
+    height: 100%;
+  }
+
+  .section-header.hero .section-header__title {
+    font-size: 33px;
+  }
+
+  .cpa-program-feedback {
+    height: 421px;
+    bottom: -60px;
+    right: -33px;
+  }
+
+  .cpa-program-advantages__list {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: flex-start;
+    row-gap: 30px;
+  }
+
+  .cpa-program-advantages__list-container {
+    padding: 40px 40px;
+  }
+
+  .profit-icons {
+    height: 154px;
+    width: 267px;
+    top: 20px;
+    left: 48px;
+  }
+
+  .cpa-program-profit__header.circle::after {
+    position: absolute;
+    display: inline-block;
+    content: "";
+    border: 30px solid rgba(249, 250, 255, 0.5);
+    border-radius: 50%;
+  }
+
+  .cpa-program-profit__header.circle.right::after {
+    top: 5%;
+    right: -50%;
+    width: 225px;
+    height: 225px;
+  }
+
+  .cpa-program-profit__header.circle.left::after {
+    top: 20%;
+    left: -50%;
+    width: 143px;
+    height: 143px;
+  }
+
+  .mb-130 {
+    margin-bottom: 80px;
+  }
+
+  .cpa-program-platforms__wrapper {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 30px;
+    row-gap: 20px;
+  }
+
+  .cpa-program-platforms__list {
+    flex-wrap: unset;
+  }
+
+  .section-header.why .section-header__title {
+    font-size: 30px;
+  }
+
+  .section-header.why .section-header__text {
+    font-size: 0.875rem;
+    line-height: 24px;
+  }
+
+  .cpa-program-material {
+    padding: 0;
+  }
+
+  .partnership-programs-hero {
+    background: url("../img/hands-horizontals.png"), var(--blue-100);
+    background-size: 1400px;
+    background-position: center top -100px;
+    background-repeat: no-repeat;
+  }
+
+  .section-header.partner-hero {
+    margin-top: 400px;
+  }
+
+  .mobile-menu .partnership-programs__nav-list.d-none {
+    display: flex !important;
+  }
+
+  .partnership-programs__nav-list {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .partnership-programs__nav-link::after {
+    bottom: 0;
+    transform: unset;
+  }
+
+  .partnership-programs__nav-item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .partnership-programs-features {
+    top: -1000px;
+  }
+
+  .partnership-programs-hero__header {
+    padding-top: 390px;
+  }
+
+  .partnership-programs-advantages__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .partnership-programs-advantages__item {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .partnership-programs-advantages__img-container {
+    margin-bottom: unset;
+    margin-right: 20px;
+  }
+
+  .partnership-programs-award__item:nth-child(-n+2),
+  .partnership-programs-advantages__item:nth-child(-n+2) {
+    margin-bottom: 20px;
+  }
+
+  .partnership-programs-award__list {
+    flex-wrap: wrap;
+  }
+
+  .partnership-programs-award__item {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+  }
+
+  .partnership-programs-award__body {
+    height: 143px;
+  }
+
+  .partnership-programs-award__item:last-child .partnership-programs-award__body {
+    padding-left: 19px;
+  }
+
+  .partnership-programs-features__list {
+    grid-template-columns: 1fr;
+  }
+
+  .partnership-programs-features__item-header {
+    padding: 30px;
+    flex: 2;
+  }
+
+  .partnership-programs-features__item {
+    flex-direction: row;
+  }
+
+  .partnership-programs-features__item-body {
+    flex: 1.5;
+    height: 100%;
+  }
+
+  .partnership-programs-features__item-body img {
+    left: -20px;
+  }
+
+  .partnership-programs-features__item:nth-child(4) .partnership-programs-features__item-body img {
+    bottom: -30px;
+  }
+
+  .partnership-programs-performance {
+    background: url("../img/performance-bg-900.png"), var(--blue-100);
+    background-position: center top -50px;
+    background-repeat: no-repeat;
+  }
+
+  .partnership-programs-privilege__list {
+    grid-template-columns: 1fr;
+  }
+
+  .partnership-programs-privilege__item.toggle {
+    display: none;
+  }
+
+  .partnership-programs-banner__wrapper {
+    background: url("../img/partner-banner-900.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px;
+  }
+
+  .partnership-programs-banner__header {
+    margin-top: 400px;
+  }
+
+
+  .partnership-programs-benefits__item:first-child {
+    display: none;
+  }
+
+  .section-header__title.hero-revenue {
+    font-size: 30px;
+  }
+
+  .section-header__sub.hero-revenue,
+  .section-header__desc.hero-revenue {
+    font-size: 0.875rem;
+  }
+
+  .section-header__sub.hero-revenue {
+    padding: 8px 14px;
+  }
+
+  .hero-offer-list__item-text::before {
+    margin-right: 10px;
+  }
+
+  .gr-circles.ib {
+    top: 30%;
+    left: 50%;
+    bottom: unset;
+    transform: translate(-50%, -50%);
+  }
+
+  .gr-circles.ib .gr-circles-icons.bottom::after {
+    bottom: 560px;
+    right: 150px;
+  }
+
+  .gr-circles.ib .gr-circles-icons.top::before {
+    left: 410px;
+  }
+
+  .gr-circles-icons.bottom::after {
+    bottom: unset;
+    top: 800px;
+    right: 170px;
+  }
+
+  .gr-circles.step {
+    top: unset;
+    left: unset;
+    width: 500px;
+    height: 500px;
+    bottom: 50px;
+    right: 0px;
+    z-index: 1;
+  }
+
+  .gr-circles.benefits {
+    top: -410px;
+    width: 600px;
+    height: 600px;
+  }
+
+
+  .gr-circles.hero-revenue {
+    top: -890px;
+  }
+
+
+  .partner-program-calculator__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .partner-program-calculator__list-item:nth-child(-n+3) {
+    border-bottom: 1px solid #dbdbdb;
+  }
+
+  .range-result {
+    width: 100%;
+  }
+
+  .range {
+    margin-bottom: 20px;
+  }
+
+  .partner-program-calculator-wrapper {
+    margin-bottom: 100px;
+  }
+
+  .ib-benefits-wrapper {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .partner-program-ib-benefits__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .partner-program-ib-benefits__list-item:not(:last-child) {
+    margin-right: unset;
+  }
+
+  .section-header.ib-benefits {
+    margin-bottom: 50px;
+  }
+
+  .partner-program-advantages__list.display-none {
+    display: none;
+  }
+
+  .gr-circles.advantages {
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .gr-circles-icons.bottom::after {
+    bottom: 0;
+    right: 390px;
+    top: unset;
+  }
+
+
+  .partner-program-step__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    -moz-column-gap: 10px;
+    column-gap: 10px;
+    row-gap: 40px;
+  }
+
+
+  .section-header.ib {
+    margin-bottom: 0;
+  }
+
+  .partner-program-ib {
+    padding-bottom: 0;
+  }
+
+
+  .grid.step,
+  .grid.step.revenue {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .grid.step .grid__item:not(:last-child) {
+    margin-right: 0;
+  }
+
+
+
+}
+
+@media (max-width: 767.98px) {
+  .cpa-program-profit__header.circle::after {
+    content: unset;
+  }
+
+  .profit-icons {
+    width: 313px;
+    height: 180px;
+  }
+
+  .cpa-program-feedback {
+    height: auto;
+  }
+
+  .cpa-program-advantages__body-title {
+    font-size: 20px;
+  }
+
+  .cpa-program-advantages__list-container {
+    padding: 20px;
+  }
+
+  .cpa-program-profit {
+    position: relative;
+    overflow: hidden;
+    padding: 0 0 70px 0;
+  }
+
+  .cpa-program-profit::after,
+  .cpa-program-profit::before {
+    position: absolute;
+    top: 20%;
+    left: -100px;
+    content: "";
+    width: 237px;
+    height: 237px;
+    border: 30px solid rgba(249, 250, 255, 0.5);
+    border-radius: 50%;
+  }
+
+  .cpa-program-profit::after {
+    top: unset;
+    left: unset;
+    bottom: 0;
+    right: -20px;
+    width: 143px;
+    height: 143px;
+  }
+
+  .cpa-program-advantages__list-container {
+    top: -70px;
+  }
+
+  .cpa-program-plan__item {
+    display: grid;
+    grid-template-rows: 180px 470px;
+  }
+
+  .cpa-program-plan-item-body-note {
+    font-size: 12px;
+  }
+
+  .cpa-program-plan.circles::before {
+    width: 180px;
+    height: 180px;
+    right: -50px;
+  }
+
+  .cpa-program-why__item:last-child .cpa-program-why__section,
+  .cpa-program-why__section {
+    margin-top: unset;
+    height: 100%;
+  }
+
+  .cpa-program-why {
+    padding: 70px 0;
+  }
+
+  .cpa-program-benefits__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cpa-program-benefits__list {
+    display: none;
+  }
+
+  .cpa-program-benefits__item {
+    display: grid;
+    grid-template-rows: 80px 160px;
+  }
+
+  .cpa-program-benefits-bg {
+    height: 60%;
+  }
+
+  .cpa-program-benefits-bg {
+    bottom: -200px;
+  }
+
+  .cpa-program-benefits-bg.circles::after {
+    bottom: 80px;
+  }
+
+  .splide__pagination__page {
+    width: 12px;
+    height: 12px;
+  }
+
+  .cpa-program-why__item.splide__slide img {
+    width: 90%;
+  }
+
+  .section-header.hero {
+    margin-top: 50px;
+  }
+
+  .cpa-program-plan-text p {
+    font-size: 0.9rem;
+  }
+
+  .cpa-program-plan__item-body-title,
+  .cpa-program-plan__item-body-price {
+    font-size: 1.25rem;
+  }
+
+  .partnership-programs-advantages__item {
+    flex-direction: column;
+  }
+
+  .partnership-programs-advantages__img-container {
+    margin-right: unset;
+    margin-bottom: 0;
+    margin-right: 10px;
+  }
+
+  .partnership-programs-advantages {
+    padding: 20px 20px;
+    margin-top: unset;
+  }
+
+
+  .partnership-programs-advantages__body-text {
+    font-size: 0.813rem;
+  }
+
+  .partnership-programs-advantages__item {
+    flex-direction: row;
+  }
+
+  .partnership-programs-award__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .partnership-programs-award__body-name {
+    line-height: 1.1;
+  }
+
+  .partnership-programs-features__list.toggle {
+    display: none;
+  }
+
+  .partnership-programs-features__item .partnership-programs-features__item-body img {
+    left: 0;
+    width: 80%;
+  }
+
+  .partnership-programs-features__item .partnership-programs-features__item-body {
+    height: 180px;
+    flex: unset;
+  }
+
+  .owl-item:first-child .partnership-programs-features__item-body img {
+    bottom: 6px;
+  }
+
+  .owl-item:nth-child(2) .partnership-programs-features__item-body img {
+    bottom: -6px;
+  }
+
+  .owl-item:nth-child(3) .partnership-programs-features__item-body img {
+    bottom: -19px;
+  }
+
+  .owl-item:last-child .partnership-programs-features__item-body img {
+    bottom: 12px;
+  }
+
+  .partnership-programs-features__item {
+    flex-direction: column;
+  }
+
+  .partnership-programs-features__item-header {
+    padding: 40px;
+    flex: unset;
+  }
+
+  .partnership-programs-features__item:nth-child(4):hover,
+  .partnership-programs-features__item:first-child:hover,
+  .partnership-programs-features__item:focus,
+  .partnership-programs-features__item:hover {
+    box-shadow: unset;
+    transform: unset;
+  }
+
+  .partnership-programs-benefits__list {
+    flex-direction: column;
+  }
+
+  .partnership-programs-benefits__item {
+    display: flex;
+  }
+
+  .partnership-programs-benefits__body {
+    flex: 1;
+    order: 0;
+  }
+
+  .partnership-programs-features__item-header {
+    flex: 1;
+    flex-grow: unset;
+  }
+
+  .partnership-programs-features__item-body {
+    flex: 1;
+    height: unset;
+  }
+
+  .partnership-programs-benefits__item-header {
+    order: 1;
+    flex: 1;
+  }
+
+  .partnership-programs-benefits__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  .partnership-programs-benefits__item-title {
+    position: unset;
+    color: var(--dark-500);
+    margin-bottom: 20px;
+  }
+
+  .partnership-programs-benefits__item:not(:last-child) {
+    margin-right: unset;
+  }
+
+  .partnership-programs-benefits__body-text {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .partnership-programs-performance {
+    background-size: 900px;
+  }
+
+  .partnership-programs-hero {
+    background: url('../img/hands-700.png'), var(--blue-100);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 155%, 100%;
+  }
+
+  .section-header.partner-hero {
+    margin-top: calc(105% + .5vw);
+    padding-top: unset;
+  }
+ 
+
+  .section-header.hero-revenue {
+    margin-top: 50px;
+  }
+
+  .gr-circles.benefits {
+    top: -160px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .section-header__title.hero-revenue {
+    font-size: 50px;
+  }
+
+  .section-header__desc.hero-revenue {
+    font-size: 1rem;
+  }
+
+  .partner-program-benefits__list-item-header-value {
+    line-height: 1.1;
+  }
+
+  .partner-program-benefits__list-item:last-child svg {
+    width: 80px;
+    height: 70px;
+  }
+
+  .range-result {
+    grid-template-columns: 1fr auto;
+  }
+
+
+  .partner-program-step__list {
+    grid-template-columns: 1fr;
+  }
+
+
+  .grid.step.revenue,
+  .grid.step {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+
+  .grid.step.revenue .step__progress {
+    width: 138px;
+    height: 138px;
+  }
+
+  .grid.step.revenue .step__icon {
+    stroke-dasharray: 428;
+    stroke-dashoffset: 428;
+  }
+
+
+}
+
+@media (max-width: 575.98px) {
+
+  .partnership-programs-plans__body-text,
+  .cpa-program-benefits__body-text,
+  .cpa-program-plan__item-body-price,
+  .cpa-program-plan__item-body-text,
+  .cpa-program-plan-text p,
+  body {
+    font-size: 0.813rem;
+    line-height: 21px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  h3 {
+    font-size: 0.875rem;
+  }
+
+  h4 {
+    font-size: 0.813rem;
+  }
+
+  .cpa-program-why,
+  .section-padding {
+    padding: 50px 0;
+  }
+
+  .btn-base-lg,
+  .btn-base-small {
+    padding: 10px 20px;
+  }
+
+  .section-header__title {
+    font-size: 1rem;
+  }
+
+  .cpa-program-why__title,
+  .section-header {
+    margin-bottom: 30px;
+  }
+
+  .section-header.profit {
+    margin-top: 30px;
+  }
+
+  .section-header.benefits,
+  .section-header.hero {
+    text-align: center;
+  }
+
+
+
+  .section-header.partner {
+    margin: 0;
+  }
+
+
+  .section-header.hero-revenue {
+    margin-top: 0;
+  }
+
+  .section-header.hero-revenue .section-header-sub {
+    font-size: 0.75rem;
+  }
+
+  .cpa-program-advantages__body-title {
+    font-size: 1.125rem;
+  }
+
+
+  .section-header.hero-revenue .section-header__title,
+  .section-header.partner-hero .section-header__title,
+  .section-header.why .section-header__title,
+  .section-header.hero .section-header__title {
+    font-size: 1.5rem;
+  }
+
+  .cpa-program-advantages__list-container {
+    padding: 50px;
+  }
+
+  .cpa-program-advantages__list {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+    margin-inline: auto;
+  }
+
+
+  .cpa-program-benefits__body-title,
+  .cpa-program-plan__item-body-title,
+  .partnership-programs-step__body-title,
+  .cpa-program-plan__item-title {
+    font-size: 1rem;
+  }
+
+  .cpa-program-plan__item-header,
+  .cpa-program-plan__item-body {
+    padding: 20px;
+  }
+
+  .cpa-program-why__title {
+    text-align: center;
+    max-width: 258px;
+    margin-inline: auto;
+  }
+
+
+  .cpa-program-why__list {
+    -moz-column-gap: 10px;
+    column-gap: 10px;
+  }
+
+  .cpa-program-header.benefits {
+    margin-top: unset;
+  }
+
+  .cpa-program-why__item {
+    height: 100%;
+  }
+
+  .inner {
+    padding-bottom: 0;
+  }
+
+  .cpa-program-benefits-bg {
+    width: 100%;
+    border-radius: unset;
+  }
+
+  .cpa-program-plan-title {
+    font-size: 90px;
+    bottom: -90px;
+  }
+
+  .cpa-program-plan__item-body-text {
+    display: flex;
+    align-items: center;
+  }
+
+  .section-header.plan {
+    margin-bottom: 90px;
+  }
+
+  .cpa-program-plan__item-body-row {
+    padding: 30px 0;
+  }
+
+  .cpa-program-plan__item {
+    grid-template-rows: 180px 390px;
+  }
+
+  .cpa-program-plan__list,
+  .cpa-program-plan-item-body-wrapper:first-child {
+    margin-bottom: 30px;
+  }
+
+  .owl-carousel-price.owl-theme .owl-dots {
+    margin-left: unset;
+    text-align: center;
+  }
+
+  .cpa-program-profit-img-container,
+  .cpa-program-why__img-container img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+  }
+
+  .cpa-program-why__img-container {
+    width: 100%;
+    height: 346px;
+  }
+
+  .profit-icons {
+    left: 40px;
+    top: 20px;
+  }
+
+  .cpa-program-profit-img-container {
+    position: relative;
+    object-fit: unset;
+  }
+
+  .img-profit,
+  .profit-icons {
+    width: 100%;
+    height: auto;
+  }
+
+  .profit-icons {
+    top: 0;
+    left: 12%;
+    width: 80%;
+  }
+
+  .owl-carousel-price.owl-theme .owl-dots .owl-dot.active span {
+    width: 80px;
+    height: 4px;
+    border-radius: 5px;
+    background-color: var(--blue-500);
+  }
+
+  .cpa-program-why__list {
+    margin-top: unset;
+  }
+
+  .cpa-program-material.circles::before {
+    bottom: -100px;
+    right: -80px;
+  }
+
+  .cpa-program-advantages__list-container {
+    top: -50px;
+  }
+
+  .partnership-programs-hero {
+    margin: 0;
+  }
+
+  .partnership-programs-hero.section-padding {
+    padding: 50px 10px;
+  }
+
+  .footer-company__item {
+    grid-template-columns: 1fr;
+  }
+
+  .partnership-programs-benefits__item-header img {
+    position: relative;
+    right: 20px;
+  }
+
+  .partnership-programs-plans__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .partnership-programs-plans__link {
+    max-width: 100%;
+    margin-inline: unset;
+  }
+
+  .partnership-programs-plans__link:hover,
+  .partnership-programs-plans__link:focus {
+    text-decoration: underline;
+    outline: none;
+  }
+
+  .partnership-programs-hero {
+    background: var(--blue-100);
+  }
+
+  .partnership-programs-hero.circles::before {
+    top: 10px;
+    left: -240px;
+    right: unset;
+    bottom: unset;
+  }
+
+
+  .partnership-programs-award__list {
+    display: none;
+  }
+
+  .partnership-programs-award__list.owl-carousel-awards {
+    display: block;
+  }
+
+  .partnership-programs-award__list {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+    margin-inline: auto;
+  }
+
+  .partnership-programs-award__body-title {
+    font-size: 10px;
+    margin-bottom: 0;
+  }
+
+  .partnership-programs-award__item:last-child .partnership-programs-award__body {
+    padding-left: 10px;
+  }
+
+  .partnership-programs-award__img-container {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .partnership-programs-award__item {
+    grid-template-columns: 1fr;
+    grid-template-rows: 270px auto;
+    row-gap: 10px;
+  }
+
+  .partnership-programs-award__body {
+    height: 60px;
+  }
+
+
+  .partnership-programs-plans__header,
+  .section-header.partner-hero,
+  .partnership-programs-benefits__header-title,
+  .section-header.performance,
+  .partnership-programs-features__title,
+  .partnership-programs-award__title {
+    text-align: center;
+  }
+
+  .section-header.performance {
+    margin-top: 30px;
+  }
+
+  .partnership-programs-benefits__item {
+    flex-direction: column;
+  }
+
+  .partnership-programs-benefits__body {
+    order: 1;
+  }
+
+  .partnership-programs-benefits__header {
+    order: 0;
+  }
+
+  .partnership-programs-benefits__item-title {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: var(--light);
+  }
+
+
+  .partnership-programs-award__body-name {
+    font-size: 9px;
+  }
+
+  .grid.step.desktop {
+    display: none;
+  }
+
+  .grid.step.mobile {
+    display: flex;
+  }
+
+
+  .grid.step.revenue .step__text {
+    flex-grow: unset;
+  }
+
+  .grid.step {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  .step__img-container {
+    margin-bottom: 0;
+    margin-right: 30px;
+  }
+
+  .grid.step .grid__item {
+    display: flex;
+    text-align: left;
+    align-items: center;
+    margin-right: unset;
+  }
+
+  .step__title {
+    font-size: 0.875rem;
+  }
+
+  .grid.step .grid__item {
+    padding: 15px;
+  }
+
+  .step-img-container-title {
+    display: none;
+  }
+
+  .partnership-programs-banner__header-title {
+    font-size: 20px;
+  }
+
+  .step__img-container {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  .step__progress {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 0;
+  }
+
+  .step__icon {
+    stroke-dasharray: 271;
+    stroke-dashoffset: 271;
+  }
+
+  .step__progress .icon-step {
+    width: auto;
+    height: 40px;
+  }
+
+  .step__title {
+    margin-bottom: 10px;
+  }
+
+  .partnership-programs-privilege__img-container svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .partnership-programs-privilege__img-container {
+    width: 60px;
+    height: 60px;
+  }
+
+  .partnership-programs-privilege__item {
+    grid-template-columns: 60px 1fr;
+    gap: 10px;
+  }
+
+
+  .card-header,
+  .card-body {
+    padding: 20px;
+  }
+
+  .partnership-programs-banner__wrapper {
+    padding: 20px;
+  }
+
+  .partnership-programs-banner__wrapper {
+    background-position: center center;
+  }
+
+  .card-header .btn-link {
+    font-size: 0.813rem;
+  }
+
+  .card__img-container {
+    width: 20px;
+    height: 20px;
+  }
+
+  .partnership-programs-step__title,
+  .partnership-programs-privilege__header,
+  .partnership-programs-benefits__header,
+  .partnership-programs-features__title {
+    margin-bottom: 30px;
+  }
+
+  .partnership-programs-plans__body {
+    padding: 20px 20px 0 20px;
+  }
+
+  .partnership-programs-plans__body-text {
+    min-height: 110px;
+  }
+
+  .partnership-programs-features__item-header {
+    padding: 20px 20px 40px 20px;
+  }
+
+  .partnership-programs-features__item {
+    justify-content: space-between;
+  }
+
+  .partnership-programs-features__item .partnership-programs-features__item-body {
+    height: 170px;
+  }
+
+  .owl-item:first-child .partnership-programs-features__item-body img {
+    top: -20px;
+    bottom: unset;
+  }
+
+  .owl-item:last-child .partnership-programs-features__item-body img {
+    top: -25px;
+    bottom: unset;
+  }
+
+  .owl-item:nth-child(5) .partnership-programs-features__item-body img {
+    top: -20px;
+    bottom: unset;
+  }
+
+  .owl-item:nth-child(3) .partnership-programs-features__item-body img {
+    bottom: unset;
+    top: 0;
+  }
+
+  .owl-item:nth-child(4) .partnership-programs-features__item-body img {
+    bottom: -10px;
+    top: unset;
+  }
+
+  .owl-item:nth-child(2) .partnership-programs-features__item-body img {
+    bottom: unset;
+    top: 0;
+  }
+
+  .partnership-programs-advantages {
+    padding: 20px;
+  }
+
+  .partnership-programs-advantages__item:nth-child(-n+2) {
+    margin-bottom: 0;
+  }
+
+  .partnership-programs-advantages__list {
+    align-items: baseline;
+    gap: 20px;
+  }
+
+  .partnership-programs-advantages__item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .partnership-programs-advantages__img-container {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .partnership-programs-hero__header {
+    padding-top: unset;
+  }
+
+  .column-hero-img {
+    padding: unset;
+    width: 100%;
+    height: 100%;
+  }
+
+  .column-hero-img img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+
+
+  .partnership-programs-performance {
+    background-position: center top -30px;
+    background-size: 690px;
+  }
+
+  .partnership-programs-performance.circles::after {
+    width: 100px;
+    height: 100px;
+  }
+
+  .partnership-programs-benefits__item-header {
+    padding: 30px;
+  }
+
+  .partnership-programs-plans-price-amount-wrapper>.partnership-programs-plans__price-amount {
+    font-size: 1.9rem;
+  }
+
+  .partnership-programs-hero {
+    background: url('../img/hands-500.png'), var(--blue-100);
+    background-repeat: no-repeat;
+    background-position: center 40px;
+    background-size: 110%, 100%;
+  }
+
+  .section-header.partner-hero {
+    margin-top: 70%;
+  }
+
+  .partnership-programs-hero.circles::before {
+    top: unset;
+    bottom: 140px;
+    left: -70px;
+  }
+
+  .partnership-programs-hero.circles::after {
+    width: 100px;
+    height: 100px;
+    top: -10px;
+    right: -20px;
+  }
+
+
+  .partner-program-benefits {
+    padding-top: 0;
+  }
+
+  .partner-program-benefits__list {
+    grid-template-columns: 1fr;
+  }
+
+  .gr-circles.hero-revenue {
+    top: 16%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+  }
+
+  .section-header__title.hero-revenue {
+    font-size: clamp(1.25rem, 0.44rem + 3.47vw, 3.13rem);
+  }
+
+  .partner-program-benefits-wrapper {
+    padding: 0 10px;
+    max-width: 374px;
+    margin-inline: auto;
+  }
+
+  .partner-program-calculator__list-item-label img {
+    width: 30px;
+  }
+
+  .partner-program-calculator__list-item-label {
+    padding: 25px 10px;
+  }
+
+  .range-result {
+    padding: 20px;
+  }
+
+  .range-index {
+    width: unset;
+  }
+
+  .partner-program-calculator-wrapper {
+    margin-bottom: 80px;
+  }
+
+  .range-indicator {
+    border-radius: 50%;
+    top: -60px;
+    margin-left: -11px;
+  }
+
+  .range-indicator::after {
+    bottom: -6px;
+    left: 42%;
+    z-index: -1;
+  }
+
+  .range-indicator {
+    width: 50px;
+    height: 50px;
+  }
+
+  .partner-program-ib-benefits__list {
+    grid-template-columns: 1fr;
+  }
+
+  .section-header.hero-revenue,
+  .partner-program-calculator-title,
+  .partner-program-advantages__header {
+    text-align: center;
+  }
+
+  .section-header__title.ib,
+  .section-header.copy .section-header__title,
+  .partner-program-advantages__header-title {
+    font-size: 1rem;
+  }
+
+  .range-result {
+    -moz-column-gap: unset;
+    column-gap: unset;
+  }
+
+  .partner-program-calculator-title {
+    display: none;
+  }
+
+
+  .partner-program-ib-benefits__list-item {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    -moz-column-gap: 10px;
+    column-gap: 10px;
+    padding: 20px;
+  }
+
+  .partner-program-ib-benefits__list-item svg {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 0;
+  }
+
+  .partnership-programs-banner__header {
+    margin-top: 240px;
+  }
+
+
+  .partner-program-benefits__list-item-header {
+    margin-bottom: 30px;
+  }
+
+  .gr-circles.benefits {
+    top: -230px;
+  }
+
+  .gr-circles.ib {
+    width: 500px;
+    height: 500px;
+ 
+  }
+
+  
+
+}
+
+@media (max-width: 375px) {
+  .cpa-program-why__img-container {
+    height: 256px;
+  }
+
+  .partnership-programs-privilege__body-title {
+    font-size: 0.875rem;
+  }
+
+  .partnership-programs-privilege__item {
+    grid-template-columns: 1fr;
+  }
+
+  .partnership-programs-step {
+    margin: unset;
+    border-radius: 10px;
+  }
+
+  .partnership-programs-features__item {
+    height: 400px;
+  }
+
+  .owl-item:nth-child(4) .partnership-programs-features__item-body img {
+    bottom: -20px;
+    width: 90%;
+  }
+
+  .owl-item:first-child .partnership-programs-features__item-body img,
+  .owl-item:last-child .partnership-programs-features__item-body img,
+  .owl-item:nth-child(5) .partnership-programs-features__item-body img {
+    bottom: 0;
+    top: unset;
+  }
+
+  .owl-item:nth-child(2) .partnership-programs-features__item-body img,
+  .owl-item:nth-child(3) .partnership-programs-features__item-body img {
+    bottom: -14px;
+    top: unset;
+  }
+
+  .partnership-programs-benefits__item-header img {
+    right: -20px;
+    bottom: -20px;
+  }
+
+  .partnership-programs-performance {
+    background-position: center top 10px;
+    background-size: 360px;
+  }
+}
+
+@media (max-width: 375.98px) {
+  .partner-program-calculator__list-item-label {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .partner-program-calculator__list-item-checkbox {
+    position: absolute;
+    pointer-events: none;
+  }
+}
+
+@media (max-width: 320px) {
+  .cpa-program-header.hero .cpa-program-header__title {
+    font-size: 28px;
+  }
+
+  .cpa-program-advantages__list-container {
+    padding: 30px;
+  }
+}
