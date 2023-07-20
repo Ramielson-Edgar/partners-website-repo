@@ -6,14 +6,10 @@ window.addEventListener('load', () => {
         ".step__progress svg circle"
     );
     const stepCounters1 = document.querySelectorAll(".step-counter");
-    const sliderValue = document.querySelector(".range-indicator span");
-    const indicator = document.querySelector(".range-indicator");
-    const inputSlider = document.querySelector("input");
+
     const progress = document.querySelector(".progress");
-    const radios = document.querySelectorAll('input[name="value"]');
 
     function updateRangeSlider(el) {
-
         console.log(el)
         var val = el.value;
         var min = el.getAttribute("min");
@@ -28,13 +24,9 @@ window.addEventListener('load', () => {
 
         const windowWidth = window.innerWidth
 
-        if(windowWidth < 575) {
+        if(windowWidth < 575)
             iel.style.left = portion * (el.offsetWidth - 30) + "px"
-        } else {
-            return
-        }
-
-
+        else return false;
     }
 
 
@@ -464,7 +456,7 @@ window.addEventListener('load', () => {
         },
 
     })
- 
+
 
 })
 
