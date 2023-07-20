@@ -1,4 +1,8 @@
 window.addEventListener('load', () => {
+    const mynum = document.getElementById('mynum');
+    mynum.addEventListener("input", updateRangeSlider(this));
+
+
     const firstStep1 = document.querySelector(
         ".step__img-container:first-child"
     );
