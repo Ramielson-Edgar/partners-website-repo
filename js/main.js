@@ -2,13 +2,13 @@ window.addEventListener('load', () => {
     const mynum = document.getElementById('mynum');
     mynum.addEventListener("input", updateRangeSlider);
 
-    const firstStep1 = document.querySelector(
+    const firstStep = document.querySelector(
         ".step__img-container:first-child"
     );
-    const progressBar1 = document.querySelectorAll(
+    const progressBar = document.querySelectorAll(
         ".step__progress svg circle"
     );
-    const stepCounters1 = document.querySelectorAll(".step-counter");
+    const stepCounters = document.querySelectorAll(".step-counter");
 
     const progress = document.querySelector(".progress");
 
@@ -35,7 +35,7 @@ window.addEventListener('load', () => {
 
     window.addEventListener("scroll", stepCounter);
 
-    function hasReached1(el) {
+    function hasReached(el) {
         if(el === null)
             return false;
         const topPosition = el.getBoundingClientRect().top;
@@ -46,20 +46,20 @@ window.addEventListener('load', () => {
     }
 
     function stepCounter() {
-        if (!hasReached1(firstStep1)) return;
+        if (!hasReached(firstStep)) return;
 
-        stepCounters1.forEach((counter, i) => {
+        stepCounters.forEach((counter, i) => {
             let target = +counter.dataset.target;
 
             if (window.innerWidth >= 575) {
                 let strokeValue = 271 - 271 * (target / 100);
-                progressBar1[i].style.setProperty("--target", strokeValue);
+                progressBar[i].style.setProperty("--target", strokeValue);
             } else {
                 let strokeValue = 428 - 428 * (target / 100);
-                progressBar1[i].style.setProperty("--target", strokeValue);
+                progressBar[i].style.setProperty("--target", strokeValue);
             }
         });
-        progressBar1.forEach(
+        progressBar.forEach(
             (el) => (el.style.animation = "progress 2s ease-in-out forwards")
         );
     }
