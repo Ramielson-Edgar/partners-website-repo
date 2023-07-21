@@ -1,7 +1,6 @@
 window.addEventListener('load', () => {
     const mynum = document.getElementById('mynum');
-    mynum.addEventListener("input", updateRangeSlider(this));
-
+    mynum.addEventListener("input", updateRangeSlider);
 
     const firstStep1 = document.querySelector(
         ".step__img-container:first-child"
@@ -13,8 +12,8 @@ window.addEventListener('load', () => {
 
     const progress = document.querySelector(".progress");
 
-    function updateRangeSlider(el) {
-        console.log(el)
+    function updateRangeSlider(e) {
+        el = e.target;
         var val = el.value;
         var min = el.getAttribute("min");
         var max = el.getAttribute("max");
@@ -41,11 +40,9 @@ window.addEventListener('load', () => {
             return false;
         const topPosition = el.getBoundingClientRect().top;
 
-        if (window.innerHeight >= topPosition + el.offsetHeight) {
+        if(window.innerHeight >= topPosition + el.offsetHeight)
             return true;
-        } else {
-            return false;
-        }
+        else return false;
     }
 
     function stepCounter() {
@@ -321,7 +318,6 @@ window.addEventListener('load', () => {
 
     function hasReached2(el) {
         let top = el.getBoundingClientRect().top
-        console.log(top)
 
         if (window.innerHeight >= top + el.offsetHeight) return true
         return false
@@ -467,8 +463,6 @@ window.addEventListener('load', () => {
 $( window ).on( "load",function () {
     const currentButton = $('.partnership-programs-plans__btn-container .btn-base')
     currentButton.hover(function () {
-
-
         if ($(this).hasClass('btn-base-small')) {
             $(this).addClass('is-active')
             $(this).removeClass('btn-base-small')
@@ -493,7 +487,6 @@ $( window ).on( "load",function () {
             600: {
                 items: 1,
                 autoplayTimeout: 5000,
-                autoplayHoverPause: true,
                 stagePadding: 0,
                 URLhashListener: true,
                 autoplayHoverPause: true,
@@ -519,7 +512,6 @@ $( window ).on( "load",function () {
             575: {
                 items: 2,
                 autoplayTimeout: 5000,
-                autoplayHoverPause: true,
                 stagePadding: 0,
                 URLhashListener: true,
                 autoplayHoverPause: true,
@@ -536,7 +528,6 @@ $( window ).on( "load",function () {
         nav: false,
         dots: true,
         autoplayTimeout: 5000,
-        autoplayHoverPause: true,
         stagePadding: 0,
         URLhashListener: true,
         autoplayHoverPause: true,
