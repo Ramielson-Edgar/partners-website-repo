@@ -66,23 +66,23 @@ window.addEventListener('load', () => {
 
     function getCheckedRadio() {
         document
-            .querySelectorAll(".partner-program-calculator__list-item-label")
+            .querySelectorAll(".calculator__label")
             .forEach((el) => {
                 el.addEventListener("click", (e) => {
                     const target = e.currentTarget;
                     if (
                         target.classList.contains(
-                            "partner-program-calculator__list-item-label"
+                            "calculator__label"
                         )
                     ) {
                         document
-                            .querySelectorAll(".partner-program-calculator__list-item-label")
+                            .querySelectorAll(".calculator__label")
                             .forEach((el) => el.classList.remove("checked"));
                     }
 
                     if (
                         target.classList.contains(
-                            "partner-program-calculator__list-item-label"
+                            "calculator__label"
                         )
                     ) {
                         target.classList.add("checked");
@@ -118,7 +118,7 @@ window.addEventListener('load', () => {
 
         if (btnCent.classList.contains("active")) {
             document
-                .querySelectorAll(".partner-program-calculator__list-item-label")
+                .querySelectorAll(".calculator__label")
                 .forEach((el, i) => {
                     if (el.classList.contains("checked")) {
                         const centData = +el.dataset.cent;
@@ -131,7 +131,7 @@ window.addEventListener('load', () => {
 
         if (btnStandard.classList.contains("active")) {
             document
-                .querySelectorAll(".partner-program-calculator__list-item-label")
+                .querySelectorAll(".calculator__label")
                 .forEach((el, i) => {
                     if (el.classList.contains("checked")) {
                         const standardData = +el.dataset.standard;
@@ -152,7 +152,7 @@ window.addEventListener('load', () => {
             updateCentCounter()
 
             document
-                .querySelectorAll(".partner-program-calculator__list-item-label")
+                .querySelectorAll(".calculator__label")
                 .forEach(el => {
                     const centData = +el.dataset.cent
 
@@ -167,7 +167,7 @@ window.addEventListener('load', () => {
             updateStandardCounter()
 
             document
-                .querySelectorAll(".partner-program-calculator__list-item-label")
+                .querySelectorAll(".calculator__label")
                 .forEach(el => {
                     if (el.classList.contains('checked')) {
                         const standardData = +el.dataset.standard
@@ -181,7 +181,7 @@ window.addEventListener('load', () => {
 
         if ( btnStandard.classList.contains('active')) {
             document
-                .querySelectorAll(".partner-program-calculator__list-item-label")
+                .querySelectorAll(".calculator__label")
                 .forEach((el, i) => {
                     el.addEventListener("click", () => {
                         document.querySelector(".render-number").textContent = (val * +el.dataset.standard).toLocaleString();
@@ -194,7 +194,7 @@ window.addEventListener('load', () => {
 
         function updateCentCounter() {
             document
-                .querySelectorAll(".partner-program-calculator__list-item-label")
+                .querySelectorAll(".calculator__label")
                 .forEach((el, i) => {
                     const centData = +el.dataset.cent
                     el.addEventListener("click", () => {
@@ -205,7 +205,7 @@ window.addEventListener('load', () => {
 
         function updateStandardCounter() {
             document
-                .querySelectorAll(".partner-program-calculator__list-item-label")
+                .querySelectorAll(".calculator__label")
                 .forEach((el, i) => {
                     el.addEventListener("click", () => {
                         document.querySelector(".render-number").textContent = (val * +el.dataset.standard).toLocaleString();
@@ -221,7 +221,7 @@ window.addEventListener('load', () => {
         const btnCent = document.querySelector(".btn-cent");
 
         document
-            .querySelectorAll(".partner-program-calculator__list-item-label")
+            .querySelectorAll(".calculator__label")
             .forEach(el => {
 
                 el.addEventListener('click', ()=>{
@@ -243,7 +243,7 @@ window.addEventListener('load', () => {
 
         btnCent.addEventListener('click', () => {
             document
-                .querySelectorAll(".partner-program-calculator__list-item-label")
+                .querySelectorAll(".calculator__label")
                 .forEach(el => {
 
                     if (el.classList.contains('checked')) {
@@ -256,7 +256,7 @@ window.addEventListener('load', () => {
 
         btnStandard.addEventListener('click', () => {
             document
-                .querySelectorAll(".partner-program-calculator__list-item-label")
+                .querySelectorAll(".calculator__label")
                 .forEach(el => {
 
                     if (el.classList.contains('checked')) {
