@@ -316,7 +316,7 @@ window.addEventListener('load', () => {
         benefitsCounter()
     })
 
-    function hasReached2(el) {
+    function hasReachedBenefits(el) {
         let top = el.getBoundingClientRect().top
 
         if (window.innerHeight >= top + el.offsetHeight) return true
@@ -335,7 +335,7 @@ window.addEventListener('load', () => {
     }
 
     function benefitsCounter() {
-        if (!hasReached2) return false
+        if (!hasReachedBenefits) return false
 
         counters.forEach(el => {
             let target = el.dataset.target
@@ -349,6 +349,10 @@ window.addEventListener('load', () => {
     // =========== Gsap ============= //
 
     gsap.registerPlugin(ScrollTrigger);
+    const tl =  gsap.timeline({default :{
+        ease:"power3.inOut",duration:1,
+    }})
+    
 
     gsap.to(".cpa-program-icons", {
         scrollTrigger: {
