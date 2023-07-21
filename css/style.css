@@ -1990,6 +1990,11 @@ img {
   overflow: unset;
 }
 
+
+.grid.advantages.owl-carousel-benefits {
+  display: none;
+}
+
 .owl-carousel-benefits.owl-theme .owl-nav.disabled+.owl-dot .owl-carousel-price.owl-theme .owl-nav.disabled+.owl-dots {
   margin-top: 50px;
 }
@@ -2164,8 +2169,8 @@ img {
   flex-basis: calc(100% /4 - 10px);
   padding: 30px 20px;
   background-color: var(--light);
-  transition: unset;
 }
+
 
 .grid.benefits .grid__item:hover {
   transform: unset;
@@ -2247,10 +2252,6 @@ img {
   display: flex;
   flex-wrap: wrap;
   border: 1px solid #dbdbdb;
-}
-
-.grid.calculator .grid__item {
-  transition: unset;
 }
 
 .grid.calculator .grid__item:hover {
@@ -2491,7 +2492,9 @@ input[type=range]::-webkit-slider-thumb {
   border-radius: 10px;
   margin-bottom: 10px;
   margin-right: 10px;
+  min-height: 267px;
 }
+
 
 .grid.advantages .grid__item:nth-child(3n) {
   margin-right: unset;
@@ -2554,10 +2557,6 @@ input[type=range]::-webkit-slider-thumb {
   background: var(--blue-500);
 }
 
-.grid.advantages .grid__item {
-  display: grid;
-  grid-template-rows: 57px 130px;
-}
 
 .copy-trade-icons {
   position: absolute;
@@ -2959,6 +2958,24 @@ input[type=range]::-webkit-slider-thumb {
   .grid.benefits .grid__item:nth-last-child(-n +2) {
     margin-bottom: unset;
   }
+  
+  .grid.advantages.cpa {
+    justify-content: unset;
+  }
+
+  .grid.advantages.cpa .grid__item {
+    flex-basis: calc(100% / 2 - 10px);
+    margin-bottom: 10px;
+  }
+
+  .grid.advantages.cpa .grid__item:nth-child(odd) {
+    margin-right: 10px;
+  }
+
+  .grid.advantages.cpa .grid__item:nth-last-child(-n + 2) {
+     margin-bottom: unset;
+  }
+
 
   .gr-circles.ib {
     left: -250px;
@@ -3284,6 +3301,10 @@ input[type=range]::-webkit-slider-thumb {
 
   .grid.calculator .grid__item:nth-child(3n) {
     border-right: unset;
+  }
+  
+  .grid.advantages.cpa {
+    display: flex;
   }
 
 
@@ -3692,6 +3713,16 @@ input[type=range]::-webkit-slider-thumb {
   }
 
 
+  .grid.advantages.owl-carousel-benefits {
+    display: block;
+  }
+
+    
+  .grid.advantages.cpa {
+    display: none;
+  }
+
+
 }
 
 @media (max-width: 575.98px) {
@@ -4071,6 +4102,16 @@ input[type=range]::-webkit-slider-thumb {
     align-items: center;
     margin-right: unset;
   }
+
+  .grid.advantages.owl-carousel-benefits .grid__item {
+    min-height: 300px;
+  }
+
+  .grid.advantages .advantages__text,
+  .grid.advantages.owl-carousel-benefits .advantages__text {
+     font-size: inherit;
+  }
+
 
   .step__title {
     font-size: 0.875rem;
