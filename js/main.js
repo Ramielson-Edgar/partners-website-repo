@@ -20,7 +20,7 @@ window.addEventListener('load', () => {
         var portion = (val - min) / (max - min);
         var iel = el.parentNode.querySelector(".range-indicator");
         iel.innerHTML = val + '<span class="range-value"></span>';
-        iel.style.left = portion * (el.offsetWidth - 15) + "px";
+        iel.style.left = portion * (el.offsetWidth - 31) + "px";
         progress.style.width = (el.value / el.max) * 100 + "%";
 
         renderResult(val);

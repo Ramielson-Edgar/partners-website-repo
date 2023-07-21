@@ -2279,7 +2279,7 @@ img {
   background-color: #ebebeb;
 }
 
-.partner-program-calculator__list-item:not(:nth-child(3n)) {
+.partner-program-calculator__list-item:not(:last-child) {
   border-right: 1px solid #dbdbdb;
 }
 
@@ -3259,6 +3259,11 @@ input[type=range]::-webkit-slider-thumb {
   .partner-program-calculator__list-item:nth-child(-n+3) {
     border-bottom: 1px solid #dbdbdb;
   }
+
+  .partner-program-calculator__list-item:nth-child(3n) {
+    border-right: unset;
+  }
+
 
   .range-result {
     width: 100%;
