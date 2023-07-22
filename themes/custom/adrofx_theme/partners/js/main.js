@@ -1,6 +1,7 @@
 window.addEventListener('load', () => {
     const mynum = document.getElementById('mynum');
-    mynum.addEventListener("input", updateRangeSlider);
+    if(mynum !== null)
+        mynum.addEventListener("input", updateRangeSlider);
 
     const firstStep = document.querySelector(
         ".step__img-container:first-child"
@@ -352,7 +353,7 @@ window.addEventListener('load', () => {
     const tl =  gsap.timeline({default :{
         ease:"power3.inOut",duration:1,
     }})
-    
+
 
     gsap.to(".cpa-program-icons", {
         scrollTrigger: {
