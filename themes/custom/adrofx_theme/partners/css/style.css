@@ -360,7 +360,7 @@ img {
   width: 30px;
   height: 30px;
 
-  background-image: url('/themes/custom/adrofx_theme/partners/icons/close.svg');
+  background-image: url('themes/custom/adrofx_theme/partners/icons/close.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -501,7 +501,7 @@ img {
 .partnership-programs-hero {
   position: relative;
   overflow: hidden;
-  background: url("/themes/custom/adrofx_theme/partners/img/hand-vertical.png"), url("/themes/custom/adrofx_theme/partners/img/hand-2.png") var(--blue-100);
+  background: url("themes/custom/adrofx_theme/partners/img/hand-vertical.png"), url("themes/custom/adrofx_theme/partners/img/hand-2.png") var(--blue-100);
   background-repeat: no-repeat, no-repeat;
   background-position: bottom center, top right -350px;
   margin: 0 10px;
@@ -989,7 +989,7 @@ img {
 .partnership-programs-performance {
   position: relative;
   overflow: hidden;
-  background: url("/themes/custom/adrofx_theme/partners/img/performance-bg.png"), var(--blue-100);
+  background: url("themes/custom/adrofx_theme/partners/img/performance-bg.png"), var(--blue-100);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 1883px;
@@ -1128,7 +1128,7 @@ img {
 }
 
 .partnership-programs-banner__wrapper {
-  background: url("/themes/custom/adrofx_theme/partners/img/partner-banner.jpg");
+  background: url("themes/custom/adrofx_theme/partners/img/partner-banner.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -1751,15 +1751,15 @@ img {
 }
 
 .cpa-program-plan__item-body-text.deposit::before {
-  background-image: url("/themes/custom/adrofx_theme/partners/icons/icon-deposit.svg");
+  background-image: url("themes/custom/adrofx_theme/partners/icons/icon-deposit.svg");
 }
 
 .cpa-program-plan__item-body-text.shield::before {
-  background-image: url("/themes/custom/adrofx_theme/partners/icons/icon-shield.svg");
+  background-image: url("themes/custom/adrofx_theme/partners/icons/icon-shield.svg");
 }
 
 .cpa-program-plan__item-body-text.payment::before {
-  background-image: url("/themes/custom/adrofx_theme/partners/icons/icon-payment.svg");
+  background-image: url("themes/custom/adrofx_theme/partners/icons/icon-payment.svg");
 }
 
 .cpa-program-plan__item-body-text {
@@ -2051,7 +2051,7 @@ img {
   left: -490px;
   width: 1047px;
   height: 1047px;
-  background: url("/themes/custom/adrofx_theme/partners/img/circles.png");
+  background: url("themes/custom/adrofx_theme/partners/img/circles.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -2073,7 +2073,7 @@ img {
 .gr-circles-icons.top::before {
   top: 490px;
   right: 180px;
-  background: url("/themes/custom/adrofx_theme/partners/icons/search.svg") var(--light);
+  background: url("themes/custom/adrofx_theme/partners/icons/search.svg") var(--light);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -2081,7 +2081,7 @@ img {
 .gr-circles-icons.bottom::after {
   bottom: 0;
   right: 450px;
-  background: url("/themes/custom/adrofx_theme/partners/icons/cloud.svg") var(--light);
+  background: url("themes/custom/adrofx_theme/partners/icons/cloud.svg") var(--light);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -2132,7 +2132,7 @@ img {
 .gr-circles.benefits .gr-circles-icons.top::before {
   top: 100px;
   right: 80px;
-  background: url("/themes/custom/adrofx_theme/partners/icons/headphone.svg") var(--light);
+  background: url("themes/custom/adrofx_theme/partners/icons/headphone.svg") var(--light);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -2140,7 +2140,7 @@ img {
 .gr-circles.benefits .gr-circles-icons.bottom::after {
   bottom: 150px;
   top: unset;
-  background: url("/themes/custom/adrofx_theme/partners/icons/settings.svg") var(--light);
+  background: url("themes/custom/adrofx_theme/partners/icons/settings.svg") var(--light);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -2236,13 +2236,13 @@ img {
   left: 130px;
   right: unset;
   top: 300px;
-  background: url("/themes/custom/adrofx_theme/partners/icons/commissions.svg") var(--light);
+  background: url("themes/custom/adrofx_theme/partners/icons/commissions.svg") var(--light);
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .gr-circles.ib .gr-circles-icons.bottom::after {
-  background: url("/themes/custom/adrofx_theme/partners/icons/discount.svg") var(--light);
+  background: url("themes/custom/adrofx_theme/partners/icons/discount.svg") var(--light);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -2644,13 +2644,13 @@ input[type=range]::-webkit-slider-thumb {
 .gr-circles.step .gr-circles-icons.top::before {
   top: 10px;
   right: 120px;
-  background-image: url('/themes/custom/adrofx_theme/partners/icons/wallet.svg');
+  background-image: url('themes/custom/adrofx_theme/partners/icons/wallet.svg');
 }
 
 .gr-circles.step .gr-circles-icons.bottom::after {
   bottom: 80px;
   right: 50%;
-  background-image: url('/themes/custom/adrofx_theme/partners/icons/dollar.svg');
+  background-image: url('themes/custom/adrofx_theme/partners/icons/dollar.svg');
 }
 
 
@@ -2819,7 +2819,7 @@ input[type=range]::-webkit-slider-thumb {
 
 @media (min-width: 1440.98px) {
   .partnership-programs-hero {
-    background: url("/themes/custom/adrofx_theme/partners/img/had-1920.png"), url("/themes/custom/adrofx_theme/partners/img/hand-2-90deg.png"), var(--blue-100);
+    background: url("themes/custom/adrofx_theme/partners/img/had-1920.png"), url("themes/custom/adrofx_theme/partners/img/hand-2-90deg.png"), var(--blue-100);
     background-repeat: no-repeat, no-repeat;
     background-position: center bottom -30px, center top -50px;
     background-size: contain, 1920px;
@@ -2916,7 +2916,7 @@ input[type=range]::-webkit-slider-thumb {
   }
 
   .partnership-programs-hero {
-    background: url("/themes/custom/adrofx_theme/partners/img/hand-2.png"), var(--blue-100);
+    background: url("themes/custom/adrofx_theme/partners/img/hand-2.png"), var(--blue-100);
     background-repeat: no-repeat, no-repeat;
     background-position: top right -350px;
     background-size: 80%;
@@ -3101,7 +3101,7 @@ input[type=range]::-webkit-slider-thumb {
   }
 
   .partnership-programs-hero {
-    background: url("/themes/custom/adrofx_theme/partners/img/hands-horizontals.png"), var(--blue-100);
+    background: url("themes/custom/adrofx_theme/partners/img/hands-horizontals.png"), var(--blue-100);
     background-size: 1400px;
     background-position: center top -100px;
     background-repeat: no-repeat;
@@ -3201,7 +3201,7 @@ input[type=range]::-webkit-slider-thumb {
   }
 
   .partnership-programs-performance {
-    background: url("/themes/custom/adrofx_theme/partners/img/performance-bg-900.png"), var(--blue-100);
+    background: url("themes/custom/adrofx_theme/partners/img/performance-bg-900.png"), var(--blue-100);
     background-position: center top -50px;
     background-repeat: no-repeat;
   }
@@ -3215,7 +3215,7 @@ input[type=range]::-webkit-slider-thumb {
   }
 
   .partnership-programs-banner__wrapper {
-    background: url("/themes/custom/adrofx_theme/partners/img/partner-banner-900.jpg");
+    background: url("themes/custom/adrofx_theme/partners/img/partner-banner-900.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     padding: 50px;
@@ -3651,7 +3651,7 @@ input[type=range]::-webkit-slider-thumb {
   }
 
   .partnership-programs-hero {
-    background: url('/themes/custom/adrofx_theme/partners/img/hands-700.png'), var(--blue-100);
+    background: url('themes/custom/adrofx_theme/partners/img/hands-700.png'), var(--blue-100);
     background-repeat: no-repeat;
     background-position: center top;
     background-size: 155%, 100%;
@@ -4310,7 +4310,7 @@ input[type=range]::-webkit-slider-thumb {
   }
 
   .partnership-programs-hero {
-    background: url('/themes/custom/adrofx_theme/partners/img/hands-500.png'), var(--blue-100);
+    background: url('themes/custom/adrofx_theme/partners/img/hands-500.png'), var(--blue-100);
     background-repeat: no-repeat;
     background-position: center 40px;
     background-size: 110%, 100%;
