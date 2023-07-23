@@ -1,7 +1,7 @@
 window.addEventListener('load', () => {
     const mynum = document.getElementById('mynum');
     if(mynum !== null)
-        mynum.addEventListener("input", updateRangeSlider);
+      mynum.addEventListener("input", updateRangeSlider);
 
     const firstStep = document.querySelector(
         ".step__img-container:first-child"
@@ -346,13 +346,12 @@ window.addEventListener('load', () => {
     }
 
     // =========== Gsap ============= //
-
     gsap.config({ nullTargetWarn: false });
 
     gsap.registerPlugin(ScrollTrigger);
     const tl =  gsap.timeline({default :{
-            ease:"power3.inOut",duration:1,
-        }})
+        ease:"power3.inOut",duration:1,
+    }})
 
     gsap.to(".cpa-program-icons", {
         scrollTrigger: {
@@ -427,237 +426,237 @@ window.addEventListener('load', () => {
 
 
 
-            gsap.set(".panel-text", { zIndex: (i, target, targets) => targets.length - i });
+                gsap.set(".panel-text", { zIndex: (i, target, targets) => targets.length - i });
 
-            const texts = gsap.utils.toArray('.panel-text');
+                const texts = gsap.utils.toArray('.panel-text');
 
-            texts.forEach((text, i) => {
+                texts.forEach((text, i) => {
 
-                var tl = gsap.timeline({
+                    var tl = gsap.timeline({
 
-                    scrollTrigger: {
-                        trigger: ".wrapper",
-                        start: () => "top -" + (window.innerHeight * i),
-                        end: () => "+=" + window.innerHeight,
-                        scrub: 1,
-                    }
-
-                })
-
-                gsap
-                    .from(text, {
                         scrollTrigger: {
-                            trigger: text,
-                            start: "top bottom",
+                            trigger: ".wrapper",
+                            start: () => "top -" + (window.innerHeight * i),
+                            end: () => "+=" + window.innerHeight,
                             scrub: 1,
-                        },
-                        duration: 1, y: 50,
+                        }
+
                     })
 
-            });
+                    gsap
+                        .from(text, {
+                            scrollTrigger: {
+                                trigger: text,
+                                start: "top bottom",
+                                scrub: 1,
+                            },
+                            duration: 1, y: 50,
+                        })
+
+                });
 
         },
 
     })
 })
 window.onload = function () {
-    (function ($) {
-        $(document).ready(function () {
-            const currentButton = $('.partnership-programs-plans__btn-container .btn-base')
-            currentButton.hover(function () {
-                if ($(this).hasClass('btn-base-small')) {
-                    $(this).addClass('is-active')
-                    $(this).removeClass('btn-base-small')
-                    $(this).addClass('btn-base-lg')
-                }
+  (function ($) {
+    $(document).ready(function () {
+      const currentButton = $('.partnership-programs-plans__btn-container .btn-base')
+      currentButton.hover(function () {
+        if ($(this).hasClass('btn-base-small')) {
+          $(this).addClass('is-active')
+          $(this).removeClass('btn-base-small')
+          $(this).addClass('btn-base-lg')
+        }
 
-                $(this).siblings($('.btn-base')).removeClass('is-active')
-                $(this).siblings($(".btn-base")).removeClass('btn-base-lg')
-                $(this).siblings($(".btn-base")).addClass('btn-base-small')
-            });
+        $(this).siblings($('.btn-base')).removeClass('is-active')
+        $(this).siblings($(".btn-base")).removeClass('btn-base-lg')
+        $(this).siblings($(".btn-base")).addClass('btn-base-small')
+      });
 
-            $('.owl-carousel-plans').owlCarousel({
-                loop: true,
-                margin: 10,
-                nav: false,
+      $('.owl-carousel-plans').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: false,
 
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    600: {
-                        items: 1,
-                        autoplayTimeout: 5000,
-                        stagePadding: 0,
-                        URLhashListener: true,
-                        autoplayHoverPause: true,
-                        startPosition: "URLHash",
-                    },
-                    900: {
-                        items: 2,
-                        nav: false,
-                    }
-                }
-            })
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 1,
+            autoplayTimeout: 5000,
+            stagePadding: 0,
+            URLhashListener: true,
+            autoplayHoverPause: true,
+            startPosition: "URLHash",
+          },
+          900: {
+            items: 2,
+            nav: false,
+          }
+        }
+      })
 
-            $('.owl-carousel-awards').owlCarousel({
-                loop: true,
-                margin: 10,
-                nav: false,
+      $('.owl-carousel-awards').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: false,
 
-                responsive: {
-                    0: {
-                        items: 2
-                    },
-                    575: {
-                        items: 2,
-                        autoplayTimeout: 5000,
-                        stagePadding: 0,
-                        URLhashListener: true,
-                        autoplayHoverPause: true,
-                        startPosition: "URLHash",
-                    },
+        responsive: {
+          0: {
+            items: 2
+          },
+          575: {
+            items: 2,
+            autoplayTimeout: 5000,
+            stagePadding: 0,
+            URLhashListener: true,
+            autoplayHoverPause: true,
+            startPosition: "URLHash",
+          },
 
-                }
-            })
+        }
+      })
 
-            $('.owl-carousel-features').owlCarousel({
-                loop: false,
-                margin: 10,
-                nav: false,
-                dots: true,
-                autoplayTimeout: 5000,
-                stagePadding: 0,
-                URLhashListener: true,
-                autoplayHoverPause: true,
-                startPosition: "URLHash",
-                responsive: {
-                    0: {
-                        items: 1,
-                        dots: true,
-                    },
-                    600: {
-                        items: 1,
-                        dots: true,
-                    },
+      $('.owl-carousel-features').owlCarousel({
+        loop: false,
+        margin: 10,
+        nav: false,
+        dots: true,
+        autoplayTimeout: 5000,
+        stagePadding: 0,
+        URLhashListener: true,
+        autoplayHoverPause: true,
+        startPosition: "URLHash",
+        responsive: {
+          0: {
+            items: 1,
+            dots: true,
+          },
+          600: {
+            items: 1,
+            dots: true,
+          },
 
-                },
+        },
 
-            })
+      })
 
-            $('.owl-carousel-advantages').owlCarousel({
-                loop: true,
-                margin: 10,
-                nav: true,
+      $('.owl-carousel-advantages').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
 
-                autoplay: true,
-                autoplayTimeout: 5000,
-                autoplayHoverPause: false,
-                responsive: {
-                    0: {
-                        items: 1,
-                        nav: false,
-                    },
-                    600: {
-                        nav: false,
-                        items: 1
-                    },
-                    900: {
-                        items: 2,
-                        nav: false,
-                    }
+        autoplay: true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: false,
+        responsive: {
+          0: {
+            items: 1,
+            nav: false,
+          },
+          600: {
+            nav: false,
+            items: 1
+          },
+          900: {
+            items: 2,
+            nav: false,
+          }
 
-                }
-            })
+        }
+      })
 
-            function collapsed() {
-                $(".card-header h2").find("button").addClass('collapsed')
-            }
-            collapsed()
+      function collapsed() {
+        $(".card-header h2").find("button").addClass('collapsed')
+      }
+      collapsed()
 
-            // plans carousel//
-            $('.owl-carousel-price').owlCarousel({
-                loop: false,
-                margin: 30,
-                stagePadding: 50,
-                nav: false,
-                responsive: {
-                    0: {
-                        items: 1,
-                        stagePadding: 0,
-                        margin: 10,
-                    },
-                    600: {
-                        items: 1
-                    },
+      // plans carousel//
+      $('.owl-carousel-price').owlCarousel({
+        loop: false,
+        margin: 30,
+        stagePadding: 50,
+        nav: false,
+        responsive: {
+          0: {
+            items: 1,
+            stagePadding: 0,
+            margin: 10,
+          },
+          600: {
+            items: 1
+          },
 
-                }
-            })
+        }
+      })
 
-            // plans benefits//
-            $('.owl-carousel-benefits').owlCarousel({
-                loop: false,
-                margin: 20,
-                stagePadding: 50,
-                nav: false,
-                responsive: {
-                    0: {
-                        items: 1,
-                        stagePadding: 0,
-                        margin: 10,
-                    },
-                    600: {
-                        items: 1
-                    },
+      // plans benefits//
+      $('.owl-carousel-benefits').owlCarousel({
+        loop: false,
+        margin: 20,
+        stagePadding: 50,
+        nav: false,
+        responsive: {
+          0: {
+            items: 1,
+            stagePadding: 0,
+            margin: 10,
+          },
+          600: {
+            items: 1
+          },
 
-                }
-            })
+        }
+      })
 
-            // plans benefits//
-            $('.owl-carousel-why').owlCarousel({
-                loop: false,
-                margin: 10,
-                nav: false,
-                autoplay: true,
-                autoplayTimeout: 3000,
-                autoplayHoverPause: true,
-                responsive: {
-                    0: {
-                        items: 1,
-                        margin: 20,
-                    },
-                    600: {
-                        items: 1,
-                        nav: false,
-                    },
+      // plans benefits//
+      $('.owl-carousel-why').owlCarousel({
+        loop: false,
+        margin: 10,
+        nav: false,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+        responsive: {
+          0: {
+            items: 1,
+            margin: 20,
+          },
+          600: {
+            items: 1,
+            nav: false,
+          },
 
-                }
-            })
+        }
+      })
 
-            //splide//
-            if($('#splide-first').length){
-                new Splide('#splide-first', {
-                    type: 'loop',
-                    drag: 'free',
-                    focus: 'center',
-                    perPage: 3,
-                    pagination: false,
-                    arrows: false,
-                    dots: false,
-                    autoScroll: {
-                        speed: 1,
-                    },
-                    breakpoints: {
+      //splide//
+      if($('#splide-first').length){
+        new Splide('#splide-first', {
+          type: 'loop',
+          drag: 'free',
+          focus: 'center',
+          perPage: 3,
+          pagination: false,
+          arrows: false,
+          dots: false,
+          autoScroll: {
+            speed: 1,
+          },
+          breakpoints: {
 
-                        575: {
-                            perPage: 2,
-                        },
-                        320: {
-                            perPage: 1,
-                        },
-                    }
-                }).mount(window.splide.Extensions);
-            }
-        })
-    })(jQuery)
+            575: {
+              perPage: 2,
+            },
+            320: {
+              perPage: 1,
+            },
+          }
+        }).mount(window.splide.Extensions);
+      }
+    })
+  })(jQuery)
 }
