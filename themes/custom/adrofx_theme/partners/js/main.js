@@ -347,6 +347,8 @@ window.addEventListener('load', () => {
 
     // =========== Gsap ============= //
 
+    gsap.config({ nullTargetWarn: false });
+
     gsap.registerPlugin(ScrollTrigger);
     const tl =  gsap.timeline({default :{
             ease:"power3.inOut",duration:1,
