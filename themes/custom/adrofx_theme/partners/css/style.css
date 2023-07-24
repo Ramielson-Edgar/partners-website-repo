@@ -191,6 +191,7 @@ img {
 }
 
 
+.btn-more,
 .btn-base {
   display: inline-block;
   border-radius: 5px;
@@ -202,16 +203,6 @@ img {
   box-shadow: none;
 }
 
-.btn-button {
-  display: inline-block;
-  border-radius: 5px;
-  color: var(--light);
-  border: 1px solid transparent;
-  text-transform: capitalize;
-  background: transparent;
-  outline: none;
-  box-shadow: none;
-}
 
 .btn-base:hover {
   transform: translateY(-8px);
@@ -322,18 +313,40 @@ img {
 
 .btn-more {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
   align-items: center;
-  flex-direction: column;
+
+  border: 1px solid var(--dark-500);
+  background: none;
 
   margin: 0 auto;
   color: var(--dark-500);
   font-family: "Roboto-bold";
 }
 
-.btn-more__container {
-  margin-top: 10px;
+.btn-more:focus,
+.btn-more:hover {
+  color: var(--light);
+  background: var(--blue-500);
+  border: 1px solid var(--blue-500);
 }
+
+.btn-more__text,
+.spinner-border {
+  margin-right: 10px;
+}
+
+.btn-more,
+.btn-more svg {
+  transition: all .3s ease-in;
+}
+
+.btn-more:focus svg,
+.btn-more:hover svg {
+  fill: var(--light);
+}
+
+ 
 
 
 .btn-button.active {
@@ -347,6 +360,10 @@ img {
 
 .btn-base-lg {
   padding: 8px 45px;
+}
+
+.btn-base-md {
+  padding: 8px 30px;
 }
 
 .btn-base-big {
@@ -410,7 +427,7 @@ img {
 .copyright {
   text-align: center;
 }
- 
+
 .partnership-programs__nav-list,
 .footer-contacts,
 .social-media,
@@ -2827,8 +2844,6 @@ input[type=range]::-webkit-slider-thumb {
 
 .search {
   overflow: hidden;
-  position: absolute;
-  top: 150%;
   display: flex;
   width: 100%;
   align-items: center;
@@ -2842,8 +2857,8 @@ input[type=range]::-webkit-slider-thumb {
   outline: none;
   border: none;
   color: var(--dark-400);
-  border-bottom: 1px solid transparent;
-  padding: 34px;
+  border-bottom: 2px solid transparent;
+  padding: 20px 30px;
   transition: border 0.3s ease-in;
 }
 
@@ -2851,7 +2866,7 @@ input[type=range]::-webkit-slider-thumb {
 
 .search__input:hover,
 .search__input:focus {
-  border-bottom: 1px solid var(--red-200);
+  border-bottom: 2px solid var(--red-200);
 }
 
 .search__input::placeholder {
@@ -2865,7 +2880,7 @@ input[type=range]::-webkit-slider-thumb {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 34px;
+  padding: 21px;
 
   background: var(--red-200);
   margin: 0;
@@ -2880,9 +2895,9 @@ input[type=range]::-webkit-slider-thumb {
   background-position: center center;
   background-size: cover;
 
-  padding: 70px 0 60px 0;
+  padding: 70px 0 10px 0;
   border-radius: 0 0 10px 10px;
-  margin: 0 10px 70px 10px;
+  margin: 0 10px;
 }
 
 
@@ -2937,8 +2952,9 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 
-.grid.car-blog {
+.grid.card-blog {
   justify-content: space-between;
+  margin-bottom: 30px;
 }
 
 .grid.card-blog .grid__item {
@@ -3049,7 +3065,7 @@ input[type=range]::-webkit-slider-thumb {
 #toolbar-bar {
   position: fixed;
 }
- 
+
 
 
 @media (min-width: 1440.98px) {
@@ -4028,7 +4044,7 @@ input[type=range]::-webkit-slider-thumb {
 
   .card-blog__img {
     flex: 15;
-     margin-right: 10px;
+    margin-right: 10px;
   }
 
   .card-blog__body {
@@ -4844,27 +4860,26 @@ input[type=range]::-webkit-slider-thumb {
   }
 
 
- 
-  .search__icon {
-    padding: 24px;
-  }
-  .search__input {
-    padding: 28px;
+  .search {
+    align-items: unset;
   }
 
-  .search {
-    top: 210px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
+  .search__icon {
+    padding: 20px;
   }
+
+  .search__input {
+    padding: 20px 30px;
+  }
+
+ 
 
   .blog-hero {
     background-image: url('../img/blog-hero-500.png');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 0 0 50px 0;
+    margin:0;
   }
 
   .section-header.blog .section-header__text {
@@ -4880,7 +4895,7 @@ input[type=range]::-webkit-slider-thumb {
     margin-bottom: 16px;
   }
 
- 
+
   .card-blog__img,
   .card-blog__body {
     flex: unset;
@@ -4950,7 +4965,7 @@ input[type=range]::-webkit-slider-thumb {
     pointer-events: none;
   }
 }
- 
+
 @media (max-width: 320px) {
   .cpa-program-header.hero .cpa-program-header__title {
     font-size: 28px;
@@ -4964,11 +4979,4 @@ input[type=range]::-webkit-slider-thumb {
     font-size: 1.125rem;
     max-width: 300px;
   }
-
-  .search {
-    top: 230px;
-  }
 }
-
-
- 
