@@ -4885,8 +4885,6 @@ input[type=range]::-webkit-slider-thumb {
     flex: unset;
   }
 
-
-
 }
 
 @media (max-width: 375px) {
