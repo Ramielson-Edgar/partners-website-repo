@@ -2956,6 +2956,7 @@ input[type=range]::-webkit-slider-thumb {
   border-radius: 17px;
   margin-bottom: 25px;
   box-shadow: -12px 19px 50px -10px rgba(39, 39, 39, 0.15);
+  transition: unset;
 }
 
 .card-blog__img img {
