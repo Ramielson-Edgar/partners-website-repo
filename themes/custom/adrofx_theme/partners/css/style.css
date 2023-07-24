@@ -2902,7 +2902,7 @@ input[type=range]::-webkit-slider-thumb {
 
 
 .section-header.blog .section-header__text {
-  max-width: 400px;
+  margin-bottom: 20px;
 }
 
 .section-header.blog {
@@ -4231,6 +4231,7 @@ input[type=range]::-webkit-slider-thumb {
   .cpa-program-benefits-bg {
     width: 100%;
     border-radius: unset;
+    bottom: -180px;
   }
 
   .cpa-program-plan-title {
