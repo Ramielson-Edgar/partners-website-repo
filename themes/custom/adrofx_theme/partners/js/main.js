@@ -556,6 +556,7 @@ window.onload = function () {
                 autoplay: true,
                 autoplayTimeout: 5000,
                 autoplayHoverPause: false,
+                startPosition: "URLHash",
                 responsive: {
                     0: {
                         items: 1,
@@ -568,6 +569,33 @@ window.onload = function () {
                     900: {
                         items: 2,
                         nav: false,
+                    }
+
+                }
+            })
+
+            $('.banner-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: false,
+                dots:true,
+
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplayHoverPause: false,
+                responsive: {
+                    0: {
+                        items: 1,
+                        dots:true,
+                    },
+                    600: {
+                        dots:true,
+                        items: 1
+                    },
+                    900: {
+                        items: 1,
+                        dots:true,
+                       
                     }
 
                 }
