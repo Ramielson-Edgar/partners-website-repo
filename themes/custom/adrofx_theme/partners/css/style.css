@@ -4343,7 +4343,18 @@ input[type=range]::-webkit-slider-thumb {
     flex: 20;
   }
 
-
+  .grid.card-blog.latest  .grid__item{
+    flex-direction: column;
+  }
+  .grid.card-blog.latest .card-blog__img {
+    margin-bottom: 20px;
+  }
+  .grid.card-blog.latest .card-blog__body {
+    flex: 1;
+  }
+ 
+ 
+  
   .card-description__title {
     font-size: 0.938rem;
   }
@@ -5200,10 +5211,6 @@ input[type=range]::-webkit-slider-thumb {
 
   .grid.card-blog.latest {
     flex-direction: column;
-  }
- 
-  .grid.card-blog.latest .grid__item:first-child {
-    margin-bottom: 30px;
   }
 }
 
