@@ -2906,7 +2906,7 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 
-
+.search-page-hero,
 .blog-hero {
   position: relative;
   background: url("../img/blog-hero.png"), var(--blue-100);
@@ -2917,6 +2917,10 @@ input[type=range]::-webkit-slider-thumb {
   padding: 70px 0 10px 0;
   border-radius: 0 0 10px 10px;
   margin: 0 10px;
+}
+
+.search-page-hero {
+   padding: 70px 0;
 }
 
 
@@ -3001,14 +3005,19 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 
+ 
+
 .share,
 .card-data,
+.card-data-meta,
 .card-data__wrapper,
 .card-info {
   display: flex;
   justify-content: space-between;
   margin-bottom: 1rem;
 }
+
+.card-data-meta  {margin-bottom: 0;}
 
 .card-info__program,
 .card-info__time {
@@ -3313,6 +3322,22 @@ input[type=range]::-webkit-slider-thumb {
 
 .dropdown-menu.social-media .dropdown-menu__item:not(:last-child) {
   border-bottom: 1px solid var(--dark-100);
+}
+
+
+.search-page-hero .section-title {margin-bottom: 50px;}
+
+.search-page-result .section-title {
+  font-size: 1.25rem;
+}
+
+.search-page-result .section-title {
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--dark-200);
+}
+
+.result-title {
+   color: var(--dark-300);
 }
 
 
@@ -3972,6 +3997,7 @@ input[type=range]::-webkit-slider-thumb {
     background-position: 105% -21px;
   }
 
+  .search-page-hero,
   .blog-hero {
     background-image: url('../img/blog-hero-900.png');
     background-repeat: no-repeat;
@@ -4381,6 +4407,7 @@ input[type=range]::-webkit-slider-thumb {
   }
 
 
+  .search-page-hero,
   .blog-hero {
     background-image: url('../img/blog-hero-700.png');
     background-position: center center;
@@ -5089,6 +5116,7 @@ input[type=range]::-webkit-slider-thumb {
   }
 
   .section-header__title.ib,
+  .search-page-result .section-title,
   .section-header.copy .section-header__title,
   .partner-program-advantages__header-title {
     font-size: 1rem;
@@ -5173,12 +5201,18 @@ input[type=range]::-webkit-slider-thumb {
     padding: 20px 30px;
   }
 
+
+  .search-page-hero,
   .blog-hero {
     background-image: url('../img/blog-hero-500.png');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0;
+  }
+
+  .search-page-hero {
+    padding: 50px 0;
   }
 
   .section-header.blog .section-header__text {
