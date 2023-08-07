@@ -3256,11 +3256,6 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 
-.list.social-media {
-  max-width: 143px;
-  margin-top: unset;
-}
-
 .list.social-media.share .social-media__link:hover .social-media__icon {
   fill: var(--red-200);
 }
