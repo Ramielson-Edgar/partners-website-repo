@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<div w3-include-html="head.html"></div>
+
+<body>
+
+<div w3-include-html="menu.html"></div>
+<div w3-include-html="header.html"></div>
+
+<main role="main" class="">
+    >>>...<<<
+</main>
+
+<div w3-include-html="footer.html"></div>
+
+<script>
+    function includeHTML() {
+        var z, i, elmnt, file, xhttp;
+        /* Loop through a collection of all HTML elements: */
+        z = document.getElementsByTagName("*");
+        for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            /*search for elements with a certain atrribute:*/
+            file = elmnt.getAttribute("w3-include-html");
+            if (file) {
+                /* Make an HTTP request using the attribute value as the file name: */
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function () {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) {
+                            elmnt.innerHTML = this.responseText;
+                        }
+                        if (this.status == 404) {
+                            elmnt.innerHTML = "Page not found.";
+                        }
+                        /* Remove the attribute, and call this function once more: */
+                        elmnt.removeAttribute("w3-include-html");
+                        includeHTML();
+                    }
+                }
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                /* Exit the function: */
+                return;
+            }
+        }
+    }
+</script>
+<script>
+    includeHTML();
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="themes/custom/adrofx_theme/partners/js/popper.min.js"></script>
+<script src="themes/custom/adrofx_theme/partners/js/bootstrap.bundle.min.js"></script>
+<script src="themes/custom/adrofx_theme/partners/js/gsap.min.js"></script>
+<script src="themes/custom/adrofx_theme/partners/js/ScrollTrigger.min.js"></script>
+
+<script src="themes/custom/adrofx_theme/partners/js/splide.js"></script>
+<script src="themes/custom/adrofx_theme/partners/js/auto-scroll.js"></script>
+
+<script src="themes/custom/adrofx_theme/partners/js/owl.carousel.min.js"></script>
+
+<script src="themes/custom/adrofx_theme/partners/js/main.js"></script>
+</body>
+
+</html>
