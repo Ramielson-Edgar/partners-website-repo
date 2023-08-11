@@ -1,3 +1,5 @@
+const { default: gsap } = require("./gsap");
+
 window.addEventListener('load', () => {
     const mynum = document.getElementById('mynum');
     if(mynum !== null)
@@ -401,6 +403,22 @@ window.addEventListener('load', () => {
         y:50,
     })
 
+    gsap.to(".hybrid-program-icons", {
+        scrollTrigger: {
+            trigger: ".hybrid-program-icons",
+            scrub: 1,
+        },
+        y:50,
+    })
+
+    gsap.to(".hybrid-hero-icons ", {
+        scrollTrigger: {
+            trigger: ".hybrid-hero-icons",
+            scrub: 1,
+        },
+        y:50,
+    })
+
     ScrollTrigger.matchMedia({
         '(min-width:768px)': function () {
 
@@ -664,6 +682,31 @@ window.onload = function () {
 
                 }
             })
+
+            $('.owl-carousel-hybrid').owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: false,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                        dots: true,
+                    },
+                    600: {
+                        items: 1,
+                        nav: false,
+                        dots: true,
+                        stagePadding:30,
+                        margin:30,
+                    },
+
+                }
+            })
+
+
 
             //splide//
             if($('#splide-first').length){
