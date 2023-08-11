@@ -1,4 +1,4 @@
-const { default: gsap } = require("./gsap");
+// const { default: gsap } = require("./gsap");
 
 window.addEventListener('load', () => {
     const mynum = document.getElementById('mynum');
@@ -408,7 +408,7 @@ window.addEventListener('load', () => {
             trigger: ".hybrid-program-icons",
             scrub: 1,
         },
-        y:50,
+        y:30,
     })
 
     gsap.to(".hybrid-hero-icons ", {
@@ -416,7 +416,7 @@ window.addEventListener('load', () => {
             trigger: ".hybrid-hero-icons",
             scrub: 1,
         },
-        y:50,
+        y:30,
     })
 
     ScrollTrigger.matchMedia({

@@ -3390,13 +3390,14 @@ input[type=range]::-webkit-slider-thumb {
 .hybrid-program-icons,
 .hybrid-hero-icons {
   position: absolute;
-  top: 0;
+  top: -30px;
   left: 0;
  
   width: auto;
   height: 100%;
 }
 
+ 
 .section-header.hybrid-benefits {
   text-align: center;
 }
