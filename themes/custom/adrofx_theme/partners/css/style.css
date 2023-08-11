@@ -2627,6 +2627,22 @@ input[type=range]::-webkit-slider-thumb {
 
 .partner-program-ib-benefits {
   position: relative;
+  z-index: 1;
+}
+
+.partner-program-ib-benefits.circles::before {
+  top: -150px;
+  right: 10%;
+  width: 200px;
+  height: 200px;
+  border: 33px solid var(--white);
+}
+
+.partner-program-ib-benefits.circles::after {
+  left: 10%;
+  bottom: -100px;
+  border: 13px solid var(--white);
+
 }
 
 .section-header.ib-benefits {
@@ -2640,6 +2656,10 @@ input[type=range]::-webkit-slider-thumb {
   -moz-column-gap: 60px;
   column-gap: 60px;
   margin-bottom: 10px;
+}
+
+.ib-benefits-wrapper.hybrid {
+  align-items: flex-start;
 }
 
 .partner-program-ib-benefits__list {
@@ -3392,12 +3412,12 @@ input[type=range]::-webkit-slider-thumb {
   position: absolute;
   top: -30px;
   left: 0;
- 
+
   width: auto;
   height: 100%;
 }
 
- 
+
 .section-header.hybrid-benefits {
   text-align: center;
 }
