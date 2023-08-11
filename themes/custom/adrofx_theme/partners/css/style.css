@@ -4214,6 +4214,10 @@ input[type=range]::-webkit-slider-thumb {
   .section-header.hybrid-program {
     margin-top: 50px;
   }
+
+  .hybrid-program-icons {
+    left: 60px;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -4666,6 +4670,9 @@ input[type=range]::-webkit-slider-thumb {
     font-size: 0.875rem;
   }
 
+  .hybrid-program-icons {
+    left: 0;
+  }
 
 }
 
