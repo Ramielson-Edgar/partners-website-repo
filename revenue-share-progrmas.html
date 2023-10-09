@@ -15,7 +15,8 @@
                 <div class="row align-items-center">
                     <div class="col-lg-7 col-md-7 order-xl-1 order-lg-1 order-md-1">
                         <div class="partner-program-hero__img-container">
-                            <img class="img-fluid revenue-icons" src="themes/custom/adrofx_theme/partners/img/revenue-share-icons.png"
+                            <img class="img-fluid revenue-icons"
+                                src="themes/custom/adrofx_theme/partners/img/revenue-share-icons.png"
                                 alt="icons shares stocks metals forex" width="595" height="433">
                         </div>
 
@@ -25,6 +26,7 @@
                                 height="586">
                         </picture>
                     </div>
+
                     <div class="col-lg-5 col-md-5 order-xl-0 order-lg-0 order-md-0 ">
                         <header class="section-header hero-revenue">
                             <span class="section-header-sub">get the 80% partners commissions</span>
@@ -44,8 +46,7 @@
             </div>
 
             <div class="container position-relative">
-                <div role="img" class="gr-circles hero-revenue">
-                    <div class="gr-circles-icons top bottom"></div>
+                <div class="gr-circles hero-revenue">
                 </div>
             </div>
 
@@ -94,13 +95,15 @@
                                     <h3 class="benefits__title">support</h3>
                                     <span class="benefits__value">
                                         <svg width="80" height="86">
-                                            <use href="themes/custom/adrofx_theme/partners/icons/sprite.svg#icon-support"></use>
+                                            <use
+                                                href="themes/custom/adrofx_theme/partners/icons/sprite.svg#icon-support">
+                                            </use>
                                         </svg>
                                     </span>
                                 </div>
                                 <div class="benefits__body">
                                     <h3 class="benefits__title">Account Manager & Support
-                   </h3>
+                                    </h3>
                                     <p class="benefits__text">Individual approach to
                                         build up
                                         a successful affiliate business</p>
@@ -113,8 +116,7 @@
             </section>
 
             <div class="container position-relative">
-                <div role="img" class="gr-circles benefits">
-                    <div class="gr-circles-icons top bottom"></div>
+                <div class="gr-circles benefits">
                 </div>
             </div>
 
@@ -122,13 +124,20 @@
                 <div class="container position-relative">
                     <div class="row align-items-center">
                         <div class="col-lg-6">
-                            <img class="img-fluid ib-icons" src="themes/custom/adrofx_theme/partners/img/ib-icons.png"
-                                alt="clients feedback and statistics" width="523" height="693">
                             <picture>
-                                <img class="img-fluid" src="themes/custom/adrofx_theme/partners/img/ib.png" alt="phone with statistics" width="545"
-                                    height="764">
+                                <source media="(max-width:575px)" srcset="themes/custom/adrofx_theme/partners/img/ib-xs-icons.png">
+                                <source media="(max-width:991px)" srcset="themes/custom/adrofx_theme/partners/img/ib-md-icons.png">
+                                <img class="img-fluid ib-icons" src="themes/custom/adrofx_theme/partners/img/ib-xl-icons.png"
+                                alt="clients feedback and statistics" width="523" height="693">
+                            </picture>
+                         
+                            <img class="img-fluid ib-markets" src="/themes/custom/adrofx_theme/partners/img/ib-markets.png"  width="500" height="500" alt="">
+                            <picture>
+                                <img class="img-fluid ib-phone" src="themes/custom/adrofx_theme/partners/img/ib.png"
+                                    alt="phone with statistics" width="353" height="634">
                             </picture>
                         </div>
+
                         <div class="col-lg-6 col-md-10 m-auto">
                             <header class="section-header ib">
                                 <span class="section-header-sub">all about iB commissions</span>
@@ -145,17 +154,14 @@
                         </div>
                     </div>
 
-                    <div role="img" class="gr-circles ib">
-                        <div class="gr-circles-icons top bottom"></div>
+                    <div class="gr-circles ib">
+                        
                     </div>
                 </div>
-
-
-
             </section>
         </section>
 
-        <section class="partner-program-calculator overflow-hidden section-padding ">
+        <!-- <section class="partner-program-calculator overflow-hidden section-padding ">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-10 m-auto text-center">
@@ -275,9 +281,256 @@
                     </div>
                 </div>
             </div>
+        </section> -->
+
+
+        <section class="ib-calculator section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 m-auto text-center">
+                        <header class="section-header">
+                            <span class="section-header-sub ib-calculator">Get your total commissions</span>
+                            <h2 class="section-header__title">calculate your <span class="text-gradient">commissions
+                                    Payouts</span></h2>
+                            <p class="section-header__desc">The more your clients invest in forex and other assets, the
+                                more commission you get.</p>
+                        </header>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="ib-calculator-container">
+                    <div class="ib-calculator__header">
+
+                        <ul class="grid ib-calculator">
+                            <li class="grid__item">
+                                <label class="ib-calculator__label checked" for="eurusd" data-standard="13"
+                                    data-cent="21">
+                                    <img src="themes/custom/adrofx_theme/partners/img/eurusd.png" alt="icon euro usd"
+                                        width="50" height="32">
+                                    <span class="ib-calculator__title">eurusd</span>
+                                    <input class="ib-calculator__checkbox" type="radio" name="value" id="eurusd">
+                                </label>
+                            </li>
+                            <li class="grid__item">
+                                <label class="ib-calculator__label" for="gpbusd" data-standard="14" data-cent="22">
+                                    <img src="themes/custom/adrofx_theme/partners/img/gpbusd.png" alt="icon gpb usd"
+                                        width="50" height="32">
+                                    <span class="ib-calculator__title">gpbusd</span>
+                                    <input class="ib-calculator__checkbox" type="radio" name="value" id="gpbusd">
+                                </label>
+                            </li>
+                            <li class="grid__item">
+                                <label class="ib-calculator__label" for="USDCHF" data-standard="14.44" data-cent="23">
+                                    <img src="themes/custom/adrofx_theme/partners/img/usdchf.png" alt="icon  usd chf"
+                                        width="50" height="32">
+                                    <span class="ib-calculator__title">USDCHF</span>
+                                    <input class="ib-calculator__checkbox" type="radio" name="value" id="USDCHF">
+                                </label>
+                            </li>
+                            <li class="grid__item">
+                                <label class="ib-calculator__label" for="USDJPY" data-standard="12.31" data-cent="20">
+                                    <img src="themes/custom/adrofx_theme/partners/img/usdjpy.png" alt="icon usd jpy"
+                                        width="50" height="32">
+                                    <span class="ib-calculator__title">USDJPY</span>
+                                    <input class="ib-calculator__checkbox" type="radio" name="value" id="USDJPY">
+                                </label>
+                            </li>
+                            <li class="grid__item">
+                                <label class="ib-calculator__label" for="EURJPY" data-standard="24" data-cent="14.20">
+                                    <img src="themes/custom/adrofx_theme/partners/img/eurjpy.png" alt="icon eur jpy"
+                                        width="50" height="32">
+                                    <span class="ib-calculator__title">EURJPY</span>
+                                    <input class="ib-calculator__checkbox" type="radio" name="value" id="EURJPY">
+                                </label>
+                            </li>
+                            <li class="grid__item">
+                                <label class="ib-calculator__label" for="NZDJPY" data-standard="15.15" data-cent="28">
+                                    <img src="themes/custom/adrofx_theme/partners/img/nzdjpy.png" alt="icon nzd jpy"
+                                        width="50" height="32">
+                                    <span class="ib-calculator__title">NZDJPY</span>
+                                    <input class="ib-calculator__checkbox" type="radio" name="value" id="NZDJPY">
+                                </label>
+                            </li>
+                        </ul>
+
+                        <div class="range">
+                            <span class="range__text d-xl-block d-lg-block d-md-block d-sm-block d-none"> 1</span>
+                            <div class="range__field">
+                                <span class="range__indicator"><span>500</span></span>
+
+                                <input id="mynum" type="range" class="range__input" min="1" max="10000" value="500"
+                                    step="1" oninput="updateRangeSlider(this)" onchange="updateRangeSlider(this)" />
+                                <div class="range__progress"></div>
+                                <div class="range__track"></div>
+
+                            </div>
+                            <span class="range__text d-xl-block d-lg-block d-md-block d-sm-block d-none">10k</span>
+                        </div>
+
+                        <div class="range-index d-xl-none d-lg-none d-md-none d-sm-none">
+                            <span class="range__text d-xl-none d-lg-none d-md-none d-sm-none d-block"> 1</span>
+                            <span class="range__text d-xl-none d-lg-none d-md-none d-sm-none d-block">10k</span>
+                        </div>
+                    </div>
+
+                  
+
+                    <div class="ib-calculator__footer">
+                        <div class="range-result">
+                            <div class="range-result__header d-xl-block d-lg-block d-md-block d-none">
+                                <h3 class="range-result__header-title">total</h3>
+                            </div>
+
+                            <div class="range-result__number">
+                                <p class="range-result__desc">Total Program Commissions </p>
+                                <h3 class="range-result__text render-number">0</h3>
+                            </div>
+
+                            <div class="range-result__value">
+                                <p class="range-result__desc">Currencies </p>
+                                <h3 class="range-result__text">USD</h3>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="range-note">
+                    <p class="range-note__text"> Choose an account type To calculate payouts</p>
+
+                    <div class="range-note__buttons-container">
+                        <button class="btn-button btn-standard btn-base-lg btn-light-blue active" href="#">stander
+                            account</button>
+                        <button class="btn-button btn-cent btn-base-lg btn-light-blue" href="#">cent
+                            account</button>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section class="partner-program-advantages overflow-hidden light-blue section-padding">
+        <section class="top-commission overflow-hidden section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-7 col-lg-10 text-center m-auto">
+                        <header class="section-header commission">
+                            <span class="section-header__sub">choose invest strategy to earn more profit</span>
+                            <h2 class="section-header__title">percentage on top <span class="text-dark">the
+                                    commissions</span>
+                            </h2>
+                            <p class="section-header__desc">Elevate partner profits with percentage on top the
+                                commissions! We
+                                provide four different level and you can find the information below.</p>
+                        </header>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <ul class="grid commissions">
+                    <li class="grid__item">
+                        <div class="commissions__header beginner">
+                            <h3 class="commissions__title">Beginner</h3>
+                        </div>
+
+                        <div class="commissions__body">
+                            <span class="commissions__sub">Earning Extra </span>
+                            <h3 class="commissions__payouts"> 10% <span>payout</span></h3>
+                        </div>
+
+                        <div class="commissions__footer">
+                            <p class="commissions__volume">Partners Total Volume </p>
+                            <h3 class="commissions__lots">500-1000 lots</h3>
+                        </div>
+                    </li>
+
+                    <li class="grid__item">
+                        <div class="commissions__header standard">
+                            <h3 class="commissions__title">intermediate</h3>
+                        </div>
+
+                        <div class="commissions__body">
+                            <span class="commissions__sub">Earning Extra </span>
+                            <h3 class="commissions__payouts"> 15% <span>payout</span></h3>
+                        </div>
+
+                        <div class="commissions__footer">
+                            <p class="commissions__volume">Partners Total Volume </p>
+                            <h3 class="commissions__lots">10,00-9999 lots</h3>
+                        </div>
+                    </li>
+
+
+                    <li class="grid__item">
+                        <div class="commissions__header premium">
+                            <h3 class="commissions__title">Pro</h3>
+                        </div>
+
+                        <div class="commissions__body">
+                            <span class="commissions__sub">Earning Extra </span>
+                            <h3 class="commissions__payouts"> 20% <span>payout</span></h3>
+                        </div>
+
+                        <div class="commissions__footer">
+                            <p class="commissions__volume">Partners Total Volume </p>
+                            <h3 class="commissions__lots">10,000 pules lots</h3>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="container">
+                <div class="gr-circles commission">
+                </div>
+            </div>
+        </section>
+
+        <section class="partner-program-copy">
+
+            <div class="container">
+                <div class="row  align-items-center">
+                    <div class="col-lg-6  order-xl-1 order-lg-1">
+                        <img class="img-fluid d-xl-none d-lg-none d-block copy-phone-1"
+                            src="/themes/custom/adrofx_theme/partners/img/award-start-phone-left.png" width="548" height="916"
+                            alt="">
+
+                    
+                        <img class="img-fluid d-xl-block d-lg-block  d-none copy-phone-1"
+                            src="/themes/custom/adrofx_theme/partners/img/copy-phone-1.png" width="335" height="607"
+                            alt="">
+
+                        <img class="img-fluid copy-trade-icons"
+                            src="/themes/custom/adrofx_theme/partners/img/copy-trade-icons-new.png" width="713" height="739" alt="">
+
+                        <img class="img-fluid d-xl-block d-lg-block d-none copy-phone-2"
+                            src="/themes/custom/adrofx_theme/partners/img/copy-phone-2.png" alt="" width="591" height="692">
+
+
+                            <img class="img-fluid d-xl-none d-lg-none  d-block copy-phone-2"
+                            src="/themes/custom/adrofx_theme/partners/img/award-start-phone-right.png" width="548" height="916"
+                            alt="">
+                    </div>
+
+                    <div class="col-lg-6 col-md-10 m-xl-0 m-lg-0 m-auto order-xl-0 order-lg-0">
+                        <header class="section-header copy">
+                            <span class="section-header-sub ">discover copy trade</span>
+                            <h2 class="section-header__title">Copy Trading
+                                <p class="text-gradient">Let The Experts Trade For You</p>
+                            </h2>
+                            <p class="section-header__text">Follow people just like on any other social media. Discover
+                                investors and copy their trades. they trade, and you copy. Fully automated For Beginners
+                                Trader, Skilled Trader even professionals Trader there is a benefit for everyone!</p>
+                            <a class="btn-base btn-base-lg btn-blue-white" href="#">Get Started</a>
+
+                        </header>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="partner-program-advantages overflow-hidden">
             <div class="container">
                 <header class="partner-program-advantages__header">
                     <span class="partner-program-advantages__header-sub">Revenue share benefits</span>
@@ -304,7 +557,8 @@
                     <li class="grid__item theme green">
                         <div class="advantages__icon">
                             <svg width="32" height="32">
-                                <use href="themes/custom/adrofx_theme/partners/icons/sprite.svg#icon-24/5-support"></use>
+                                <use href="themes/custom/adrofx_theme/partners/icons/sprite.svg#icon-24/5-support">
+                                </use>
                             </svg>
                         </div>
                         <div class="advantages__body">
@@ -375,7 +629,8 @@
                         <li class="grid__item theme black">
                             <div class="advantages__icon">
                                 <svg width="32" height="32">
-                                    <use href="themes/custom/adrofx_theme/partners/icons/sprite.svg#icon-no-bonus"></use>
+                                    <use href="themes/custom/adrofx_theme/partners/icons/sprite.svg#icon-no-bonus">
+                                    </use>
                                 </svg>
                             </div>
                             <div class="advantages__bdoy">
@@ -387,7 +642,8 @@
                         <li class="grid__item theme green">
                             <div class="advantages__icon">
                                 <svg width="32" height="32">
-                                    <use href="themes/custom/adrofx_theme/partners/icons/sprite.svg#icon-24/5-support"></use>
+                                    <use href="themes/custom/adrofx_theme/partners/icons/sprite.svg#icon-24/5-support">
+                                    </use>
                                 </svg>
                             </div>
                             <div class="advantages__body">
@@ -401,7 +657,8 @@
                         <li class="grid__item theme orange">
                             <div class="advantages__icon">
                                 <svg width="32" height="32">
-                                    <use href="themes/custom/adrofx_theme/partners/icons/sprite.svg#icon-analitycs"></use>
+                                    <use href="themes/custom/adrofx_theme/partners/icons/sprite.svg#icon-analitycs">
+                                    </use>
                                 </svg>
                             </div>
                             <div class="advantages__body">
@@ -415,7 +672,8 @@
                         <li class="grid__item theme purple">
                             <div class="advantages__icon">
                                 <svg width="32" height="32">
-                                    <use href="themes/custom/adrofx_theme/partners/icons/sprite.svg#icon-mastercard"></use>
+                                    <use href="themes/custom/adrofx_theme/partners/icons/sprite.svg#icon-mastercard">
+                                    </use>
                                 </svg>
                             </div>
                             <div class="adavantages__body">
@@ -429,7 +687,8 @@
                         <li class="grid__item theme cyan">
                             <div class="advantages__icon">
                                 <svg width="32" height="32">
-                                    <use href="themes/custom/adrofx_theme/partners/icons/sprite.svg#icon-partners"></use>
+                                    <use href="themes/custom/adrofx_theme/partners/icons/sprite.svg#icon-partners">
+                                    </use>
                                 </svg>
                             </div>
                             <div class="advantages__body">
@@ -462,44 +721,12 @@
             </div>
 
             <div class="container position-relative">
-                <div role="img" class="gr-circles advantages">
-                    <div class="gr-circles-icons top bottom"></div>
+                <div class="gr-circles advantages">
                 </div>
             </div>
         </section>
 
-        <section class="partner-program-copy section-padding">
-
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6  order-xl-1 order-lg-1">
-                        <picture>
-                            <img class="img-fluid copy-trade-icons" src="themes/custom/adrofx_theme/partners/img/copy-trade-icons.png"
-                                alt="best traders with profit" width="660" height="459">
-                        </picture>
-                        <picture>
-                            <img class="img-fluid" src="themes/custom/adrofx_theme/partners/img/copy-trade.png"
-                                alt="two phones one wit trading chart other with platform" width="660" height="661">
-                        </picture>
-                    </div>
-                    <div class="col-lg-6 col-md-10 m-xl-0 m-lg-0 m-auto order-xl-0 order-lg-0">
-                        <header class="section-header copy">
-                            <span class="section-header-sub ">discover copy trade</span>
-                            <h2 class="section-header__title">Copy Trading
-                                <p class="text-gradient">Let The Experts Trade For You</p>
-                            </h2>
-                            <p class="section-header__text">Follow people just like on any other social media. Discover
-                                investors and copy their trades. they trade, and you copy. Fully automated For Beginners
-                                Trader, Skilled Trader even professionals Trader there is a benefit for everyone!</p>
-                            <a class="btn-base btn-base-lg btn-blue-white" href="#">Get Started</a>
-
-                        </header>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="partner-program-ib-benefits light-blue section-padding">
+        <!-- <section class="partner-program-ib-benefits light-blue section-padding">
             <div class="container">
                 <div class="ib-benefits-wrapper">
                     <header class="section-header ib-benefits">
@@ -514,6 +741,7 @@
                             be quite costly.
                         </p>
                     </header>
+
                     <ul class="partner-program-ib-benefits__list">
                         <li class="partner-program-ib-benefits__list-item d-xl-flex d-lg-flex d-none">
                             <svg width="122" height="88">
@@ -571,29 +799,118 @@
                 </ul>
 
 
+        </section> -->
+
+        <section class="ib-benefits overflow-hidden">
+
+            <div class="container mb-5">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 order-xl-1 order-lg-1">
+                        <picture>
+                            <img class="img-fluid" src="themes/custom/adrofx_theme/partners/img/copy-trade.png"
+                                alt="two phones one wit trading chart other with platform" width="660" height="661">
+                        </picture>
+                    </div>
+
+                    <div class="col-lg-6 order-xl-0 order-lg-0">
+                        <header class="section-header ib-benefits">
+                            <span class="section-header-sub">see and visit all benefits adroFx</span>
+                            <h2 class="section-header__title">More
+
+                                <span class="text-gradient">IB Benefits</span>
+                            </h2>
+                            <p class="section-header__text">Many individual broker-dealers prefer to act as
+                                intermediaries
+                                of a large brokerage firm because they can cut down on marketing and advertising fees by
+                                getting free access to effective marketing and advertising resources which would
+                                otherwise
+                                be quite costly.
+                            </p>
+                        </header>
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="splide-ib-benefits" class="splide" role="group" aria-label="Splide Basic HTML Example">
+                <div class="splide__track">
+                    <ul class="splide__list ib-benefits">
+                        <li class="splide__slide">
+                            <svg class="ib-benefits__icon" width="122" height="88">
+                                <use href="themes/custom/adrofx_theme/partners/icons/sprite.svg#icon-crown-outline">
+                                </use>
+                            </svg>
+                            <p class="ib-benefits__text"> premium grade Expert Advisors</p>
+                        </li>
+
+                        <li class="splide__slide">
+                            <svg class="ib-benefits__icon" width="125" height="88">
+                                <use href="themes/custom/adrofx_theme/partners/icons/sprite.svg#icon-educational"></use>
+                            </svg>
+                            <p class="ib-benefits__text">comprehensive educational resources
+                            </p>
+                        </li>
+
+                        <li class="splide__slide">
+                            <svg class="ib-benefits__icon" width="107" height="88">
+                                <use href="themes/custom/adrofx_theme/partners/icons/sprite.svg#icon-expert"></use>
+                            </svg>
+                            <p class="ib-benefits__text">written by expert financial analysts
+                            </p>
+                        </li>
+
+                        <li class="splide__slide">
+                            <svg class="ib-benefits__icon" width="100" height="88">
+                                <use href="themes/custom/adrofx_theme/partners/icons/sprite.svg#icon-e-books"></use>
+                            </svg>
+                            <p class="ib-benefits__text"> e-books, <span class="d-block">video tutorials</span></p>
+                        </li>
+
+                        <li class="splide__slide">
+                            <svg class="ib-benefits__icon" width="103" height="88">
+                                <use href="themes/custom/adrofx_theme/partners/icons/sprite.svg#icon-indicators"></use>
+                            </svg>
+                            <p class="ib-benefits__text"> advanced technical indicators</p>
+                        </li>
+
+                        <li class="splide__slide">
+                            <svg class="ib-benefits__icon" width="127" height="88">
+                                <use href="themes/custom/adrofx_theme/partners/icons/sprite.svg#icon-calendar"></use>
+                            </svg>
+                            <p class="ib-benefits__text">daily market analysis performed</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="gr-circles ib-benefits">
+                </div>
+            </div>
         </section>
 
-        <section class="partner-program-step overflow-hidden section-padding">
+        <section class="start-program overflow-hidden section-padding">
             <div class="container">
-                <header class="partner-program-step__headers text-center">
-                    <span class="partner-program-step__header-sub">click on each step and go to step</span>
-                    <h2 class="partner-program-step__header-title">More
+                <header class="start-program__header text-center">
+                    <span class="start-program__sub">click on each step and go to step</span>
+                    <h2 class="start-program__title">More
 
-                        It&#39;s simple to begin <span class="text-gradient">& start Earning with AdroFX</span>
+                        It&#39;s simple to begin <span class="text-dark">& start Earning with AdroFX</span>
                     </h2>
                 </header>
             </div>
 
             <div class="container">
                 <ul class="grid step revenue">
-                    <li class="grid__item theme orange">
+                    <li class="grid__item">
                         <div class="step__img-container">
                             <div class="step__progress">
                                 <svg class="step__icon">
                                     <circle cx="69" cy="69" r="66" />
                                 </svg>
                                 <span data-target="50" class="step-counter sr-only">step one 50%</span>
-                                <img class="icon-step" src="themes/custom/adrofx_theme/partners/icons/step-1.svg" alt="icon users" width="46" height="74">
+                                <img class="icon-step" src="themes/custom/adrofx_theme/partners/icons/step-1.svg"
+                                    alt="icon users" width="46" height="74">
                             </div>
                         </div>
                         <div class="step__body">
@@ -604,15 +921,15 @@
                         </div>
                     </li>
 
-                    <li class="grid__item theme green">
+                    <li class="grid__item">
                         <div class="step__img-container">
                             <div class="step__progress">
                                 <svg class="step__icon">
                                     <circle cx="69" cy="69" r="66" />
                                 </svg>
                                 <span data-target="80" class="step-counter sr-only">step one 50%</span>
-                                <img class="icon-step" src="themes/custom/adrofx_theme/partners/icons/step-2.svg" alt="icon two chats" width="72"
-                                    height="74">
+                                <img class="icon-step" src="themes/custom/adrofx_theme/partners/icons/step-2.svg"
+                                    alt="icon two chats" width="72" height="74">
                             </div>
 
                         </div>
@@ -624,7 +941,7 @@
                         </div>
                     </li>
 
-                    <li class="grid__item theme purple">
+                    <li class="grid__item">
                         <div class="step__img-container">
 
                             <div class="step__progress">
@@ -632,8 +949,8 @@
                                     <circle cx="69" cy="69" r="66" />
                                 </svg>
                                 <span data-target="100" class="step-counter sr-only">step one 50%</span>
-                                <img class="icon-step" src="themes/custom/adrofx_theme/partners/icons/step-3.svg" alt="icon had with money" width="72"
-                                    height="74">
+                                <img class="icon-step" src="themes/custom/adrofx_theme/partners/icons/step-3.svg"
+                                    alt="icon had with money" width="72" height="74">
                             </div>
 
 
@@ -650,9 +967,8 @@
                 </ul>
             </div>
 
-            <div class="container position-relative">
-                <div role="img" class="gr-circles step">
-                    <div class="gr-circles-icons top bottom"></div>
+            <div class="container">
+                <div class="gr-circles start-program">
                 </div>
             </div>
         </section>
@@ -694,8 +1010,8 @@
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-            crossorigin="anonymous"></script>
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
     <script src="themes/custom/adrofx_theme/partners/js/popper.min.js"></script>
     <script src="themes/custom/adrofx_theme/partners/js/bootstrap.bundle.min.js"></script>
     <script src="themes/custom/adrofx_theme/partners/js/gsap.min.js"></script>
@@ -707,6 +1023,48 @@
     <script src="themes/custom/adrofx_theme/partners/js/owl.carousel.min.js"></script>
 
     <script src="themes/custom/adrofx_theme/partners/js/main.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const benefits = new Splide('#splide-ib-benefits', {
+                type: 'loop',
+                focus: 'center',
+                gap: 10,
+                height: '15rem',
+
+                pagination: false,
+                arrows: false,
+
+                autoScroll: {
+                    speed: 2,
+                    pauseOnHover: false,
+                    pauseOnFocus: false,
+                },
+
+                perPage: 5,
+                breakpoints: {
+                    1198: {
+                        perPage: 4,
+                    },
+                    991: {
+                        perPage: 3,
+                    },
+                    800: {
+                        perPage: 2,
+                    },
+                    600: {
+                        perPage: 1,
+                    }
+                },
+            });
+            benefits.mount(window.splide.Extensions);
+
+
+
+
+
+        });
+    </script>
 </body>
 
 </html>

@@ -13,7 +13,8 @@ window.addEventListener('load', () => {
     );
     const stepCounters = document.querySelectorAll(".step-counter");
 
-    const progress = document.querySelector(".progress");
+    // const progress = document.querySelector(".progress");
+    const progress = document.querySelector(".range__progress");
 
     function updateRangeSlider(e) {
         el = e.target;
@@ -21,9 +22,10 @@ window.addEventListener('load', () => {
         var min = el.getAttribute("min");
         var max = el.getAttribute("max");
         var portion = (val - min) / (max - min);
-        var iel = el.parentNode.querySelector(".range-indicator");
+        var iel = el.parentNode.querySelector(".range__indicator");
         iel.innerHTML = val + '<span class="range-value"></span>';
-        iel.style.left = portion * (el.offsetWidth - 31) + "px";
+        // iel.style.left = portion * (el.offsetWidth - 31) + "px";
+        iel.style.left = portion * (el.offsetWidth - 30) + "px";
         progress.style.width = (el.value / el.max) * 100 + "%";
 
         renderResult(val);
@@ -69,23 +71,23 @@ window.addEventListener('load', () => {
 
     function getCheckedRadio() {
         document
-            .querySelectorAll(".calculator__label")
+            .querySelectorAll(".ib-calculator__label")
             .forEach((el) => {
                 el.addEventListener("click", (e) => {
                     const target = e.currentTarget;
                     if (
                         target.classList.contains(
-                            "calculator__label"
+                            "ib-calculator__label"
                         )
                     ) {
                         document
-                            .querySelectorAll(".calculator__label")
+                            .querySelectorAll(".ib-calculator__label")
                             .forEach((el) => el.classList.remove("checked"));
                     }
 
                     if (
                         target.classList.contains(
-                            "calculator__label"
+                            "ib-calculator__label"
                         )
                     ) {
                         target.classList.add("checked");
@@ -121,7 +123,7 @@ window.addEventListener('load', () => {
 
         if (btnCent.classList.contains("active")) {
             document
-                .querySelectorAll(".calculator__label")
+                .querySelectorAll(".ib-calculator__label")
                 .forEach((el, i) => {
                     if (el.classList.contains("checked")) {
                         const centData = +el.dataset.cent;
@@ -134,7 +136,7 @@ window.addEventListener('load', () => {
 
         if (btnStandard.classList.contains("active")) {
             document
-                .querySelectorAll(".calculator__label")
+                .querySelectorAll(".ib-calculator__label")
                 .forEach((el, i) => {
                     if (el.classList.contains("checked")) {
                         const standardData = +el.dataset.standard;
@@ -155,7 +157,7 @@ window.addEventListener('load', () => {
             updateCentCounter()
 
             document
-                .querySelectorAll(".calculator__label")
+                .querySelectorAll(".ib-calculator__label")
                 .forEach(el => {
                     const centData = +el.dataset.cent
 
@@ -170,7 +172,7 @@ window.addEventListener('load', () => {
             updateStandardCounter()
 
             document
-                .querySelectorAll(".calculator__label")
+                .querySelectorAll(".ib-calculator__label")
                 .forEach(el => {
                     if (el.classList.contains('checked')) {
                         const standardData = +el.dataset.standard
@@ -184,7 +186,7 @@ window.addEventListener('load', () => {
 
         if ( btnStandard.classList.contains('active')) {
             document
-                .querySelectorAll(".calculator__label")
+                .querySelectorAll(".ib-calculator__label")
                 .forEach((el, i) => {
                     el.addEventListener("click", () => {
                         document.querySelector(".render-number").textContent = (val * +el.dataset.standard).toLocaleString();
@@ -197,7 +199,7 @@ window.addEventListener('load', () => {
 
         function updateCentCounter() {
             document
-                .querySelectorAll(".calculator__label")
+                .querySelectorAll(".ib-calculator__label")
                 .forEach((el, i) => {
                     const centData = +el.dataset.cent
                     el.addEventListener("click", () => {
@@ -208,7 +210,7 @@ window.addEventListener('load', () => {
 
         function updateStandardCounter() {
             document
-                .querySelectorAll(".calculator__label")
+                .querySelectorAll(".ib-calculator__label")
                 .forEach((el, i) => {
                     el.addEventListener("click", () => {
                         document.querySelector(".render-number").textContent = (val * +el.dataset.standard).toLocaleString();
@@ -223,7 +225,7 @@ window.addEventListener('load', () => {
         const btnCent = document.querySelector(".btn-cent");
 
         document
-            .querySelectorAll(".calculator__label")
+            .querySelectorAll(".ib-calculator__label")
             .forEach(el => {
 
                 el.addEventListener('click', ()=>{
@@ -245,7 +247,7 @@ window.addEventListener('load', () => {
 
         btnCent.addEventListener('click', () => {
             document
-                .querySelectorAll(".calculator__label")
+                .querySelectorAll(".ib-calculator__label")
                 .forEach(el => {
 
                     if (el.classList.contains('checked')) {
@@ -258,7 +260,7 @@ window.addEventListener('load', () => {
 
         btnStandard.addEventListener('click', () => {
             document
-                .querySelectorAll(".calculator__label")
+                .querySelectorAll(".ib-calculator__label")
                 .forEach(el => {
 
                     if (el.classList.contains('checked')) {
