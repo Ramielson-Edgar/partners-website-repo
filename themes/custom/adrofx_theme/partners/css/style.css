@@ -2303,7 +2303,7 @@ img {
   background-size: contain;
 }
 
- 
+
 .ib-calculator-container {
   overflow: hidden;
   border-radius: 40px;
@@ -2312,7 +2312,7 @@ img {
 
   box-shadow: 7px 63px 100px -20px rgba(0, 0, 0, 0.15);
 }
- 
+
 
 .ib-calculator__header {
   padding: 30px;
@@ -2752,7 +2752,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 
-.gr-circles.ib-benefits{
+.gr-circles.ib-benefits {
   position: absolute;
   left: 50%;
   bottom: -50%;
@@ -2776,7 +2776,7 @@ input[type="range"]::-webkit-slider-thumb {
   margin-bottom: 0;
 }
 
- 
+
 .splide__list.ib-benefits .splide__slide {
   border-radius: 30px;
   background: #FFF;
@@ -2784,17 +2784,18 @@ input[type="range"]::-webkit-slider-thumb {
   padding: 30px;
 }
 
-.ib-benefits  .splide .splide__track {
+.ib-benefits .splide .splide__track {
   overflow: visible;
   position: relative;
   z-index: 2;
 }
 
-.list.ib-benefits  .splide__slide {
+.list.ib-benefits .splide__slide {
   display: flex;
   flex-direction: column;
   flex-basis: 329px;
 }
+
 .ib-benefits__icon {
   flex-grow: 1;
   margin-bottom: 20px;
@@ -2865,7 +2866,7 @@ input[type="range"]::-webkit-slider-thumb {
 
 }
 
- 
+
 .grid.step.mobile {
   display: none;
 }
@@ -3769,8 +3770,9 @@ input[type="range"]::-webkit-slider-thumb {
   bottom: 0;
   left: 0;
 
-  width: auto;
-  height: 90%;
+  display: block;
+  max-width: 100%;
+  height: auto;
 
   z-index: 1;
 }
@@ -3997,6 +3999,7 @@ input[type="range"]::-webkit-slider-thumb {
     display: flex;
     flex-direction: column;
   }
+
   .ib-benefits__icon {
     margin-bottom: 30px;
   }
@@ -4385,7 +4388,7 @@ input[type="range"]::-webkit-slider-thumb {
     margin-bottom: 10px;
   }
 
-  .grid.commissions  {
+  .grid.commissions {
     justify-content: flex-start;
     /* align-items: flex-start; */
   }
@@ -4395,7 +4398,7 @@ input[type="range"]::-webkit-slider-thumb {
   }
 
   .grid.commissions .grid__item:nth-child(odd) {
-    margin-right: 10px; 
+    margin-right: 10px;
   }
 
   .commissions__payouts {
@@ -4473,8 +4476,8 @@ input[type="range"]::-webkit-slider-thumb {
   .section-header.ib {
     margin-bottom: 0;
   }
- 
-  
+
+
   .grid.step,
   .grid.step.revenue {
     display: grid;
@@ -4571,11 +4574,11 @@ input[type="range"]::-webkit-slider-thumb {
     padding: 0;
   }
 
-  
+
   .ib-markets {
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 
     width: 70%;
     height: auto;
@@ -4601,7 +4604,7 @@ input[type="range"]::-webkit-slider-thumb {
     animation: phone-fly 10s ease-in-out 0s infinite;
     z-index: 2;
   }
- 
+
 
   .copy-phone-2 {
     right: 15px;
@@ -4615,7 +4618,7 @@ input[type="range"]::-webkit-slider-thumb {
     z-index: 1;
   }
 
-  
+
 
 }
 
@@ -5086,7 +5089,7 @@ input[type="range"]::-webkit-slider-thumb {
     margin-bottom: 5px;
     padding: 20px;
   }
-  
+
 
   .grid.commissions .grid__item:nth-child(odd) {
     margin-right: 5px;
@@ -5096,7 +5099,7 @@ input[type="range"]::-webkit-slider-thumb {
     font-size: 1.25rem;
   }
 
- 
+
 
 }
 
@@ -5775,7 +5778,7 @@ input[type="range"]::-webkit-slider-thumb {
     margin-bottom: 80px;
   } */
 
-  
+
   .partner-program-ib-benefits__list {
     grid-template-columns: 1fr;
   }
@@ -5962,7 +5965,7 @@ input[type="range"]::-webkit-slider-thumb {
   .gr-circles.commission {
     top: 60%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 
     width: 500px;
     height: 500px;
@@ -5977,7 +5980,7 @@ input[type="range"]::-webkit-slider-thumb {
   }
 
   .ib-calculator__label {
- 
+
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -5988,7 +5991,7 @@ input[type="range"]::-webkit-slider-thumb {
 
   .grid.ib-calculator .grid__item {
     position: relative;
- 
+
 
   }
 
@@ -6039,7 +6042,7 @@ input[type="range"]::-webkit-slider-thumb {
     display: flex;
     justify-content: space-between;
     margin-top: 40px;
-  } 
+  }
 
   .range-index span {
     font-size: .813rem;
@@ -6048,7 +6051,7 @@ input[type="range"]::-webkit-slider-thumb {
   .gr-circles.start-program {
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 
     width: 500px;
     height: 500px;
