@@ -1,6 +1,7 @@
 // const { default: gsap } = require("./gsap");
+ 
 
-window.addEventListener('load', () => {
+window.addEventListener('DOMContentLoaded', () => {
     const mynum = document.getElementById('mynum');
     if(mynum !== null)
         mynum.addEventListener("input", updateRangeSlider);
@@ -30,11 +31,11 @@ window.addEventListener('load', () => {
 
         renderResult(val);
 
-        const windowWidth = window.innerWidth
+        // const windowWidth = window.innerWidth
 
-        if(windowWidth < 575)
-            iel.style.left = portion * (el.offsetWidth - 30) + "px"
-        else return false;
+        // if(windowWidth < 575)
+        //     iel.style.left = portion * (el.offsetWidth - 30) + "px"
+        // else return false;
     }
 
 
@@ -220,7 +221,7 @@ window.addEventListener('load', () => {
     }
 
     function renderStartNumber() {
-        const inputMin = document.querySelector('.range-input').value
+        const inputMin = document.querySelector('.range__input').value
         const btnStandard = document.querySelector(".btn-standard");
         const btnCent = document.querySelector(".btn-cent");
 
@@ -273,7 +274,7 @@ window.addEventListener('load', () => {
 
     }
 
-    if(document.querySelector('.range-input') !== null)
+    if(document.querySelector('.range__input') !== null)
         renderStartNumber()
 
     const toggleButton = document.querySelector('.toggle-menu')
@@ -479,6 +480,9 @@ window.addEventListener('load', () => {
 
     })
 })
+
+
+
 window.onload = function () {
     (function ($) {
         $(document).ready(function () {
