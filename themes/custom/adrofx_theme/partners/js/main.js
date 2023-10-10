@@ -31,12 +31,16 @@ window.addEventListener('DOMContentLoaded', () => {
 
         renderResult(val);
 
+        // !!!NEED REMOVE!!!//
+
         // const windowWidth = window.innerWidth
 
         // if(windowWidth < 575)
         //     iel.style.left = portion * (el.offsetWidth - 30) + "px"
         // else return false;
     }
+
+// !!!  UPDATE LABEL NAME  !!! // 
 
 
     window.addEventListener("scroll", stepCounter);
@@ -572,7 +576,8 @@ window.onload = function () {
 
             })
 
-            $('.owl-carousel-advantages').owlCarousel({
+         // !!!NEED ADD NEW SPLIDE !!! //
+            $('.ib-advantages-carousel').owlCarousel({
                 loop: true,
                 margin: 10,
                 nav: true,
@@ -712,6 +717,41 @@ window.onload = function () {
                 }
             })
 
+
+            // !!!NEED ADD NEW SPLIDE !!! //
+
+            const benefits = new Splide('#splide-ib-benefits', {
+                type: 'loop',
+                focus: 'center',
+                gap: 10,
+                height: '15rem',
+
+                pagination: false,
+                arrows: false,
+
+                autoScroll: {
+                    speed: 2,
+                    pauseOnHover: false,
+                    pauseOnFocus: false,
+                },
+
+                perPage: 5,
+                breakpoints: {
+                    1198: {
+                        perPage: 4,
+                    },
+                    991: {
+                        perPage: 3,
+                    },
+                    800: {
+                        perPage: 2,
+                    },
+                    600: {
+                        perPage: 1,
+                    }
+                },
+            });
+            benefits.mount(window.splide.Extensions);
 
 
             //splide//
