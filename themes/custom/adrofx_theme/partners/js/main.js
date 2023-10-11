@@ -1,11 +1,15 @@
 // const { default: gsap } = require("./gsap");
- 
+
 
 window.addEventListener('DOMContentLoaded', () => {
-    const mynum = document.getElementById('mynum');
-    if(mynum !== null)
-        mynum.addEventListener("input", updateRangeSlider);
 
+    const mynum = document.getElementById('mynum');
+    if (mynum !== null) {
+        mynum.addEventListener("input", (e) => {
+            updateIndicator(e.target.value);
+        });
+
+    }
     const firstStep = document.querySelector(
         ".step__img-container:first-child"
     );
@@ -13,44 +17,95 @@ window.addEventListener('DOMContentLoaded', () => {
         ".step__progress svg circle"
     );
     const stepCounters = document.querySelectorAll(".step-counter");
+    const rangeSlider = document.querySelector("#mynum");
+    const indicator = document.querySelector(".range__indicator");
+    const rangeProgress = document.querySelector('.range__progress')
 
-    // const progress = document.querySelector(".progress");
-    const progress = document.querySelector(".range__progress");
+    let isDragging = false;
 
-    function updateRangeSlider(e) {
-        el = e.target;
-        var val = el.value;
-        var min = el.getAttribute("min");
-        var max = el.getAttribute("max");
-        var portion = (val - min) / (max - min);
-        var iel = el.parentNode.querySelector(".range__indicator");
-        iel.innerHTML = val + '<span class="range-value"></span>';
-        // iel.style.left = portion * (el.offsetWidth - 31) + "px";
-        iel.style.left = portion * (el.offsetWidth - 30) + "px";
-        progress.style.width = (el.value / el.max) * 100 + "%";
+    indicator.addEventListener("mousedown", () => {
+        startDragging();
 
-        renderResult(val);
+        indicator.style.cursor = "grabbing";
+        document.addEventListener("mousemove", moveIndicator);
+        document.addEventListener("mouseup", stopMovingIndicator);
+    });
 
-        // !!!NEED REMOVE!!!//
+    indicator.addEventListener("touchstart", (e) => {
+        e.preventDefault(); 
+        startDragging();
+      });
 
-        // const windowWidth = window.innerWidth
 
-        // if(windowWidth < 575)
-        //     iel.style.left = portion * (el.offsetWidth - 30) + "px"
-        // else return false;
+    document.addEventListener("touchend", () => {
+        stopDragging();
+      });
+
+      document.addEventListener("touchmove", (e) => {
+        if (isDragging) {
+          e.preventDefault(); 
+          moveIndicator(e.touches[0]);
+        }
+      });
+      
+
+    function updateIndicator(value) {
+        indicator.innerHTML = Math.trunc(value);
+
+        if (window.innerWidth < 575) {
+            const offsetPercentage = (value - rangeSlider.min) / (rangeSlider.max - rangeSlider.min) * 89;
+            indicator.style.left = `${offsetPercentage}%`;
+            rangeProgress.style.width = `${(value - rangeSlider.min) / (rangeSlider.max - rangeSlider.min) * 100}%`
+        } else {
+            const offsetPercentage = (value - rangeSlider.min) / (rangeSlider.max - rangeSlider.min) * 97;
+            indicator.style.left = `${offsetPercentage}%`;
+            rangeProgress.style.width = `${(value - rangeSlider.min) / (rangeSlider.max - rangeSlider.min) * 100}%`
+        }
+
+
+        renderResult(value);
     }
 
-// !!!  UPDATE LABEL NAME  !!! // 
+    function moveIndicator(e) {
+        const rect = rangeSlider.getBoundingClientRect();
+        const offsetX = e.clientX - rect.left;
+        const sliderWidth = rect.width;
+
+        const percentage = Math.min(100, Math.max(0, (offsetX / sliderWidth) * 100));
+
+        const newValue = (percentage * (rangeSlider.max - rangeSlider.min)) / 100 + parseFloat(rangeSlider.min);
+        rangeSlider.value = newValue;
+        updateIndicator(newValue);
+    }
+
+
+    function stopMovingIndicator() {
+        indicator.style.cursor = "pointer";
+        document.removeEventListener("mousemove", moveIndicator);
+        document.removeEventListener("mouseup", stopMovingIndicator);
+    }
+
+    updateIndicator(rangeSlider.value);
+
+    function startDragging() {
+        isDragging = true;
+        indicator.style.cursor = "grabbing";
+      }
+
+      function stopDragging() {
+        isDragging = false;
+        indicator.style.cursor = "pointer";
+      }
 
 
     window.addEventListener("scroll", stepCounter);
 
     function hasReached(el) {
-        if(el === null)
+        if (el === null)
             return false;
         const topPosition = el.getBoundingClientRect().top;
 
-        if(window.innerHeight >= topPosition + el.offsetHeight)
+        if (window.innerHeight >= topPosition + el.offsetHeight)
             return true;
         else return false;
     }
@@ -189,7 +244,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 
-        if ( btnStandard.classList.contains('active')) {
+        if (btnStandard.classList.contains('active')) {
             document
                 .querySelectorAll(".ib-calculator__label")
                 .forEach((el, i) => {
@@ -233,8 +288,8 @@ window.addEventListener('DOMContentLoaded', () => {
             .querySelectorAll(".ib-calculator__label")
             .forEach(el => {
 
-                el.addEventListener('click', ()=>{
-                    if (el.classList.contains('checked') ) {
+                el.addEventListener('click', () => {
+                    if (el.classList.contains('checked')) {
                         const currentTarget = el.dataset.standard
 
                         document.querySelector(".render-number").textContent = (inputMin * currentTarget).toLocaleString();
@@ -242,7 +297,7 @@ window.addEventListener('DOMContentLoaded', () => {
                     }
                 })
 
-                if (el.classList.contains('checked') ) {
+                if (el.classList.contains('checked')) {
                     const currentTarget = el.dataset.standard
 
                     document.querySelector(".render-number").textContent = (inputMin * currentTarget).toLocaleString();
@@ -278,44 +333,44 @@ window.addEventListener('DOMContentLoaded', () => {
 
     }
 
-    if(document.querySelector('.range__input') !== null)
+    if (document.querySelector('.range__input') !== null)
         renderStartNumber()
 
     const toggleButton = document.querySelector('.toggle-menu')
     const mobileMenu = document.querySelector('.mobile-menu')
     const menu = document.querySelector('.menu')
     const btnCLose = document.querySelector('.btn-close')
-    const menuLinks =document.querySelectorAll('.partnership-programs__nav-link')
+    const menuLinks = document.querySelectorAll('.partnership-programs__nav-link')
 
-    function onHandleToggleMenu () {
-        toggleButton.addEventListener('click',(e)=>{
+    function onHandleToggleMenu() {
+        toggleButton.addEventListener('click', (e) => {
             mobileMenu.classList.toggle('is-active')
             menu.classList.toggle('is-active')
         })
 
-        menu.addEventListener('click',(e)=>{
+        menu.addEventListener('click', (e) => {
 
             const isMenuClicked = mobileMenu.contains(e.target);
             console.log(isMenuClicked)
 
-            if(!isMenuClicked) {
+            if (!isMenuClicked) {
                 menu.classList.remove('is-active')
             }
 
         })
 
-        btnCLose.addEventListener('click',()=>{
+        btnCLose.addEventListener('click', () => {
             menu.classList.remove('is-active')
         })
 
-        menuLinks.forEach( el => el.addEventListener('click',()=>{
+        menuLinks.forEach(el => el.addEventListener('click', () => {
             menu.classList.remove('is-active')
         }))
 
 
     }
 
-    onHandleToggleMenu ()
+    onHandleToggleMenu()
 
     const counters = document.querySelectorAll('.cpa-program-advantages__body-title span')
     const firstCounter = document.querySelector('.cpa-program-advantages__item:first-child')
@@ -358,9 +413,11 @@ window.addEventListener('DOMContentLoaded', () => {
     gsap.config({ nullTargetWarn: false });
 
     gsap.registerPlugin(ScrollTrigger);
-    const tl =  gsap.timeline({default :{
-            ease:"power3.inOut",duration:1,
-        }})
+    const tl = gsap.timeline({
+        default: {
+            ease: "power3.inOut", duration: 1,
+        }
+    })
 
     gsap.to(".cpa-program-icons", {
         scrollTrigger: {
@@ -386,28 +443,28 @@ window.addEventListener('DOMContentLoaded', () => {
         y: 60,
     })
 
-    gsap.to(".revenue-icons",{
+    gsap.to(".revenue-icons", {
         scrollTrigger: {
             trigger: ".revenue-icons",
             scrub: 1,
         },
-        y:50,
+        y: 50,
     })
 
-    gsap.to(".ib-icons",{
+    gsap.to(".ib-rebate-icons", {
         scrollTrigger: {
-            trigger: ".ib-icons",
+            trigger: ".ib-rebate-icons",
             scrub: 1,
         },
-        y:50,
+        y: 50,
     })
 
-    gsap.to(".copy-trade-icons",{
+    gsap.to(".ib-copy-trade-icons", {
         scrollTrigger: {
-            trigger: ".copy-trade-icons",
+            trigger: ".ib-copy-trade-icons",
             scrub: 1,
         },
-        y:50,
+        y: 50,
     })
 
     gsap.to(".hybrid-program-icons", {
@@ -415,7 +472,7 @@ window.addEventListener('DOMContentLoaded', () => {
             trigger: ".hybrid-program-icons",
             scrub: 1,
         },
-        y:30,
+        y: 30,
     })
 
     gsap.to(".hybrid-hero-icons ", {
@@ -423,7 +480,7 @@ window.addEventListener('DOMContentLoaded', () => {
             trigger: ".hybrid-hero-icons",
             scrub: 1,
         },
-        y:30,
+        y: 30,
     })
 
     ScrollTrigger.matchMedia({
@@ -576,7 +633,7 @@ window.onload = function () {
 
             })
 
-         // !!!NEED ADD NEW SPLIDE !!! //
+            // !!!NEED ADD NEW SPLIDE !!! //
             $('.ib-advantages-carousel').owlCarousel({
                 loop: true,
                 margin: 10,
@@ -607,7 +664,7 @@ window.onload = function () {
                 loop: true,
                 margin: 10,
                 nav: false,
-                dots:true,
+                dots: true,
 
                 autoplay: true,
                 autoplayTimeout: 5000,
@@ -615,16 +672,16 @@ window.onload = function () {
                 responsive: {
                     0: {
                         items: 1,
-                        dots:true,
+                        dots: true,
                     },
                     600: {
-                        dots:true,
+                        dots: true,
                         items: 1
                     },
                     900: {
                         items: 1,
-                        dots:true,
-                       
+                        dots: true,
+
                     }
 
                 }
@@ -710,8 +767,8 @@ window.onload = function () {
                         items: 1,
                         nav: false,
                         dots: true,
-                        stagePadding:30,
-                        margin:30,
+                        stagePadding: 30,
+                        margin: 30,
                     },
 
                 }
@@ -735,8 +792,12 @@ window.onload = function () {
                     pauseOnFocus: false,
                 },
 
+
                 perPage: 5,
                 breakpoints: {
+                    1440: {
+                        perPage: 4,
+                    },
                     1198: {
                         perPage: 4,
                     },
@@ -755,7 +816,7 @@ window.onload = function () {
 
 
             //splide//
-            if($('#splide-first').length){
+            if ($('#splide-first').length) {
                 new Splide('#splide-first', {
                     type: 'loop',
                     drag: 'free',
