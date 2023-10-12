@@ -3844,6 +3844,10 @@ input[type="range"]::-webkit-slider-thumb {
   font-size: 1.25rem;
 }
 
+.ib-commissions__sub {
+  text-transform: capitalize;
+}
+
 
 .ib-commissions__lots {
   font-size: 1.5rem;
@@ -4192,6 +4196,26 @@ input[type="range"]::-webkit-slider-thumb {
 
   .grid-features.advantages .grid-features__item:not(:nth-last-child(-n + 2)) {
     margin-bottom: 10px;
+  }
+
+  .grid.ib-calculator .grid__item:last-child .ib-calculator__label img {
+    width: 20px;
+  }
+
+  .ib-calculator__label {
+    padding: 15px;
+    align-items: center;
+  }
+
+  .ib-calculator__label img {
+    width: 30px;
+    height: 19px;
+  }
+
+
+  .ib-calculator__label .ib-calculator__title {
+    font-size: 14px;
+    line-height: 24px;
   }
 }
 
