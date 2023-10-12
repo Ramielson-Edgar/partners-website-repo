@@ -2335,7 +2335,7 @@ img {
   margin-bottom: 38px;
 }
 
-.section-header.ib-hero .section-header__sub {
+.section-header.ib-hero .section-header-sub {
   color: var(--green-500);
   text-transform: capitalize;
   padding: 8px 30px;
@@ -2559,8 +2559,8 @@ img {
 
 .ib-calculator__label {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   cursor: pointer;
 
   height: 100%;
