@@ -489,6 +489,7 @@ img {
   transform: translateY(-8px);
 }
 
+.icon-container,
 .grid-features__header {
   width: 70px;
   height: 70px;
@@ -506,6 +507,11 @@ img {
   margin-bottom: 0;
 }
 
+.title {
+  font-family: var(--montserrat);
+}
+
+
 
 .partnership-programs__nav-link,
 .btn-base {
@@ -521,10 +527,10 @@ img {
 
 .grid-features__item,
 .grid .grid__item,
-.partner-program-step__list-item,
+/* .partner-program-step__list-item, */
 .partnership-programs-features__item,
 .partnership-programs-plans__item,
-.partner-program-ib-benefits__list-item,
+/* .partner-program-ib-benefits__list-item, */
 /* .partner-program-advantages__list-item, */
 .partnership-programs__nav-link::after,
 .btn-base {
@@ -2400,6 +2406,10 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+
+  width: 100%;
+  height: auto;
+
   color: var(--blue-500);
 }
 
@@ -3698,23 +3708,22 @@ input[type="range"]::-webkit-slider-thumb {
   text-align: center;
 }
 
-.grid.hybrid-benefits {
+.grid-features.hybrid-benefits {
   justify-content: space-between;
 }
 
-.grid.program .grid__item,
-.grid.hybrid-benefits .grid__item {
+
+.grid-features.hybrid-benefits .grid-features__item {
   flex-basis: calc(100% / 3 - 10px);
   padding: 30px;
-  border-radius: 10px;
+  border-radius: 30px;
 }
 
-.grid.hybrid-benefits .grid__item:hover {
+.grid-features.hybrid-benefits .grid-features__item:hover {
   box-shadow: -16px 21px 80px -10px rgba(9, 19, 69, 0.05);
 }
 
-.grid.program .program__icon-container,
-.hybrid-benefits__icon-container {
+.grid-features.hybrid-benefits .grid-features__header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3723,23 +3732,29 @@ input[type="range"]::-webkit-slider-thumb {
   height: 74px;
 
   background: var(--blue-100);
-  border-radius: 50%;
   margin-bottom: 20px;
 }
 
-.hybrid-benefits__title {
+.grid-features.hybrid-benefits .grid-features__title {
   font-size: clamp(1.00rem, calc(0.78rem + 0.60vw), 1.25rem);
   margin-bottom: 1em;
 }
 
-.hybrid-benefits__text {
+.grid-features.hybrid-benefits .grid-features__text {
   font-size: 0.875rem;
   line-height: 21px;
 }
 
+
 .grid.program {
   justify-content: space-between;
   margin-bottom: 50px;
+}
+
+.grid.program .grid__item {
+  flex-basis: calc(100% / 3 - 10px);
+  padding: 30px;
+  border-radius: 20px;
 }
 
 .grid.program .grid__item {
@@ -3763,11 +3778,15 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 
-.grid.program .program__title {
+.grid.program .title {
   font-size: 1.125rem;
 }
 
-.grid.program .program__icon-container {
+.grid.program .icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   width: 38px;
   height: 38px;
 
@@ -4102,14 +4121,22 @@ input[type="range"]::-webkit-slider-thumb {
     right: -20px;
   }
 
+  .grid-features.hybrid-benefits .grid-features__item {
+    padding: 24px;
+  }
 
-  .grid.hybrid-benefits .grid__item {
+  .grid-features.hybrid-benefits .grid-features__title {
+    font-size: 1.125rem;
+  }
+
+
+  /* .grid.hybrid-benefits .grid__item {
     padding: 24px;
   }
 
   .hybrid-benefits__title {
     font-size: 1.125rem;
-  }
+  } */
 
 
   /* UPDATE */
@@ -4415,7 +4442,7 @@ input[type="range"]::-webkit-slider-thumb {
 
 
   /* ADD */
-  .grid-features.ib-advantages.desktop,
+  .grid-features.advantages.ib.desktop,
   .aside-banner.top,
   .aside-banner.bottom,
   .partnership-programs-benefits__item:first-child,
@@ -4567,7 +4594,7 @@ input[type="range"]::-webkit-slider-thumb {
 
 
   .grid.card-blog .grid__item,
-  .grid.hybrid-benefits .grid__item,
+  .grid-features.hybrid-benefits .grid-features__item,
   .grid.card-blog.related .grid__item {
     flex-basis: calc(100% / 2);
   }
@@ -4671,8 +4698,9 @@ input[type="range"]::-webkit-slider-thumb {
   }
 
   .list.banner-carousel,
+
   /* ADD */
-  .grid-features.ib-advantages {
+  .grid-features.advantages.ib {
     display: block;
   }
 
@@ -5336,16 +5364,17 @@ input[type="range"]::-webkit-slider-thumb {
     padding: 50px 0;
   }
 
-  .grid.hybrid-benefits .grid__item {
+  .grid-features.hybrid-benefits .grid-features__item {
     box-shadow: -16px 21px 80px -10px rgba(9, 19, 69, 0.05);
     padding: 30px;
   }
 
-  .grid.program {
+  /* NEED REMOVE */
+  /* .grid.program {
     column-gap: 5px;
-  }
+  } */
 
-  .grid.program .program__icon-container {
+  .grid.program .icon-container {
     width: 24px;
     height: 24px;
     margin-right: 10px;
@@ -5359,8 +5388,24 @@ input[type="range"]::-webkit-slider-thumb {
     margin-right: 0;
   }
 
-  .grid.program .program__title {
+  .grid.program .title {
     font-size: 0.875rem;
+  }
+
+
+  .grid-features.hybrid-benefits .grid-features__body,
+  .grid-features.hybrid-benefits .grid-features__item,
+  .grid-features.hybrid-benefits.owl-carousel-hybrid .owl-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .grid-features.hybrid-benefits .grid-features__body {
+    flex-basis: 140px;
+  }
+
+  .grid-features.hybrid-benefits .grid-features__text {
+    flex-grow: 1;
   }
 
   .hybrid-program-icons {
@@ -5789,7 +5834,7 @@ input[type="range"]::-webkit-slider-thumb {
   } */
 
   /* UPDATE */
-  .grid-features.ib-advantages .grid-features__text,
+  .grid-features.advantages.ib .grid-features__text,
   .grid-features.advantages.advantages-carousel .grid-features__text {
     font-size: inherit;
   }

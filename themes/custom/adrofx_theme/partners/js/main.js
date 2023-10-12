@@ -634,31 +634,31 @@ window.onload = function () {
             })
 
             // !!!NEED ADD NEW SPLIDE !!! //
-            $('.ib-advantages-carousel').owlCarousel({
-                loop: true,
-                margin: 10,
-                nav: true,
+            // $('.ib-advantages-carousel').owlCarousel({
+            //     loop: true,
+            //     margin: 10,
+            //     nav: true,
 
-                autoplay: true,
-                autoplayTimeout: 5000,
-                autoplayHoverPause: false,
-                startPosition: "URLHash",
-                responsive: {
-                    0: {
-                        items: 1,
-                        nav: false,
-                    },
-                    600: {
-                        nav: false,
-                        items: 1
-                    },
-                    900: {
-                        items: 2,
-                        nav: false,
-                    }
+            //     autoplay: true,
+            //     autoplayTimeout: 5000,
+            //     autoplayHoverPause: false,
+            //     startPosition: "URLHash",
+            //     responsive: {
+            //         0: {
+            //             items: 1,
+            //             nav: false,
+            //         },
+            //         600: {
+            //             nav: false,
+            //             items: 1
+            //         },
+            //         900: {
+            //             items: 2,
+            //             nav: false,
+            //         }
 
-                }
-            })
+            //     }
+            // })
 
             $('.banner-carousel').owlCarousel({
                 loop: true,
@@ -764,11 +764,11 @@ window.onload = function () {
                         dots: true,
                     },
                     600: {
-                        items: 1,
+                        items: 2,
                         nav: false,
                         dots: true,
                         stagePadding: 30,
-                        margin: 30,
+                        margin: 10,
                     },
 
                 }
