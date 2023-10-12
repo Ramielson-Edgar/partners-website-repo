@@ -443,9 +443,9 @@ window.addEventListener('DOMContentLoaded', () => {
         y: 60,
     })
 
-    gsap.to(".revenue-icons", {
+    gsap.to(".ib-hero-icons", {
         scrollTrigger: {
-            trigger: ".revenue-icons",
+            trigger: ".ib-hero-icons",
             scrub: 1,
         },
         y: 50,
@@ -712,9 +712,9 @@ window.onload = function () {
             })
 
             // plans benefits//
-            $('.owl-carousel-benefits').owlCarousel({
+            $('.advantages-carousel').owlCarousel({
                 loop: false,
-                margin: 20,
+                margin: 10,
                 stagePadding: 50,
                 nav: false,
                 responsive: {
