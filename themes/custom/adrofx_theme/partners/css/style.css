@@ -4190,6 +4190,8 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 
+ 
+
 
 /* .grid.card-blog.related .card-blog__img {
   flex: 4;
@@ -4271,8 +4273,8 @@ input[type="range"]::-webkit-slider-thumb {
 .section-title.latest {
   font-size: var(--font-size-24);
 }
-
-/* .article {
+/* 
+.article {
   padding-bottom: 70px;
 } */
 
@@ -4311,6 +4313,34 @@ input[type="range"]::-webkit-slider-thumb {
 
 .article__title {
   font-size: var(--font-size-30);
+}
+
+.tags {
+  padding: 30px 0;
+}
+
+.list.tags {
+  justify-content: flex-start;
+}
+
+.list.tags .list__item .link {
+  color: var(--dark-500);
+  line-height: normal;
+  border-radius: 100px;
+  background: #EBEBEB;
+  text-transform: capitalize;
+  padding: 10px 20px;
+  transition: background-color .3s ease-in-out 0s;
+}
+.list.tags .list__item:not(:last-child) {
+  margin-right: 5px;
+}
+
+.list.tags .list__item .link:hover,
+.list.tags .list__item .link:focus {
+  background: var(--blue-500);
+  color: var(--white);
+  text-decoration: none;
 }
 
 
@@ -6186,7 +6216,14 @@ input[type="range"]::-webkit-slider-thumb {
       padding: 0;
       }
 
+      .tags {
+        padding: 10px 0;
+      }
  
+      .list.tags.list__item {
+        font-size: 13px;
+        line-height: normal;
+      }
  
   
     /* ============================================== */
