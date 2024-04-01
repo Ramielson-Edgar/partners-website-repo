@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<div w3-include-html="head.html"></div>
+
+<body>
+
+    <div w3-include-html="menu.html"></div>
+    <div w3-include-html="header.html"></div>
+
+
+    <section class="cashback-terms section-padding">
+
+        <div class="container">
+            <h1 class="title mb-3">CashBack Terms and Conditions</h1>
+            <p class="text mb-5">Any customer who deposits $100 or more and completes at least 10 Standard lots of
+                trading in
+                a
+                calendar month
+                can participate in the cashback program.</p>
+
+            <h2 class="title mb-3">Cashback Structure:</h2>
+           
+
+        
+                    <ul>
+                        <li class="mb-3">
+                            <p class="text">Customers who trade between 10 and 1,000 Standard lots in one calendar month
+                                will
+                                receive 0.5% cashback on their Cent account and a 5% rebate from the spread they paid for
+                                trading
+                                that volume on all other account types.
+                            </p>
+                        </li>
+            
+                        <li class="mb-3">
+                            <p class="text">Customers who trade between 1,000 and 3,000 Standard lots in one calendar month
+                                will
+                                receive 1% cashback on their Cent account and a 10% rebate from the spread they paid for
+                                trading
+                                that volume on all other account types.
+                            </p>
+                        </li>
+            
+                        <li class="mb-3">
+                            <p class="text"> Customers who trade 3,000 Standard lots or more in one calendar month will
+                                receive
+                                1.5%
+                                cashback on their Cent account and a 15% rebate from the spread they paid for trading that
+                                volume on
+                                all other account types.
+                            </p>
+                        </li>
+            
+                        <li class="mb-3">
+                            <p class="text">Customers can withdraw their cashback only once per month, between the 1st and
+                                the
+                                5th
+                                of each month. To receive cashback, customers must complete a full account verification.</p>
+                        </li>
+            
+                        <li class="mb-3">
+                            <p class="text">Please note that the current cashback cannot be combined with any other AdroFx
+                                bonuses.
+                            </p>
+                        </li>
+            
+                        <li class="mb-3">
+                            <p class="text">Positions with a duration of less than 5 minutes or with profit/loss values less
+                                than
+                                two typical spreads of the traded instruments will not be considered when calculating the
+                                cashback
+                                amount.
+                            </p>
+                        </li>
+                    </ul>
+       
+
+
+            <h2 class="title mb-3">Regenerate</h2>
+
+            <p class="text mb-4">This promotion can be canceled at the discretion of the company and will remain in
+                effect
+                for as
+                long as the company sees fit to provide it based on the terms and conditions outlined here and in the
+                customer agreement.
+            </p>
+
+
+            <p class="text mb-4">AdroFx may make changes to these Promotion Terms and will notify you of these changes
+                by
+                posting the modified terms on the AdroFx website.
+            </p>
+
+
+            <p class="text mb-4">AdroFx advises you to revise these Promotion Terms regularly and by your continued use
+                of the AdroFx website and services that you accept any such modified terms.
+            </p>
+
+
+            <p class="text mb-4">Any dispute or situation not covered by these Promotion Terms will be resolved by our
+                management in a manner it deems to be the fairest to all concerned. That decision shall be final and/or
+                binding on all entrants.
+            </p>
+
+            <p class="text"> If these Promotion Terms are translated into a language other than English, then the
+                English version of the Rules will be prevailing
+            </p>
+
+
+        </div>
+    </section>
+
+
+
+    <div w3-include-html="footer.html"></div>
+
+    <script>
+        function includeHTML() {
+            var z, i, elmnt, file, xhttp;
+            /* Loop through a collection of all HTML elements: */
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                /*search for elements with a certain atrribute:*/
+                file = elmnt.getAttribute("w3-include-html");
+                if (file) {
+                    /* Make an HTTP request using the attribute value as the file name: */
+                    xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4) {
+                            if (this.status == 200) {
+                                elmnt.innerHTML = this.responseText;
+                            }
+                            if (this.status == 404) {
+                                elmnt.innerHTML = "Page not found.";
+                            }
+                            /* Remove the attribute, and call this function once more: */
+                            elmnt.removeAttribute("w3-include-html");
+                            includeHTML();
+                        }
+                    }
+                    xhttp.open("GET", file, true);
+                    xhttp.send();
+                    /* Exit the function: */
+                    return;
+                }
+            }
+        }
+    </script>
+    <script>
+        includeHTML();
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="themes/custom/adrofx_theme/partners/js/popper.min.js"></script>
+    <script src="themes/custom/adrofx_theme/partners/js/bootstrap.bundle.min.js"></script>
+    <script src="themes/custom/adrofx_theme/partners/js/gsap.min.js"></script>
+    <script src="themes/custom/adrofx_theme/partners/js/ScrollTrigger.min.js"></script>
+
+    <script src="themes/custom/adrofx_theme/partners/js/splide.js"></script>
+    <script src="themes/custom/adrofx_theme/partners/js/auto-scroll.js"></script>
+
+    <script src="themes/custom/adrofx_theme/partners/js/owl.carousel.min.js"></script>
+
+    <script src="themes/custom/adrofx_theme/partners/js/main.js"></script>
+</body>
+
+</html>

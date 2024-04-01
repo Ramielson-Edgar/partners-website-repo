@@ -118,7 +118,6 @@ window.addEventListener('load', () => {
 
         stepCounters.forEach((counter, i) => {
             let target = +counter.dataset.target;
-            console.log(target)
 
             if (window.innerWidth >= 575) {
                 let strokeValue = 271 - 271 * (target / 100);
@@ -591,7 +590,7 @@ window.onload = function () {
                 e.preventDefault();
                 $('#notification').hide('slow');
             }));
-            const currentButton = $('.buttons-container.partner-plans .btn-base')
+            const currentButton = $('.partnership-programs-plans__btn-container .btn-base')
             currentButton.hover(function () {
                 if ($(this).hasClass('btn-base-small')) {
                     $(this).addClass('is-active')
