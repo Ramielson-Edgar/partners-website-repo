@@ -5099,6 +5099,11 @@ input[type="range"]::-webkit-slider-thumb {
   .partner-performance {
     background-size: 1628px;
   }
+
+/* ADD */
+  .aside-banner > .btn-base {
+    bottom: 20px;
+  }
 }
 
 @media (max-width: 991.98px) {
