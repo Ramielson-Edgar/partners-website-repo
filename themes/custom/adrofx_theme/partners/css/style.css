@@ -291,6 +291,17 @@ img {
   background-color: var(--red-500);
 }
 
+.btn-red {
+  color: var(--light);
+  background-color: var(--red-500);
+}
+
+.btn-red:hover,
+.btn-red:focus {
+  color: var(--light);
+}
+
+
 .btn-red-green:hover,
 .btn-red-green:focus {
   color: var(--light);
@@ -4280,6 +4291,31 @@ input[type="range"]::-webkit-slider-thumb {
   margin-bottom: 70px;
 }
 
+.aside-banner.bottom,
+.aside-banner.top {
+  overflow: hidden;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+
+  border-radius: 5px;
+}
+
+.aside-banner.top {
+ background: var(--green-500);
+}
+
+.aside-banner.bottom > .btn-base,
+.aside-banner.top > .btn-base {
+  position: absolute;
+  bottom: 30px;
+}
+ 
+ 
+
 .section-title.latest {
   font-size: var(--font-size-24);
 }
@@ -5271,10 +5307,12 @@ input[type="range"]::-webkit-slider-thumb {
   }
 
 
-  /* ADD */
+  /* REMOVED */
+  /* .aside-banner.top,
+  .aside-banner.bottom, */
+
+
   .grid-features.advantages.ib.desktop,
-  .aside-banner.top,
-  .aside-banner.bottom,
   /* .partnership-programs-benefits__item:first-child, */
   .partnership-programs-privilege__item.toggle {
     display: none;
