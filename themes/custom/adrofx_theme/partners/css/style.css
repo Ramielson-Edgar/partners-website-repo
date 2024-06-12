@@ -4305,16 +4305,16 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .aside-banner.top {
- background: var(--green-500);
+  background: var(--green-500);
 }
 
-.aside-banner.bottom > .btn-base,
-.aside-banner.top > .btn-base {
+.aside-banner.bottom>.btn-base,
+.aside-banner.top>.btn-base {
   position: absolute;
   bottom: 30px;
 }
- 
- 
+
+
 
 .section-title.latest {
   font-size: var(--font-size-24);
@@ -5307,10 +5307,13 @@ input[type="range"]::-webkit-slider-thumb {
   }
 
 
-  /* REMOVED */
-  /* .aside-banner.top,
-  .aside-banner.bottom, */
-
+  /* CHANGED */
+  .aside-banner.top,
+  .aside-banner.bottom {
+    align-items: flex-start;
+    margin-bottom: 0;
+  }
+ 
 
   .grid-features.advantages.ib.desktop,
   /* .partnership-programs-benefits__item:first-child, */
@@ -6272,7 +6275,7 @@ input[type="range"]::-webkit-slider-thumb {
     font-size: 13px;
     line-height: 20px;
   }
-
+ 
 }
 
 @media (max-width: 575.98px) {
@@ -6301,7 +6304,7 @@ input[type="range"]::-webkit-slider-thumb {
   .list.tags .list__item:nth-child(n+1) {
     margin-right: 0;
   }
- 
+
 
   .tags .section-title {
     font-size: 16px;
@@ -7331,6 +7334,17 @@ input[type="range"]::-webkit-slider-thumb {
     height: 30px;
   }
 
+  .aside-banner.top,
+  .aside-banner.bottom {
+    align-items: center;
+  }
+
+  .aside-banner.top > .btn-base,
+  .aside-banner.bottom > .btn-base {
+    padding: 10px 30px;
+    font-size: 13px;
+  }
+
 }
 
 @media (max-width: 375px) {
@@ -7432,53 +7446,123 @@ input[type="range"]::-webkit-slider-thumb {
     height: 300px;
   }
 }
+
 .partnership-programs-header__nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 30px;
 }
+
 .partnership-programs__nav-list {
   display: flex;
   justify-content: space-between;
 }
-.partnership-programs__nav-list, .footer-contacts, .list.social-media, .footer-links, .footer-list, .footer-terms, .footer-company, .footer-contacts__item, .partnership-programs-privilege__body-text, .partnership-programs-privilege__list, .partnership-programs-benefits__body-list, .partnership-programs-benefits__list, .partnership-programs-features__item-list, .partnership-programs-features__list, .partnership-programs-plans__list, .partnership-programs-award__list, .partnership-programs-advantages__list, .cpa-program-benefits__list, .cpa-program-why__list, .cpa-program-platforms__list, .cpa-program-plan__list, .cpa-program-advantages__list, .partnership-programs__nav-list, .list, .grid-features, .grid {
+
+.partnership-programs__nav-list,
+.footer-contacts,
+.list.social-media,
+.footer-links,
+.footer-list,
+.footer-terms,
+.footer-company,
+.footer-contacts__item,
+.partnership-programs-privilege__body-text,
+.partnership-programs-privilege__list,
+.partnership-programs-benefits__body-list,
+.partnership-programs-benefits__list,
+.partnership-programs-features__item-list,
+.partnership-programs-features__list,
+.partnership-programs-plans__list,
+.partnership-programs-award__list,
+.partnership-programs-advantages__list,
+.cpa-program-benefits__list,
+.cpa-program-why__list,
+.cpa-program-platforms__list,
+.cpa-program-plan__list,
+.cpa-program-advantages__list,
+.partnership-programs__nav-list,
+.list,
+.grid-features,
+.grid {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-.partnership-programs__nav-link.is-active::after, .partnership-programs__nav-link:focus::after, .partnership-programs__nav-link:hover::after {
+
+.partnership-programs__nav-link.is-active::after,
+.partnership-programs__nav-link:focus::after,
+.partnership-programs__nav-link:hover::after {
   width: 100%;
   outline: none;
 }
+
 .partnership-programs__nav-list {
   display: flex;
   justify-content: space-between;
 }
-.partnership-programs__nav-list, .footer-contacts, .list.social-media, .footer-links, .footer-list, .footer-terms, .footer-company, .footer-contacts__item, .partnership-programs-privilege__body-text, .partnership-programs-privilege__list, .partnership-programs-benefits__body-list, .partnership-programs-benefits__list, .partnership-programs-features__item-list, .partnership-programs-features__list, .partnership-programs-plans__list, .partnership-programs-award__list, .partnership-programs-advantages__list, .cpa-program-benefits__list, .cpa-program-why__list, .cpa-program-platforms__list, .cpa-program-plan__list, .cpa-program-advantages__list, .partnership-programs__nav-list, .list, .grid-features, .grid {
+
+.partnership-programs__nav-list,
+.footer-contacts,
+.list.social-media,
+.footer-links,
+.footer-list,
+.footer-terms,
+.footer-company,
+.footer-contacts__item,
+.partnership-programs-privilege__body-text,
+.partnership-programs-privilege__list,
+.partnership-programs-benefits__body-list,
+.partnership-programs-benefits__list,
+.partnership-programs-features__item-list,
+.partnership-programs-features__list,
+.partnership-programs-plans__list,
+.partnership-programs-award__list,
+.partnership-programs-advantages__list,
+.cpa-program-benefits__list,
+.cpa-program-why__list,
+.cpa-program-platforms__list,
+.cpa-program-plan__list,
+.cpa-program-advantages__list,
+.partnership-programs__nav-list,
+.list,
+.grid-features,
+.grid {
   list-style: none;
   padding: 0;
   margin: 0;
 }
+
 .partnership-programs__nav-link {
   margin: 0 16px;
   font-size: 0.813rem;
   position: relative;
 }
+
 .partnership-programs__nav-link {
   display: inline-block;
   color: var(--dark-400);
 }
-.partnership-programs__nav-link:focus, .partnership-programs__nav-link:hover {
+
+.partnership-programs__nav-link:focus,
+.partnership-programs__nav-link:hover {
   color: var(--dark-500);
 }
-.partnership-programs__nav-link:hover, .btn-base:hover, .partnership-programs__nav-link:focus, .btn-base:focus {
+
+.partnership-programs__nav-link:hover,
+.btn-base:hover,
+.partnership-programs__nav-link:focus,
+.btn-base:focus {
   text-decoration: none;
 }
-.partnership-programs__nav-link.is-active::after, .partnership-programs__nav-link:focus::after, .partnership-programs__nav-link:hover::after {
+
+.partnership-programs__nav-link.is-active::after,
+.partnership-programs__nav-link:focus::after,
+.partnership-programs__nav-link:hover::after {
   width: 100%;
   outline: none;
 }
+
 .partnership-programs__nav-link::after {
   display: inline-block;
   position: absolute;
